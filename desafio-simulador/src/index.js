@@ -21,10 +21,13 @@ async function rollDice(){
     //Math.floor() arredonda o resultado. Número gerado multiplica por 6 (quero rodar o dado até o valor 6). O random está de 0 à 5 por padrão começa do zero, por isso somamos +1
 }
 
-(async function main(){
-    //função de entrada, chama todas as outras
-    console.log(`🏁🚨 Corrida entre ${player1.NOME} e ${player2.NOME} começando ... \n`)
-})()
+async function playRaceEngine(character1, character2){
 
-//posso chamar a função ou posso tornar ela auto invocável  - auto invoke (function)()
-//main();
+}
+
+(async function main(){
+    console.log(`🏁🚨 Corrida entre ${player1.NOME} e ${player2.NOME} começando ... \n`);
+
+    //await - sinalizar para o js esperar a playRaceEngine finalizar dee executar antes de executar as outras funções
+    await playRaceEngine(player1, player2)
+})()
