@@ -114,5 +114,5 @@
 * Cria função para rolar o dado
 * Dependendo do tipo de pista: calcular o valor do dado + habilidade do jogador 1, repetir para o jogador 2
 * Caso o tipo de pista seja confronto, 
-* Se o player 1 fizer mais pontos ele ganha
-* 
+* Se o player 1 fizer mais pontos no confronto ele ganha a rodada
+* No fim, exibir quem venceu o jogo
