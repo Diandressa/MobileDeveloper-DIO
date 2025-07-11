@@ -1,6 +1,6 @@
 # Bootcamp de NodeJS 
 
-Bootecamp de NodeJS da DIO
+Bootcamp de NodeJS da DIO
 
 ## Projetos
 
@@ -46,3 +46,7 @@ node e o caminho do arquivo:\
 * npm init -y (inicia com sim)
 * node src/arquivo.js (roda arquivo)
 * node --watch src/arquivo.js (roda arquivo a cada alteração)
+
+## Anotações
+
+alt + shift + 🔽 = copiar a linha para a linha de baixo
