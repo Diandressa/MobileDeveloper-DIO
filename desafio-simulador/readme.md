@@ -105,3 +105,12 @@
 
 <input type="checkbox" id="vitoria-item" />
 <label for="vitoria-item">Ao final, vence quem acumulou mais pontos</label>
+
+## Processo Lógico
+
+* Criar objetos com as informações do jogadores
+* Criar função com for, de 1 até 5 rodadas
+* Cada rodada chama função que sorteia reta, curva ou confronto (tipo de pista)
+* Cria função para rolar o dado
+* Dependendo do tipo de pista: calcular o valor do dado + habilidade do jogador 1, repetir para o jogador 2
+* Caso o tipo de pista seja confronto...

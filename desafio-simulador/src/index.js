@@ -33,7 +33,7 @@ async function getRandomBlock(){
             result = "CURVA"
             break;
         default:
-            result = "CONFROTO"
+            result = "CONFRONTO"
             break;
     }
 
@@ -56,6 +56,19 @@ async function playRaceEngine(character1, character2){
     //teste de habilidade - armazena o valor da habilidade
     let totalTestSkill1 = 0;
     let totalTestSkill2 = 0;
+
+    if(block === "RETA"){
+        totalTestSkill1 = diceResul1 + character1.VELOCIDADE;
+        totalTestSkill2 = diceResul2 + character2.VELOCIDADE;
+    }
+    if(block === "CURVA"){
+        totalTestSkill1 = diceResul1 + character1.MANOBRABILIDADE;
+        totalTestSkill2 = diceResul2 + character2.MANOBRABILIDADE;
+    }
+    if(block === "CONFRONTO"){
+        let powerResult1 = diceResul1 + character1.PODER
+        let powerResult2 = diceResul2 + character2.PODER
+    }
 }
 
 (async function main(){
