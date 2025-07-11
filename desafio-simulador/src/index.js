@@ -1,5 +1,5 @@
 const player1 = {
-    NOME: "Mario",
+    NOME: "Donkey Kong",
     VELOCIDADE: 4,
     MANOBRABILIDADE: 3,
     PODER: 3,
@@ -23,7 +23,7 @@ async function rollDice(){
 
 (async function main(){
     //função de entrada, chama todas as outras
-    console.log('hello')
+    console.log(`🏁🚨 Corrida entre ${player1.NOME} e ${player2.NOME} começando ... \n`)
 })()
 
 //posso chamar a função ou posso tornar ela auto invocável  - auto invoke (function)()
