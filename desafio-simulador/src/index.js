@@ -77,6 +77,37 @@ async function playRaceEngine(character1, character2){
         if(block === "CONFRONTO"){
             let powerResult1 = diceResul1 + character1.PODER
             let powerResult2 = diceResul2 + character2.PODER
+
+            console.log(`${character1.NOME} confrontou ${character2.NOME}! 🥊`);
+
+            await logRollResult(character1.NOME, "poder", diceResul1, character1.PODER);
+            await logRollResult(character2.NOME, "poder", diceResul2, character2.PODER);
+
+            //if ternário, diminui um ponto no valor que já está na variavel se o pode1 for maior que o 2 e se os pontos do 2 for maior que zero
+            character2.PONTOS -= powerResult1 > powerResult2 && character2.PONTOS > 0 ? 1 : 0;
+            character1.PONTOS -= powerResult2 > powerResult1 && character1.PONTOS > 0 ? 1 : 0;
+            
+            console.log(powerResult2 === powerResult1 ? "Confronto empatado! Nenhum ponto foi perdido." : "")
+            
+            /*
+            if(powerResult1 > powerResult2){
+                //se no confronto o 1 ganhar o 2 perde um ponto, e a contagem não pode ser menor que zero
+                if(character2 > 0){
+                    character2.PONTOS--
+                }
+            }
+
+            if(powerResult2 > powerResult1){
+                //se no confronto o 1 ganhar o 2 perde um ponto, e a contagem não pode ser menor que zero
+                if(character1 > 0){
+                    character1.PONTOS--
+                }
+            }
+            
+            if(powerResult1 === powerResult2){
+                console.log("Confronto empatado! Nenhum ponto foi perdido.")
+            }
+            */
         }
 
         //verificando o vencedor
