@@ -98,17 +98,21 @@ async function playRaceEngine(character1, character2){
             await logRollResult(character1.NOME, "poder", diceResul1, character1.PODER);
             await logRollResult(character2.NOME, "poder", diceResul2, character2.PODER);
             
-            if(powerResult1 > powerResult2 && character2.PONTOS > 0){
-                character2.PONTOS--;
-                console.log(`${character1.NOME} venceu o confronto! ${character2.NOME} perdeu 1 ponto 🐢`)
-                console.log(`${character1.NOME} possui ${character1.PONTOS}`);
-                console.log(`${character2.NOME} possui ${character2.PONTOS}`);
+            if(powerResult1 > powerResult2){
+                character1.PONTOS++;
+                console.log(`${character1.NOME} venceu o confronto! Ganhou 1 ponto`)
+                if(character2.PONTOS > 0){
+                    character2.PONTOS--;
+                    console.log(`${character2.NOME} perdeu 1 ponto`)
+                }
 
-            } else if (powerResult2 > powerResult1 && character1.PONTOS > 0) {
-                character1.PONTOS--;
-                console.log(`${character2.NOME} venceu o confronto! ${character1.NOME} perdeu 1 ponto 🐢`)
-                console.log(`${character1.NOME} possui ${character1.PONTOS}`)
-                console.log(`${character2.NOME} possui ${character2.PONTOS}`);
+            } else if (powerResult2 > powerResult1) {
+                character2.PONTOS++;
+                console.log(`${character2.NOME} venceu o confronto! Ganhou 1 ponto`)
+                if(character1.PONTOS > 0){
+                    character1.PONTOS--;
+                    console.log(`${character1.NOME} perdeu 1 ponto`)
+                }
             } 
 
             if(character1.PONTOS === 0 && character2.PONTOS === 0){
@@ -129,8 +133,8 @@ async function playRaceEngine(character1, character2){
                     character2.PONTOS--
                     console.log(`🐢 ${character2.NOME} foi atingido por um casco. Perdeu 1 ponto.`)
                 }
-                console.log(`${character1.NOME} possui ${character1.PONTOS}`);
-                console.log(`${character2.NOME} possui ${character2.PONTOS}`);
+                console.log(`${character1.NOME} possui ${character1.PONTOS} ponto(s)`);
+                console.log(`${character2.NOME} possui ${character2.PONTOS} ponto(s)`);
             } else if (obstacle == "bomba") {
                 if(playerRandom > 0.5 && character1.PONTOS > 1){
                     character1.PONTOS -= 2
@@ -139,8 +143,8 @@ async function playRaceEngine(character1, character2){
                     character2.PONTOS -= 2
                     console.log(`💣 ${character2.NOME} foi atingido por uma bomba. Perdeu 2 pontos.`)
                 }
-                console.log(`${character1.NOME} possui ${character1.PONTOS}`);
-                console.log(`${character2.NOME} possui ${character2.PONTOS}`);
+                console.log(`${character1.NOME} possui ${character1.PONTOS} ponto(s)`);
+                console.log(`${character2.NOME} possui ${character2.PONTOS} ponto(s)`);
             }
         }
 
@@ -149,13 +153,13 @@ async function playRaceEngine(character1, character2){
             //se o player 1 tem mais pontos de rodada que o dois, então ele ganha 1 ponto
             character1.PONTOS++; //vai somando mais 1
             console.log(`${character1.NOME} marcou um ponto!\n`)
-            console.log(`${character1.NOME} possui ${character1.PONTOS} pontos.`)
-            console.log(`${character2.NOME} possui ${character2.PONTOS} pontos.`)
+            console.log(`${character1.NOME} possui ${character1.PONTOS} ponto(s)`)
+            console.log(`${character2.NOME} possui ${character2.PONTOS} ponto(s)`)
         } else if (totalTestSkill2 > totalTestSkill1){
             character2.PONTOS++; 
             console.log(`${character2.NOME} marcou um ponto!\n`)
-            console.log(`${character1.NOME} possui ${character1.PONTOS} pontos.`)
-            console.log(`${character2.NOME} possui ${character2.PONTOS} pontos.`)
+            console.log(`${character1.NOME} possui ${character1.PONTOS} ponto(s)`)
+            console.log(`${character2.NOME} possui ${character2.PONTOS} ponto(s)`)
         }
 
         console.log("----------------------")
