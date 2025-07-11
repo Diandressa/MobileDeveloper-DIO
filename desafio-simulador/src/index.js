@@ -48,6 +48,14 @@ async function playRaceEngine(character1, character2){
         let block = await getRandomBlock()
         console.log(`Bloco: ${block}`)
     }
+
+    //rolar dados
+    let diceResul1 = await rollDice();
+    let diceResul2 = await rollDice();
+
+    //teste de habilidade - armazena o valor da habilidade
+    let totalTestSkill1 = 0;
+    let totalTestSkill2 = 0;
 }
 
 (async function main(){
