@@ -4,7 +4,7 @@ Bootecamp de NodeJS da DIO
 
 ## Projetos
 
-### 🚗 [Simulador de Corridas - Mario Kart](README-simulador.md)
+### 🚗 [Simulador de Corridas - Mario Kart](desafio-simulador/readme.md)
 
 
 ## Iniciar projeto/ criar package.json
