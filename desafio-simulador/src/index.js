@@ -20,3 +20,11 @@ async function rollDice(){
     return Math.floor(Math.random() * 6) + 1 
     //Math.floor() arredonda o resultado. Número gerado multiplica por 6 (quero rodar o dado até o valor 6). O random está de 0 à 5 por padrão começa do zero, por isso somamos +1
 }
+
+(async function main(){
+    //função de entrada, chama todas as outras
+    console.log('hello')
+})()
+
+//posso chamar a função ou posso tornar ela auto invocável  - auto invoke (function)()
+//main();
