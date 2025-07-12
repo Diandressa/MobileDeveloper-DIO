@@ -1,5 +1,6 @@
 const product = require("./services/products");
 const config = require("./services/config.js");
+const database = require("./services/database.js");
 
 async function main(){
     console.log("Carrinho compras:");
@@ -8,7 +9,7 @@ async function main(){
     // p.getFullName("508", "mouse");
     // p.getProductLabel("mousepad");
 
-    console.log(config.production);
+    database.connectToDatabase("DadosBanco")
 }
 
 main()
