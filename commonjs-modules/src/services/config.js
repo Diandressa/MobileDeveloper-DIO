@@ -3,8 +3,11 @@ const devArea = {
     production: false
 };
 
-// const client = {
-//     device: "web",
-// }
+const client = {
+    device: "web",
+}
 
-module.exports = devArea;
+module.exports = {
+    devArea,
+    client,
+};

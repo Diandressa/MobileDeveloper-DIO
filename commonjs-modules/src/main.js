@@ -1,4 +1,4 @@
-//const p = require("./services/products");
+const product = require("./services/products");
 const config = require("./services/config.js");
 
 async function main(){
