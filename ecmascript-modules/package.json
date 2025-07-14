@@ -1,9 +1,3 @@
-# EcmaScript Modules - ESM
-
-## Configurar packjson para esc modules
-> usar o "type":"module",
-
-```
 {
   "name": "ecmascript-modules",
   "version": "1.0.0",
@@ -17,9 +11,3 @@
   "author": "",
   "license": "ISC"
 }
-```
-
-## Anotações
-
-### Feature flag:
-Funcionalidade que pode ser ativada, como o type: module no package
