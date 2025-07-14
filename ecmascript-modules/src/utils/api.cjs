@@ -1,3 +1,5 @@
+//Arquivos cjs são como mjs, mas usado para o CommonJS - ele usa require() e module.exports
+
 //exportar em linha diretamente
 export const key = {
     value: "2313jklfds",
