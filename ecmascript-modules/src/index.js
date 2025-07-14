@@ -1,4 +1,4 @@
-//tenho que expecificar a extenção do arquivo : arquivo.js
-import connectToDatabase from "./utils/database.js";
+//mjs é uma extensão que diz que o arquivo é somente um modulo - é mais para organização e visualização
+import connectToDatabase from "./utils/database.mjs";
 
 connectToDatabase("my-database")
