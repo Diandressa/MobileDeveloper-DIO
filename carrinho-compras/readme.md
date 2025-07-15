@@ -16,3 +16,9 @@ Entidades representadas:
 
 * Carrinho
 * Itens
+
+Criar um módulo para cada entidade
+
+## Anotações
+
+Geralmente, a pasta services guarda a lógica e as regras de negócio de alguma entidade. Guardamos os módulos na pasta services

@@ -9,6 +9,8 @@ Bootcamp de NodeJS da DIO
 
 ## Iniciar projeto/ criar package.json
 
+Sempre ao criar um projeto dar o npm init para criar o package.json:
+
 `npm init`
 `npm init -y` - sim automaticamente para as perguntas iniciais de criação
 
