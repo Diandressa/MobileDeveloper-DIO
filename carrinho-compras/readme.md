@@ -35,6 +35,10 @@ Quais ações que meu carrinho pode fazer?
 
 Criar assinatura do método, os nomes das funções somente e se recebe algum parâmetro
 
+Item:
+Quais ações que meu item pode fazer?
+
+* Criar um item com subtotal dele, conforme a quantidade de itens
 
 ## Anotações
 
