@@ -1,4 +1,5 @@
 # Projeto Carrinho de Compras da Shopee com Node.js
+![Projeto Carrinho de Compras](https://cdni.iconscout.com/illustration/premium/thumb/cliente-com-carrinho-de-compras-compra-servico-digital-online-8047194-6462744.png?f=webp)
 
 ## Objetivo
 

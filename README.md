@@ -1,11 +1,12 @@
 # Bootcamp de NodeJS 
 
 Bootcamp de NodeJS da DIO
+Node é uma plataforma pra rodar JavaScript
 
 ## Projetos
 
 ### 🚗 [Simulador de Corridas - Mario Kart](desafio-simulador/readme.md)
-
+### 🛒 [Carrinho de Compras da Shopee com Node.js](carrinho-compras/readme.md)
 
 ## Iniciar projeto/ criar package.json
 
