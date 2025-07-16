@@ -22,8 +22,41 @@ async function deleteItem(userCart, name){
 }
 
 //Remover quantidade de item do carrinho - diminui 1 item
-async function removeItem(userCart, index){
+// async function removeItem(userCart, index){
+//     const deleteIndex = index - 1;
+//     if(deleteIndex >= 0 && deleteIndex < userCart.length){
+//         userCart.splice(deleteIndex,1);
+//     }
+// }
+
+async function removeItem(userCart, item){
+    //encontrar o indice que tem o mesmo name do que item.name, p é o nome de cada item 
+    //se encontrar retorna a posição dele no array
+    //preciso da posição dele para manipular ele depois
+    const indexFound = userCart.findIndex((p) => p.name === item.name);
+    console.log("item encontrado no index: ")
+    console.log(indexFound);
+
+    //caso nào encontro o item
+    if(indexFound === -1){
+        console.log("Item não encontrado");
+        return;
+    }
+
+    // Se quantidade for maior que um eu tira um item, 
+    //verifica se a quantidade desse item, no index passado
+    if(userCart[indexFound].quantify > 1){
+        userCart[indexFound].quantify -= 1;
+        return;
+    }
+
+    //se tiver só uma quantidade eu deleto o item
+    if(userCart[indexFound].quantify === 1){
+        userCart.splice(indexFound, 1);
+        return;
+    }
 }
+
 
 //Calcular total
 async function calculateTotal(userCart){
@@ -32,8 +65,7 @@ async function calculateTotal(userCart){
     console.log(`💰 Total: ${result}`);
 }
 
-//mostrar o que tem no carrinho
-
+//Mostrar o que tem no carrinho
 async function displayCart(userCart){
     console.log("\n Shopee cart list");
     userCart.forEach((item, index) => {

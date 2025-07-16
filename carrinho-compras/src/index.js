@@ -13,6 +13,10 @@ const item2 = await createItem("hotheels lamborghini", 39.99, 3);
 await cartService.addItem(myCart, item1);
 await cartService.addItem(myCart, item2);
 //await cartService.addItem(myWhishList, item2);
+
+await cartService.removeItem(myCart, item2);
+await cartService.removeItem(myCart, item2);
+await cartService.removeItem(myCart, item2);
 await cartService.displayCart(myCart);
 
 //mando name pois na função espera o name do item
