@@ -57,6 +57,12 @@ roda a cada mudança no index.js:
 
 `node --watch src/index.js `
 
+## Arquitetura da solução
+
+Controller chama as funções
+
+![Arquitetura da Solução](arquitetura-da-solucao.png)
+
 ### async
 
 Uma async function em Node.js é uma função assíncrona que permite a execução de operações assíncronas dentro dela. Ela retorna uma Promise, o que permite o uso de await para aguardar a resolução de outras Promises dentro da função.
