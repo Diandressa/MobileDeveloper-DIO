@@ -53,6 +53,10 @@ node e o caminho do arquivo:\
 
 alt + shift + 🔽 = copiar a linha para a linha de baixo
 
+roda a cada mudança no index.js:
+
+`node --watch src/index.js `
+
 ### async
 
 Uma async function em Node.js é uma função assíncrona que permite a execução de operações assíncronas dentro dela. Ela retorna uma Promise, o que permite o uso de await para aguardar a resolução de outras Promises dentro da função.
