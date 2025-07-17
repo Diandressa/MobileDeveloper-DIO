@@ -36,3 +36,23 @@ Yarn é uma alternativa ao npm
 https://firebearstudio.com/blog/node-js-command-line-apps-utilities.html
 
 O node trata todo o projeto dele como um pacote, por isso há o package.json, pra gerenciar o pacote/projeto todo.
+
+## Instalar pacote
+
+Ir no site do npm, buscar o pacote
+
+### Instalar pacote:
+
+Exemplo com chalk:
+
+`npm i chalk`
+
+### Verificar se foi instalado
+
+Ir no package.json
+
+```
+"dependencies": {
+    "chalk": "^5.4.1" // posso mudar aqui a versão
+}
+```
