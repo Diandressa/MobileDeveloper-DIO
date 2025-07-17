@@ -64,3 +64,30 @@ Ao instalar um pacote ele cria a paste node_modules, geralmente ela é a pasta m
 O pacote baixado pode ter as dependências de outros pacotes, posso ver no package.json dentro da pasta do pacote chalk
 
 Por ser um arquivo pesado é recomendado não instalar vários pacotes no projeto
+
+### package-lock.json
+
+package-lock.json seria a receita para replicar todas as dependências e sub-dependências do meu projeto e suas versões
+
+não é recomendado mexer nesse arquivo
+
+posso guardar o package-lock.json dentro do package.json (opcional)
+
+`control + shift + p`
+
+digitar settings > Preferences: Open User Settings (JSON)
+
+Escrever 
+
+"explorer.fileNesting.patterns": {}
+
+Ao dar entre dentro das chaves ele completa
+
+Deixar assim:
+
+```
+"explorer.fileNesting.patterns":{
+    "ormconfig.json": "ormconfig.sample.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock"
+},
+```
