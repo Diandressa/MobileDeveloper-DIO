@@ -58,6 +58,8 @@ roda a cada mudança no index.js:
 
 `node --watch src/index.js `
 
+deploy: publicar a aplicação
+
 ## Arquitetura da solução
 
 Controller chama as funções

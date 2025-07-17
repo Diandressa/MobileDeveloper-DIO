@@ -1,7 +1,9 @@
 
 # Npm
 
-Npm (node package manager) é o gerenciador de pacote do node
+![npm](Npm-logo.svg)
+
+npm (node package manager) é o gerenciador de pacote do node
 
 Cada linguagem tem seu repositório com os seus pacotes. 
 Todos os pacotes e repositórios ficam disponíveis no site:
@@ -20,3 +22,10 @@ O que é um package (pacote) no mundo da programação?
 
 ![Dependências](dependencias.png)
 
+## Dev Dependencies - dependência de desenvolvimento
+
+![Dependências](dev-dependencias.png)
+
+## Anotações
+
+Yarn é uma alternativa ao npm
