@@ -86,3 +86,15 @@ no settings.json:
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock"
 },
 ```
+
+### gitignore
+
+Quando mando o projeto pro github eu posso ignorar arquivos, como o node_modules.
+
+Criar arquivo na raiz do projeto: .gitignore
+
+No .gitignore
+
+node_modules/
+
+/(barra) diz que tenho que ignorar tudo que estiver dentro dessa pasta node_modules
