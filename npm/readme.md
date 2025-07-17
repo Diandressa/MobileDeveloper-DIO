@@ -77,15 +77,10 @@ posso guardar o package-lock.json dentro do package.json (opcional)
 
 digitar settings > Preferences: Open User Settings (JSON)
 
-Escrever 
-
-"explorer.fileNesting.patterns": {}
-
-Ao dar entre dentro das chaves ele completa
-
-Deixar assim:
+no settings.json:
 
 ```
+"explorer.fileNesting.enabled": true,
 "explorer.fileNesting.patterns":{
     "ormconfig.json": "ormconfig.sample.json",
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock"
