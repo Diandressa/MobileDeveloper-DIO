@@ -159,9 +159,6 @@ Exemplo:
 
 `npm fund`
 
-<<<<<<< HEAD
-Vai listar as dependências que tem no projeto
-=======
 Vai listar as dependências que tem no projeto
 
 ### npm update
@@ -174,5 +171,4 @@ Comando que atualiza as dependências :
 
 Se aparece `up to date` significa que o pacote está atualizado.
 
-Se o projeto está funcionando na versão antiga, cuidado ao atualizar pois pode acontecer o breaking changes (alterações significativas) no pacote e quebrar a aplicação.
->>>>>>> 231a9f8 (npm: npm update)
+Se o projeto está funcionando na versão antiga, cuidado ao atualizar pois pode acontecer o breaking changes (alterações significativas) no pacote e quebrar a aplicação
