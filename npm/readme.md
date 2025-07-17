@@ -112,3 +112,25 @@ Assim instala todas as dependências necessárias informadas no package-lock.jso
 
 Para usar ver na documentação do pacote no site da npm.
 Geralmente usamos com import.
+
+### usage dev dependencies
+
+Usar o -D no comando de instalação do pacote:
+
+`npm i log-symbols -D`
+
+No package.json fica em dev dependencies:
+
+```
+"devDependencies": {
+    "log-symbols": "^7.0.1"
+}
+```
+
+Usar:
+
+import apelido from "nome-exato-do-pacote";
+
+`import logSymbols  from "log-symbols"`
+
+As dev dependencies não rodar no servidos, no ambiente real. Elá só serve na hora do desenvolvimento.
