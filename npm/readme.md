@@ -39,6 +39,8 @@ O node trata todo o projeto dele como um pacote, por isso há o package.json, pr
 
 Recomendado não mexer no package-lock.json
 
+Quando ver @ na frente do nome do projeto ou pacote significa a versão dele
+
 ## Instalar pacote
 
 Ir no site do npm, buscar o pacote
@@ -152,3 +154,9 @@ Exemplo:
 `npm unistall log-symbols`
 
 > Não ir na node_modules e deletar a pasta do pacote, dessa forma ele não é deletado corretamente. Acaba não alterando no package-lock.json. Quando clonar novamente, ele vai instalar esse pacote novamente.
+
+### npm fund
+
+`npm fund`
+
+Vai listar as dependências que tem no projeto
