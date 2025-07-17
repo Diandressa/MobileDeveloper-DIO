@@ -37,6 +37,8 @@ https://firebearstudio.com/blog/node-js-command-line-apps-utilities.html
 
 O node trata todo o projeto dele como um pacote, por isso há o package.json, pra gerenciar o pacote/projeto todo.
 
+Recomendado não mexer no package-lock.json
+
 ## Instalar pacote
 
 Ir no site do npm, buscar o pacote
@@ -127,6 +129,8 @@ No package.json fica em dev dependencies:
 }
 ```
 
+Também salva no package-lock.json
+
 Usar:
 
 import apelido from "nome-exato-do-pacote";
@@ -134,3 +138,17 @@ import apelido from "nome-exato-do-pacote";
 `import logSymbols  from "log-symbols"`
 
 As dev dependencies não rodar no servidos, no ambiente real. Elá só serve na hora do desenvolvimento.
+
+### npm unistall
+
+desinstalar o pacote:
+
+npm uninstall nome-exato-pacote
+
+Ver no nome exato do pacote no package.json
+
+Exemplo:
+
+`npm unistall log-symbols`
+
+> Não ir na node_modules e deletar a pasta do pacote, dessa forma ele não é deletado corretamente. Acaba não alterando no package-lock.json. Quando clonar novamente, ele vai instalar esse pacote novamente.
