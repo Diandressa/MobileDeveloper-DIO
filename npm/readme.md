@@ -56,3 +56,11 @@ Ir no package.json
     "chalk": "^5.4.1" // posso mudar aqui a versão
 }
 ```
+
+### node_modules
+
+Ao instalar um pacote ele cria a paste node_modules, geralmente ela é a pasta mais pesada de um projeto nodejs
+
+O pacote baixado pode ter as dependências de outros pacotes, posso ver no package.json dentro da pasta do pacote chalk
+
+Por ser um arquivo pesado é recomendado não instalar vários pacotes no projeto
