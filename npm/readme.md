@@ -107,3 +107,8 @@ para rodar o projeto preciso digitar no terminal
 `npm i`
 
 Assim instala todas as dependências necessárias informadas no package-lock.json
+
+### usage
+
+Para usar ver na documentação do pacote no site da npm.
+Geralmente usamos com import.
