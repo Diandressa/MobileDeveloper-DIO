@@ -98,3 +98,12 @@ No .gitignore
 node_modules/
 
 /(barra) diz que tenho que ignorar tudo que estiver dentro dessa pasta node_modules
+
+### restore
+
+Caso eu clone um repositório le não clona com o node_modules,\
+para rodar o projeto preciso digitar no terminal 
+
+`npm i`
+
+Assim instala todas as dependências necessárias informadas no package-lock.json
