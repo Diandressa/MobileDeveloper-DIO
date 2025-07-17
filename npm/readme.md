@@ -29,3 +29,7 @@ O que é um package (pacote) no mundo da programação?
 ## Anotações
 
 Yarn é uma alternativa ao npm
+
+75 pacotes de nodejs:
+
+https://firebearstudio.com/blog/node-js-command-line-apps-utilities.html
