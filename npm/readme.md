@@ -159,4 +159,20 @@ Exemplo:
 
 `npm fund`
 
+<<<<<<< HEAD
 Vai listar as dependências que tem no projeto
+=======
+Vai listar as dependências que tem no projeto
+
+### npm update
+
+Para atualizar uma dependência, não precisamos dar uninstall no pacote e instalar novamente. Basta usar o npm update. Atualiza dev dependencies tb.
+
+Comando que atualiza as dependências :
+
+`npm update nome-pacote`
+
+Se aparece `up to date` significa que o pacote está atualizado.
+
+Se o projeto está funcionando na versão antiga, cuidado ao atualizar pois pode acontecer o breaking changes (alterações significativas) no pacote e quebrar a aplicação.
+>>>>>>> 231a9f8 (npm: npm update)
