@@ -30,3 +30,21 @@ No arquivo .env:
 
 USERDATABASE="Cruso"
 PASSWORDDATABASE="DIO"
+
+## Process.Env
+
+Como conectar o arquivo .env com a aplicação.
+
+Ir no package.json:
+
+Adicionar a flag  --env
+
+```
+"scripts": {
+    "start:Dev": "node --env-file=.env --watch src/index.js"
+},
+```
+
+Para acessar as variáveis do .env no projeto (index.js):
+
+console.log(process.env.USERDATABASE);
