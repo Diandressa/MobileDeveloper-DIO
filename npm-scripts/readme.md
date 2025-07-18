@@ -74,3 +74,16 @@ Uso o && (e comercial):
 
 > o \" conteúdo \" o caractere de escape para usar as aspas dentro do comando que já tem aspas.
 Imprimir "pasta dist criada" -> com aspas no terminal
+
+## Scripts Naming
+
+Scripts mais comuns em projetos:
+
+"scripts": {
+    "prebuild": "npm install",
+    "start:dev": "node src/index.js",
+    "start:watch": "node --watch src/index.js" 
+  },
+
+  > prebuild são os comandos que devem ser rodados primeiro
+
