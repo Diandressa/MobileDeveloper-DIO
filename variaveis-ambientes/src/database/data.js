@@ -1,8 +1,8 @@
 async function connectToDatabase(user, password){
-    if(user === "curso" && password === "dio"){
-        console.log("Conexão com banco de dados estabelecida")
+    if(user === process.env.USERDATABASE && password === process.env.PASSWORDDATABASE){
+        console.log("✅ Conexão com banco de dados estabelecida.")
     } else {
-        console.log("Falha de login. Conexão não estabelecida")
+        console.log("❌ Falha de login. Conexão não estabelecida.")
     }
 }
 
