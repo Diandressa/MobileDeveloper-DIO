@@ -1,0 +1,13 @@
+{
+  "name": "variaveis-ambientes",
+  "version": "1.0.0",
+  "description": "![Variáveis de ambiente](variaveis-de-ambiente.png)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:Dev": "node --watch src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
