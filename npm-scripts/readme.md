@@ -26,3 +26,11 @@ Quando passo o próximo comando uso  &&:
 2 comando: exit 1
 
 ## Rodar o script
+
+No terminal:
+
+`npm run nome-script`
+
+Exemplo:
+
+`npm run test`
