@@ -63,3 +63,18 @@ Altera o nome do arquivo no package.json:
     "start:Dev": "node --env-file=.env.development --watch src/index.js"
 },
 ```
+
+## dotenv x package
+
+Antigamente o .env não era nativo no nodejs, era usado um pacote npm.
+
+Versões do node inferiores à versão 20 não tem suporte aos arquivos .env.
+
+Caso trabalhe com versões do node sem o suporte:
+
+Pesquise o pacote dotenv no site npm: https://www.npmjs.com/package/dotenv
+
+Instala o pacote, importa no arquivo js
+
+Usa da mesma maneira: cria o .env e usa o process.env no arquivo
+
