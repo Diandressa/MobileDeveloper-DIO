@@ -87,3 +87,29 @@ Scripts mais comuns em projetos:
 
   > prebuild são os comandos que devem ser rodados primeiro
 
+## Script Naming Guidelines
+
+Principais scripts:
+
+[principais scrips naming](semmantic-script-names.md)
+ou
+[repositório: digitalinnovationone-formacao-nodejs](https://github.com/digitalinnovationone/formacao-nodejs/blob/main/08-npm-scripts/docs/semmantic-script-names.md)
+
+Convenções: 
+
+Cada empresa pode adotar o seu.
+
+* padronizar em minúsculos
+dev: Start the development server with hot reloading.
+build: Build the application for production.
+
+* separar por contexto, usar nome:especificidade
+
+test: Run unit tests.
+test:watch: Run unit tests in watch mode.
+test:coverage: Generate test coverage report.
+
+Exemplo do react: https://github.com/facebook/react/blob/main/package.json 
+
+
+
