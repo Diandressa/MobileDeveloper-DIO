@@ -65,3 +65,12 @@ Criar no script field os script:
     "iniciar": "node src/index.js"
 },
 ```
+
+## Script Multi Tasks
+
+Uso o && (e comercial):
+
+"iniciar": "node src/index.js && mkdir dist && echo\" pasta dist criada\" "
+
+> o \" conteúdo \" o caractere de escape para usar as aspas dentro do comando que já tem aspas.
+Imprimir "pasta dist criada" -> com aspas no terminal

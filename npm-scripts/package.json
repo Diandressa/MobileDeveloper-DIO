@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "myScript": "echo \"hello world\" && exit 1",
-    "iniciar": "node src/index.js"
+    "iniciar": "node src/index.js && mkdir dist && echo \"pasta dist criada\" "
   },
   "keywords": [],
   "author": "",
