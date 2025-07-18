@@ -25,6 +25,8 @@ Quando passo o próximo comando uso  &&:
 1 comando: "echo \"Error: no test specified\" 
 2 comando: exit 1
 
+Comando entre aspas: "iniciar": "node src/index.js",
+
 ## Rodar o script
 
 No terminal:
@@ -52,3 +54,14 @@ Isso ativa a barra inferior de NPM SCRIPTS
 Dar play para rodar o script
 
 ![Vscode View npm scripts](../npm-scripts/img/vscode-view-npm-script-play.png)
+
+## Create script
+
+Criar no script field os script:
+
+```
+"scripts": {
+    "myScript": "echo \"hello world\" && exit 1",
+    "iniciar": "node src/index.js"
+},
+```

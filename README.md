@@ -3,6 +3,8 @@
 Bootcamp de NodeJS da DIO
 Node é uma plataforma pra rodar JavaScript
 
+> O Node não é uma linguagem, ele é um meio de rodar o javascript fora do navegador.
+
 ## Projetos
 
 ### 🚗 [Simulador de Corridas - Mario Kart](desafio-simulador/readme.md)
