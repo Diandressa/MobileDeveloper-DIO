@@ -8,8 +8,8 @@ Node é uma plataforma pra rodar JavaScript
 
 ## Projetos
 
-### 🚗 [Simulador de Corridas - Mario Kart](desafios/desafio-simulador/readme.md)
-### 🛒 [Carrinho de Compras da Shopee com Node.js](desafios/carrinho-compras/readme.md)
+### 🚗 [Simulador de Corridas - Mario Kart](desafios/01-desafio-simulador/readme.md)
+### 🛒 [Carrinho de Compras da Shopee com Node.js](desafios/02-carrinho-compras/readme.md)
 ### 🔑📱 [Gerador de QR Codes para E-commerces com Node.js](desafios/03-gerador-qrcode/readme.md)
 
 ## Iniciar projeto/ criar package.json
