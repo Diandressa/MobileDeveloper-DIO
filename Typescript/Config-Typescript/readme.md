@@ -1,0 +1,1 @@
+# Configurar Typescript em projetos Node.js
