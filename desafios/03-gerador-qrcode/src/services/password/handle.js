@@ -24,7 +24,7 @@ async function handle(){
 
     const passwordLength = process.env.PASSWORD_LENGHT;
     characters = await permittedCharacters();
-
+    console.log(characters)
     for(let i = 0; i < passwordLength; i++){
         //vai sortear index/posição 8 vezes
         //sorteia array de characters (todo o array)
@@ -37,15 +37,13 @@ async function handle(){
         */
 
         /*
-            characters[index] pega o valor que está naquela posição sorteada.
+            characters[index] pega o valor que está naquela posição no array characters (que foi feita com os if).
             password += characters[index]; adiciona esse caractere ao final da string password.
         */
         password += characters[index];
 
-        console.log(`Random: ${random}`);
-        console.log(`Multiplicado: ${multiplied}`);
-        console.log(`Índice escolhido: ${index}`);
-        console.log(`Caractere escolhido: ${char}`);
+        console.log("index: "+index)
+        console.log(password)
     }
 
     return password
