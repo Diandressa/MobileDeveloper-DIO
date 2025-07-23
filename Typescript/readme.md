@@ -1,5 +1,7 @@
 # Typescript
 
+Curso Typescript DIO
+
 ![Logo Typescript](./img/Typescript.png)
 
 ## Superset
