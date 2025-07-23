@@ -22,6 +22,6 @@ Na dist o projeto vai ser compilado para javascript
 
 ## Compile-time x Runtime
 
-Compile-time: identifica o erro em quanto compila, enquanto escreve o código - Typescript
+Compile-time: identifica o erro em quanto compila, enquanto escreve o código (evidencia erro muito antes) - Typescript
 
 Runtime: identifica o erro só depois que roda/executa o projeto - Javascript
