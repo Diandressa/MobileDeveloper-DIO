@@ -12,6 +12,7 @@ async function handle (err, result) {
     }
 
     const isSmall = result.type == 2; //retorna true
+    
     qrcodeTerminal.generate(result.link, {small: isSmall}, (qrcode) => {
         console.log(chalk.green("QR Code gerado com sucesso:\n"));
         console.log(qrcode)
