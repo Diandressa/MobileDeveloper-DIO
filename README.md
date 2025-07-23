@@ -9,7 +9,7 @@ Node é uma plataforma pra rodar JavaScript
 
 ### 🚗 [Simulador de Corridas - Mario Kart](desafios/desafio-simulador/readme.md)
 ### 🛒 [Carrinho de Compras da Shopee com Node.js](desafios/carrinho-compras/readme.md)
-### 🛒 [Gerador de QR Codes para E-commerces com Node.js](desafios/03-gerador-qrcode/readme.md)
+### 🔑📱 [Gerador de QR Codes para E-commerces com Node.js](desafios/03-gerador-qrcode/readme.md)
 
 ## Iniciar projeto/ criar package.json
 
@@ -62,6 +62,9 @@ roda a cada mudança no index.js:
 `node --watch src/index.js `
 
 deploy: publicar a aplicação
+
+Alterar nome no código com F2 - isso faz com substitua os outros textos iguais ao anterior no projeto todo. Geralmente, não altera apelidos/nomes de import.
+
 
 ## Arquitetura da solução
 

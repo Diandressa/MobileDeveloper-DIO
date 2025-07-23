@@ -17,3 +17,6 @@ Pega a função no código e extrai ele para um a arquivo isolado
 Schema:
 Modelo de como os arquivos de configuração de prompts devem ser chamados conforme a documentação do pacote
 
+## Architecture - Arquitetura do projeto
+
+![Arquitetura do projeto](draw_tldr/architecture.png)
