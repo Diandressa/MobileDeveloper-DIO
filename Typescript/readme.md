@@ -19,3 +19,9 @@ Na dist o projeto vai ser compilado para javascript
 ## Transpile
 
 ![transpile](img/transpile.png)
+
+## Compile-time x Runtime
+
+Compile-time: identifica o erro em quanto compila, enquanto escreve o código - Typescript
+
+Runtime: identifica o erro só depois que roda/executa o projeto - Javascript
