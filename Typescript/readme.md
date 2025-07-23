@@ -18,7 +18,46 @@ Na dist o projeto vai ser compilado para javascript
 
 ## Transpile
 
-![transpile](img/transpile.png)
+Transpilar é transformar código de uma linguagem para outra muito parecida (ex: TS → JS).
+
+Exemplo:
+```
+// TypeScript (não roda no navegador)
+let nome: string = "Andressa";
+```
+
+⬇️ Transpilado para JavaScript:
+
+```
+// JavaScript (roda no navegador)
+let nome = "Andressa";
+```
+➡️ Ainda é código legível, só mudou de “dialeto”.
+
+Transpile é diferente de compile:
+
+O que é compile?
+
+Compilar normalmente transforma código em algo mais próximo da linguagem de máquina, que o computador entende diretamente (ex: C → binário).
+
+Exemplo com C:
+
+```
+// Código C
+int soma(int a, int b) {
+  return a + b;
+}
+```
+
+⬇️ Compilado para linguagem de máquina (não legível por humanos):
+
+```
+101010 000011 101101 000111 ... (binário)
+```
+
+➡️ Vira um arquivo executável (.exe) que o computador entende.
+
+fonte: ChatGPT
 
 ## Compile-time x Runtime
 
