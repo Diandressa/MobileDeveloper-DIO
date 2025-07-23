@@ -25,3 +25,12 @@ Na dist o projeto vai ser compilado para javascript
 Compile-time: identifica o erro em quanto compila, enquanto escreve o código (evidencia erro muito antes) - Typescript
 
 Runtime: identifica o erro só depois que roda/executa o projeto - Javascript
+
+## Typescript Cheat Sheets (Folha de cola)
+
+Acesse todas no link: https://www.typescriptlang.org/cheatsheets/
+
+![Control Flow Analysis](./img/cheat-sheets/TypeScript-Control%20Flow-Analysis.png)
+![Interfaces](./img/cheat-sheets/TypeScript-Interfaces.png)
+![Types](./img/cheat-sheets/TypeScript-Types.png)
+![Classes](./img/cheat-sheets/TypeScript-Classes.png)
