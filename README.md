@@ -11,5 +11,5 @@
 
 ## Projetos
 
-[NodJS - projetos e readme](./NodeJS/README.md)
+[NodeJS - projetos e readme](./NodeJS/README.md)
 
