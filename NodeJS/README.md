@@ -1,6 +1,6 @@
-# Bootcamp de NodeJS 
+# NodeJS 
 
-Bootcamp Mobile Developer(meutudo) da DIO
+[Logo NodeJS](./nodejs-logo.svg)
 
 Node é uma plataforma pra rodar JavaScript
 
