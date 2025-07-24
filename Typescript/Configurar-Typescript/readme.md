@@ -137,3 +137,7 @@ Agora, no package.json (podemos deixar a extensão .ts):
 O watch executa o projeto toda vez que observar uma mudança.
 
 O start:dist eu uso quando for publicar o projeto, aí eu traduzo os arquivos para o js
+
+## tsconfig documentation
+
+https://www.typescriptlang.org/pt/tsconfig/
