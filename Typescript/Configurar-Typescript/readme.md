@@ -68,3 +68,45 @@ start:dev chama o npm run dist que roda o transpile e já roda o projeto com nod
 ```
 
 Com um único comando eu traduzo e roda o projeto em js
+
+## Create tsconfig
+
+Apontar para transpila todos os arquivos ts do projeto e quando traduzir substituir o arquivo gerado pelo antigo. Fazemos isso no tsconfig.
+
+`npx tsc --init`
+
+Cria um arquivo de configuração ao ser iniciado, o tsconfig
+
+### Configurar tsconfig
+
+Remover o conteúdo dentro de compilerOption.
+Vamos colocar nossas configurações:
+
+target: Qual versão vai gerar o arquivo js\
+module: Converte o arquivo para o CommonJS, ele é mais compatível nos navegadores\
+outDir: Joga os arquivos traduzidos na pasta especificada\
+strict: true, verifica se a tipagem e declaração de variável estão corretas\
+esModuleInterop: ajuda você a importar bibliotecas JavaScript antigas usando a sintaxe moderna de import
+
+```
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strict": true, 
+    "esModuleInterop": true,
+  }
+}
+```
+
+Posso remover o caminho do npx tsc no script do package.json. Sem o caminho ele vai no arquivo tsconfig e le os comando, ele salva no caminho que colocamos no outDir. Percorre o projeto procurando arquivos ts e manda para a pasta dist como configurado no tsconfig outDir
+
+```
+"scripts": {
+    "dist":"npx tsc",
+    "start:dev": "npm run dist && node src/index.js"
+},
+```
+
+Podemos ver todas as configurações possíveis aqui: https://www.typescriptlang.org/tsconfig/ 

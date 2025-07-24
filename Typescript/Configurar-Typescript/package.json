@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dist":"npx tsc src/index.ts",
+    "dist":"npx tsc",
     "start:dev": "npm run dist && node src/index.js"
   },
   "keywords": [],
