@@ -1,6 +1,6 @@
 # Configurar Typescript em projetos Node.js
 
-## Adicionar Typescript no projeto 
+## Adicionar Pacote Typescript no projeto 
 
 Acesse: https://www.typescriptlang.org
 
@@ -141,3 +141,35 @@ O start:dist eu uso quando for publicar o projeto, aí eu traduzo os arquivos pa
 ## tsconfig documentation
 
 https://www.typescriptlang.org/pt/tsconfig/
+
+## npm trends e tsup
+
+npm trends e tsup são alternativas ao pacote tsc (pacote padrão do typescript)
+
+site que compara pacotes: https://npmtrends.com/tsc-vs-tsdx-vs-tsup 
+
+O mais utilizado em 2025 é o tsup , ele usa o esbuild que traduz e compila para js mais rápido (melhor desempenho).
+
+Usamos o tsup para traduzir o ts para js no lugar do npx tsc
+
+`npm i tsup - D`
+
+No package.json:
+
+```
+"scripts": {
+  "dist": "tsup src",
+  "start:dev": "tsx src/index.ts",
+  "start:watch": "tsx watch src/index.ts",
+  "start:dist": "npm run dist && node dist/index.js"
+},
+```
+
+no dist uso tsup e caminho da pasta onde estão os arquivos ts, gera arquivo cjs (usa o commonjs)
+
+## resumo scripts
+
+* "dist": "tsup src" // Compila os arquivos TypeScript da pasta src para JavaScript.
+* "start:dev": "tsx src/index.ts" // Roda o arquivo src/index.ts
+* "start:watch": "tsx watch src/index.ts" // Executa o arquivo src/index.ts quando você salva mudanças
+* "start:dist": "npm run dist && node dist/index.js" // Roda o dist e depois executa o arquivo compilado com node
