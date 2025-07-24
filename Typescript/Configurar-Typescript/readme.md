@@ -110,3 +110,30 @@ Posso remover o caminho do npx tsc no script do package.json. Sem o caminho ele 
 ```
 
 Podemos ver todas as configurações possíveis aqui: https://www.typescriptlang.org/tsconfig/ 
+
+## Typescript Executable (tsx)
+
+Há um pacote que faz com que o node rode arquivos ts, assim não precisamos traduzir os arquivos ts para js.
+
+tsx: https://www.npmjs.com/package/tsx
+
+Recomendado instalar em ambiente de dev, porque em ambiente de distribuição final rodamos o javascript.
+
+Ele transpila e executa na memória, sem precisar criar outra pasta
+
+`npm i tsx -D`
+
+Agora, no package.json (podemos deixar a extensão .ts):
+
+```
+"scripts": {
+  "dist": "npx tsc",
+  "start:dev": "tsx src/index.ts",
+  "start:watch": "tsx watch src/index.ts",
+  "start:dist": "npm run dist && node dist/index.js"
+},
+
+```
+O watch executa o projeto toda vez que observar uma mudança.
+
+O start:dist eu uso quando for publicar o projeto, aí eu traduzo os arquivos para o js

@@ -8,13 +8,16 @@
     "doc": "docs"
   },
   "scripts": {
-    "dist":"npx tsc",
-    "start:dev": "npm run dist && node src/index.js"
+    "dist": "npx tsc",
+    "start:dev": "tsx src/index.ts",
+    "start:watch": "tsx watch src/index.ts",
+    "start:dist": "npm run dist && node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }
