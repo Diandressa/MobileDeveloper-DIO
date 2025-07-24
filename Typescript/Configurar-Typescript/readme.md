@@ -52,3 +52,19 @@ No package.json deixa o js:
     "start:dev": "node src/index.js"
 },
 ```
+
+## Script rodar npx tsc e node no comando
+
+Script para rodar o comando npx tsc caminho-arquivo:
+
+start:dev chama o npm run dist que roda o transpile e já roda o projeto com node :
+
+```
+"scripts": {
+    "dist":"npx tsc src/index.ts",
+    "start:dev": "npm run dist && node src/index.js"
+},
+
+```
+
+Com um único comando eu traduzo e roda o projeto em js
