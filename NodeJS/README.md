@@ -21,6 +21,8 @@ Sempre ao criar um projeto dar o npm init para criar o package.json:
 
 cria o package.json
 
+`npm install` - para instalar as dependências listadas no package-lock.json
+
 ## cria pasta src
 
 Colocar os arquivos que irei codificar nesta página,

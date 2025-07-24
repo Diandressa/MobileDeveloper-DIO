@@ -91,6 +91,8 @@ no settings.json:
 },
 ```
 
+`npm install` - para instalar as dependências listadas no package-lock.json
+
 ### gitignore
 
 Quando mando o projeto pro github eu posso ignorar arquivos, como o node_modules.
