@@ -11,7 +11,7 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 * React Native
 * IA Powered
 
-## Projetos
+## NodeJS
 
-[NodeJS - projetos e readme](./NodeJS/readme.md)
+[Veja o conteúdo sobre NodeJS](./NodeJS/readme.md)
 
