@@ -173,3 +173,21 @@ no dist uso tsup e caminho da pasta onde estão os arquivos ts, gera arquivo cjs
 * "start:dev": "tsx src/index.ts" // Roda o arquivo src/index.ts
 * "start:watch": "tsx watch src/index.ts" // Executa o arquivo src/index.ts quando você salva mudanças
 * "start:dist": "npm run dist && node dist/index.js" // Roda o dist e depois executa o arquivo compilado com node
+
+## Configurar o Typescript usando o terminal (powershell)
+
+[Arquivo readme - como configurar](./readme-terminal.md)
+
+## One Command
+
+Alternativa de iniciar o projeto typescript com um comando.
+
+Disponível nas versões mais novas do Node.
+
+Inicializar um projeto nodejs com um template de typescript:
+
+`npm init -y typescript -D`
+
+Inserir o arquivo .gitignore (node_modules/)
+
+
