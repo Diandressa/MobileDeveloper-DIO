@@ -57,6 +57,69 @@ export const getDataFromApi = () => {
 }
 ```
 
+## Export default em linha
+
+Função:
+
+```
+export default function () {
+  console.log('Olá, mundo!');
+}
+
+ou 
+
+export default () => {
+  console.log('Função padrão!');
+};
+```
+
+```
+import minhaFuncao from './arquivo.js';
+minhaFuncao(); // 'Olá, mundo!'
+```
+
+Função com nome:
+
+```
+export default function conectar() {
+  console.log('Conectando...');
+}
+```
+
+```
+import outroNome from './arquivo.js';
+outroNome(); // 'Conectando...'
+```
+
+Objeto:
+
+```
+export default {
+  nome: 'Ana',
+  idade: 30
+};
+```
+
+```
+import pessoa from './arquivo.js';
+console.log(pessoa.nome); // Ana
+```
+
+Classe:
+
+```
+export default class Pessoa {
+  constructor(nome) {
+    this.nome = nome;
+  }
+}
+```
+
+```
+import Pessoa from './arquivo.js';
+const p = new Pessoa('João');
+```
+
 ## Multiple export
 
 ```
