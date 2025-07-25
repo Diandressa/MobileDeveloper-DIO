@@ -49,11 +49,11 @@ No package.json deixa o js:
 
 ```
 "scripts": {
-    "start:dev": "node src/index.js"
+    "start:dev": "npx tsc src/index.ts && node src/index.js"
 },
 ```
 
-## Script rodar npx tsc e node no comando
+## Script: rodar npx tsc e node no mesmo comando
 
 Script para rodar o comando npx tsc caminho-arquivo:
 
@@ -67,11 +67,11 @@ start:dev chama o npm run dist que roda o transpile e já roda o projeto com nod
 
 ```
 
-Com um único comando eu traduzo e roda o projeto em js
+Com um único comando eu traduzo e rodo o projeto em js
 
 ## Create tsconfig
 
-Apontar para transpila todos os arquivos ts do projeto e quando traduzir substituir o arquivo gerado pelo antigo. Fazemos isso no tsconfig.
+Apontar para transpile todos os arquivos ts do projeto e quando traduzir substituir o arquivo gerado pelo antigo. Fazemos isso no tsconfig.
 
 `npx tsc --init`
 
@@ -100,7 +100,9 @@ esModuleInterop: ajuda você a importar bibliotecas JavaScript antigas usando a 
 }
 ```
 
-Posso remover o caminho do npx tsc no script do package.json. Sem o caminho ele vai no arquivo tsconfig e le os comando, ele salva no caminho que colocamos no outDir. Percorre o projeto procurando arquivos ts e manda para a pasta dist como configurado no tsconfig outDir
+Posso remover o caminho do npx tsc no script do package.json. Sem o caminho ele vai no arquivo tsconfig e lê os comandos, salvando o arquivo js no caminho que colocamos no outDir. 
+
+Percorre o projeto procurando arquivos ts e manda para a pasta dist como configurado no tsconfig outDir.
 
 ```
 "scripts": {
@@ -144,13 +146,14 @@ https://www.typescriptlang.org/pt/tsconfig/
 
 ## npm trends e tsup
 
-npm trends e tsup são alternativas ao pacote tsc (pacote padrão do typescript)
+npm trends e tsup são alternativas ao npx tsc (pacote padrão do typescript).
+
+Usamos o tsup para traduzir o ts para js no lugar do **npx tsc**
 
 site que compara pacotes: https://npmtrends.com/tsc-vs-tsdx-vs-tsup 
 
 O mais utilizado em 2025 é o tsup , ele usa o esbuild que traduz e compila para js mais rápido (melhor desempenho).
 
-Usamos o tsup para traduzir o ts para js no lugar do npx tsc
 
 `npm i tsup - D`
 
@@ -169,10 +172,10 @@ no dist uso tsup e caminho da pasta onde estão os arquivos ts, gera arquivo cjs
 
 ## resumo scripts
 
-* "dist": "tsup src" // Compila os arquivos TypeScript da pasta src para JavaScript.
-* "start:dev": "tsx src/index.ts" // Roda o arquivo src/index.ts
-* "start:watch": "tsx watch src/index.ts" // Executa o arquivo src/index.ts quando você salva mudanças
-* "start:dist": "npm run dist && node dist/index.js" // Roda o dist e depois executa o arquivo compilado com node
+* "dist": "tsup src" **Traduz os arquivo ts para cjs e salva na pasta ./dist(outDir - tsconfig)**
+* "start:dev": "tsx src/index.ts" **Pacote que roda ts sem precisar traduzir e criar uma pasta, fazemos isso com dist no final (ao publicar o projeto) tsup src**
+* "start:watch": "tsx watch src/index.ts" **Faz a mesma coisa que o tsx src, mas observando as mudanças feitas**
+* "start:dist": "npm run dist && node dist/index.js" **Traduz o projeto para js e roda o js criado**
 
 ## Configurar o Typescript usando o terminal (powershell)
 
@@ -180,7 +183,7 @@ no dist uso tsup e caminho da pasta onde estão os arquivos ts, gera arquivo cjs
 
 ## One Command
 
-Alternativa de iniciar o projeto typescript com um comando.
+Alternativa de iniciar o projeto typescript com um comando no terminal.
 
 Disponível nas versões mais novas do Node.
 
