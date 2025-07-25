@@ -67,6 +67,10 @@ Compile-time: identifica o erro em quanto compila, enquanto escreve o código (e
 
 Runtime: identifica o erro só depois que roda/executa o projeto - Javascript
 
+## Como configurar o typescript no projeto
+
+[Configuração do Typescript - readme](./Config-Typescript/readme.md)
+
 ## Typescript Cheat Sheets (Folha de cola)
 
 Acesse todas no link: https://www.typescriptlang.org/cheatsheets/
