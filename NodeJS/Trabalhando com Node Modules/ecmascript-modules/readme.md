@@ -31,13 +31,25 @@ Em vez do `module.exports = {}` e do `require("./")`, no EcmaScript utilizo o ex
 
 ```
 async function connectToDatabase(dataName){
-    //lógica de conexão do banco
     console.log(`Conectado ao banco ${dataName}`);
 }
 
-//export default - por padrão
 export default connectToDatabase;
 ```
+Posso importar com qualquer nome no default
+
+import qualquerNome from './arquivo.js'
+```
+import connect from './database.js';
+connect('PostgreSQL');
+```
+---
+
+```
+// ERRADO — isso não funciona com export default
+import { connectToDatabase } from './database.js'
+```
+Isso vai dar erro, porque você está tentando importar como se fosse um named export, mas o que você fez foi um default export.
 
 ## Export em linha
 
@@ -141,7 +153,7 @@ export {
 Para importar chamamos a função exportada e passamos o caminho do módulo, arquivo que foi exportado.
 Para usar no código chamamos a função e ele puxa do módulo.
 
-Usamos com chaves quando importamos arquivos específicos - desestruturação:
+Usamos com chaves quando importamos arquivos específicos - desestruturação ou exportações de named export:
 
 ```
 import { disconnectDatabase, databaseType } from './utils/database.js';
@@ -156,6 +168,18 @@ export function disconnectDatabase() {
 
 export const databaseType = 'MongoDB';
 
+```
+
+named export:
+
+```
+export function somar(a, b) {
+  return a + b;
+}
+```
+
+```
+import { somar } from './utils.js';
 ```
 
 Usamos sem {} quando é uma importação de default export:
