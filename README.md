@@ -13,5 +13,5 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 ## NodeJS
 
-[Veja o conteúdo sobre NodeJS](./NodeJS/readme.md)
+[Veja o conteúdo sobre NodeJS](./NodeJS/README.md)
 
