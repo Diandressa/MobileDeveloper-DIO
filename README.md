@@ -5,7 +5,7 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 ## Conteúdos dominados
 
 * NodeJS ✔ 
-* Typescript
+* Typescript ⏳
 * Aplicações Web
 * APIs
 * React Native
