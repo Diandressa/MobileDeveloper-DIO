@@ -25,6 +25,39 @@ Ir no package.json, passar o mouse no script e clicar em debug script
 
 Posso escrever em watch, no debugging, o nome da variável. Conforme dou o step into (⬇) ele acompanha o que está sendo armazenado naquela variável.
 
+## Debug Mode e Lauch Json
+
+Ao clicar em Run and Debug (no inseto com o play, do lado esquerdo do vscode), posso clicar em create a launch.json file para customizar a depuração.
+
+Cria a pasta .vscode onde ficam todas as config do vscode e dentro dela o arquivo launch.json
+
+Ir em Add Configuration
+![Add Configuration](./addconfig.png)
+
+ Escolher o modelo 'Attach to process' do NodeJS
+
+```
+{
+    "name": "Attach by Process ID",
+    "processId": "${command:PickProcess}",
+    "request": "attach",
+    "skipFiles": [
+        "<node_internals>/**"
+    ],
+    "type": "node"
+}
+```
+
+Agora escolhemos o script:
+
+![Script Debug](./script-debug-launch.png)
+
+Dessa forma, não preciso ir no package.json e clicar em run debug no script. 
+
+Criamos um perfil de debug (customização de como o modo debug deve rodar)
+
+O outro modo abre a ferramenta javascript debug terminal e só funciona para js e ts.
+
 ## Anotações
 
 No import não preciso passar a extensão trabalhando com ts.
