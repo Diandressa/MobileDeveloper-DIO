@@ -1,3 +1,10 @@
 import { getBaseEmail } from "./services/email";
 
-getBaseEmail("Andressa")
+async function main (){
+    console.log(await getBaseEmail("Andressa"))
+}
+
+console.log('finalizado')
+console.log('...')
+
+main()

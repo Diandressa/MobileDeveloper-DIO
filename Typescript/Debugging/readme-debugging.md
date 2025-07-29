@@ -21,6 +21,10 @@ Ir no package.json, passar o mouse no script e clicar em debug script
 
 ![breakpoint](./debugterminal.png)
 
+## Watch Variables
+
+Posso escrever em watch, no debugging, o nome da variável. Conforme dou o step into (⬇) ele acompanha o que está sendo armazenado naquela variável.
+
 ## Anotações
 
 No import não preciso passar a extensão trabalhando com ts.
