@@ -5,8 +5,8 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 ## Conteúdos dominados
 
 * NodeJS ✔ 
-* Typescript ⏳
-* Aplicações Web
+* Typescript ✔ 
+* Aplicações Web ⏳
 * APIs
 * React Native
 * IA Powered
@@ -14,4 +14,8 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 ## NodeJS
 
 [Veja o conteúdo sobre NodeJS](./NodeJS/README.md)
+
+## Typescript
+
+[Veja o conteúdo sobre Typescript](./Typescript/README.md)
 
