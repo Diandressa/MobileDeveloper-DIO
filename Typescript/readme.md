@@ -79,3 +79,6 @@ Acesse todas no link: https://www.typescriptlang.org/cheatsheets/
 ![Interfaces](./img/cheat-sheets/TypeScript-Interfaces.png)
 ![Types](./img/cheat-sheets/TypeScript-Types.png)
 ![Classes](./img/cheat-sheets/TypeScript-Classes.png)
+
+
+
