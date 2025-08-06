@@ -6,8 +6,8 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 * NodeJS ✔ 
 * Typescript ✔ 
-* Aplicações Web ⏳
-* APIs
+* Aplicações Web ✔ 
+* APIs ⏳
 * React Native
 * IA Powered
 
@@ -18,4 +18,8 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 ## Typescript
 
 [Veja o conteúdo sobre Typescript](./Typescript/README.md)
+
+## Aplicações Web
+
+[Veja o conteúdo sobre Aplicações Web](./Aplicações%20Web)
 
