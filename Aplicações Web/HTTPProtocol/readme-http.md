@@ -88,6 +88,6 @@ O Content pode retornar: Texto, HTML, Código, Arquivos XML (pouco usado/antigo)
 
 ## Extras
 
-Site para fazer mapa mental: https://xmind.com/
+Site para fazer mapa mental/fluxograma: https://xmind.com/
 
 

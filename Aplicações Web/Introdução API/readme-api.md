@@ -71,6 +71,10 @@ REST**ful** = full = aplicação completa REST
 
 Nem toda aplicação precisa ser RESTful, depende do tipo e uso dessa aplicação.
 
+## Mapa mental
+
+![Mapa mental - Introdução API](./introducaoAPImapa.webp)
+
 ## Anotações
 
 Quando ver Interfaces em documentação, significa as regras e padrões que preciso obedecer para poder utilizar
