@@ -129,6 +129,12 @@ const server = http.createServer(async (req:http.IncomingMessage, res:http.Serve
 });
 ```
 
+### Chamada para API
+
+Para ver a chamada tem duas opções: 
+
+Navegador - só mostra o GET
+
 
 
 
