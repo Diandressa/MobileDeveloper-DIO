@@ -44,5 +44,9 @@ Listar os episódios de podcasts em sessões de categorias
 > **Como vou implementar:**
 Vou retornar em uma api rest(json) o nome podcast, nome do episódio, imagem de capa, link do vídeo, categoria do episódio
 
+### Arquitetura do projeto
+
+![Arquitetura do Projeto](./arch/arquitetura-projeto.png)
+
 ### Anotações
 Zoom-out => definir cada parte, e depois olhar o todo
