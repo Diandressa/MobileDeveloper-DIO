@@ -1,7 +1,7 @@
 # Gerenciador de Podcasts - API NodeJS Com Typescript e HTTP Module
 
 ## Estrutura do diretório, conforme a arquitetura desenhada (tree)
-
+```
 Gerenciando-Podcasts
 ├── docs
 │   └── arch
@@ -14,6 +14,7 @@ Gerenciando-Podcasts
 ├── .gitignore
 ├── package.json
 └── readme.md
+```
 
 ## Pacote HTTP Node
 
