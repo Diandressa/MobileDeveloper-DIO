@@ -236,5 +236,37 @@ A path lê tudo qu está dentro do diretório.
 
 __dirname pega o diretório da src, não importa em qual máquina o projeto está ele encontra a pasta src. Ele não funciona com o type:module no package.json
 
-O join junta o caminho do src encontrado com o caminho da pasta repositories
 
+```
+import fs from "fs";
+import path from "path";
+import { Podcast } from "../models/podcast-model";
+
+//limitar os tipos de dados que serão exportados, podemos salvar esse pedaço de código em uma pasta chamada models e importar
+/*
+interface Podcast{
+    podcastName: string;
+    episode: string;
+    videoId: string;
+    category:string[];
+}
+*/
+
+//O join junta o caminho do src encontrado com o caminho da pasta repositories
+const pathData = path.join(__dirname, "../repositories/podcasts.json");
+
+export const repositoryPodcast = async (): Promise<Podcast[]> => {
+    //fs para ler o arquivo no caminho apontado pelo pathData
+    const rawData = fs.readFileSync(pathData, "utf-8");
+
+    //ler o arquivo e guardar ele na memória
+    const jsonFile = JSON.parse(rawData)
+
+    return jsonFile;
+}
+
+```
+
+## Modulo Dinâmico
+
+Deixar no package.jon o type dinâmico, não especificar o type no package.json, o node lida sozinho dinamicamente
