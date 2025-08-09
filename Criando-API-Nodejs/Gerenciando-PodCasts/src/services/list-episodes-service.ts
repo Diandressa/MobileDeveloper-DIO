@@ -1,0 +1,18 @@
+export const serviceListEpisodes = async () => {
+    const data = [
+        {
+            podcastName: "flow",
+            episode: "MEIO BRASILEIRA E PEDRO - Extra Flow",
+            videoId: "exUYInNk58I",
+            category: ["internacional", "influenciador"]
+        },
+        {
+            podcastName: "flow",
+            episode: "LUANA ZUCOLOTO - Flow #404",
+            videoId: "jf5NoJhMyDw",
+            category: ["humor", "influenciador"]
+        }
+    ];
+
+    return data;
+}

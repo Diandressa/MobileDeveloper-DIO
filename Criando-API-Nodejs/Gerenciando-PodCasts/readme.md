@@ -129,7 +129,7 @@ const server = http.createServer(async (req:http.IncomingMessage, res:http.Serve
 });
 ```
 
-### Chamada para API
+## Chamada para API
 
 Para ver a chamada tem duas opções: 
 
@@ -166,5 +166,44 @@ Escolher o método e inserir a url localhost:port
 
 * Podemos usar a extensão **thunder clint** do vscode
 
+## Criando a Service
 
+Colocar os dados no service em vez do controller, o controller só precisa intermediar os dados requeridos e enviados.
+
+No services > list-episodes-service.ts:
+
+```
+export const serviceListEpisodes = async () => {
+    const data = [
+        {
+            podcastName: "flow",
+            episode: "MEIO BRASILEIRA E PEDRO - Extra Flow",
+            videoId: "exUYInNk58I",
+            category: ["internacional", "influenciador"]
+        },
+        {
+            podcastName: "flow",
+            episode: "LUANA ZUCOLOTO - Flow #404",
+            videoId: "jf5NoJhMyDw",
+            category: ["humor", "influenciador"]
+        }
+    ];
+
+    return data;
+}
+```
+
+No controller:
+
+```
+import {IncomingMessage, ServerResponse} from 'http';
+import {serviceListEpisodes} from '../services/list-episodes-service'
+
+export const getListEpisodes = async (req: IncomingMessage, res:ServerResponse)=>{
+    const content = await serviceListEpisodes()
+
+    res.writeHead(200,{'content-type': "application/json"});
+    res.end(JSON.stringify(content))
+}
+```
 
