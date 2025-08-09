@@ -2,18 +2,26 @@
 
 ## Estrutura do diretório, conforme a arquitetura desenhada (tree)
 ```
-Gerenciando-Podcasts
-├── docs
-│   └── arch
-├── src
-│   ├── controllers
-│   ├── data
-│   └── services
-├── server.ts
+Gerenciando-Podcasts/
+├── docs/
+│   ├── arch
+│   └── app.md
+├── src/
+│   ├── controllers/
+│   │   └── controller.ts
+│   ├── models/
+│   │   └── model.ts
+│   ├── repositories/
+│   │   ├── repository.ts
+│   │   └── dados.json
+│   ├── services/
+│   │   └── service.ts
+│   └── server.ts
 ├── .env
 ├── .gitignore
 ├── package.json
-└── readme.md
+├── readme.md
+└── tsconfig.json
 ```
 
 ## Pacote HTTP Node
