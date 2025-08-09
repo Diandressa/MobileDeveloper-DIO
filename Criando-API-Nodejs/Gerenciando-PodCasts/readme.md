@@ -73,7 +73,7 @@ Para capturar esse arquivo preciso configurar o package.json, os scripts. Inseri
 ```
 "scripts": {
     "start:dev": "tsx --env-file=.env src/server.ts",
-    "start:watch": "tsx --env-file=.env watch src/server.ts",
+    "start:watch": "tsx watch --env-file=.env src/server.ts",
     "dist": "tsup src",
     "start:dist": "npm run dist && --env-file=.env node dist/server.js"
 },
@@ -133,8 +133,38 @@ const server = http.createServer(async (req:http.IncomingMessage, res:http.Serve
 
 Para ver a chamada tem duas opções: 
 
-Navegador - só mostra o GET
+* Navegador, usado como o clint - só mostra o GET:
 
+Rodar o tsx no arquivo ts:
+
+`"start:watch": "tsx watch --env-file=.env src/server.ts",`
+
+Abrir o navegador, digitar localhost/3333 (porta que eu defini de entrada)
+
+Ele retorna erro pois o tipo do conteúdo no controller, lido por navegador, deve ser um texto
+
+Converter a resposta m string:
+
+```
+export const getListEpisodes = async (req: IncomingMessage, res:ServerResponse)=>{
+    res.writeHead(200,{'content-type': "application/json"});
+    res.end(JSON.stringify(
+        {
+            name: "andressa",
+        }
+    ))
+}
+```
+
+* ferramentas que simulam client: Postman.com, Insomnia.rest
+
+[www.postman.com](https://www.postman.com)
+
+Abrir > Ir no menu > Fil > News > HTTP (escolher o protocolo http)
+
+Escolher o método e inserir a url localhost:port
+
+* Podemos usar a extensão **thunder clint** do vscode
 
 
 
