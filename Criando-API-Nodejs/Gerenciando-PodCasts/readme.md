@@ -207,3 +207,34 @@ export const getListEpisodes = async (req: IncomingMessage, res:ServerResponse)=
 }
 ```
 
+## Criando um Repository
+
+Criar na pasta repositories (repositórios de dados) o arquivo json
+
+```
+[
+    {
+        "podcastName": "flow",
+        "episode": "MEIO BRASILEIRA E PEDRO - Extra Flow",
+        "videoId": "exUYInNk58I",
+        "category": ["internacional", "influenciador"]
+    },
+    {
+        "podcastName": "flow",
+        "episode": "LUANA ZUCOLOTO - Flow #404",
+        "videoId": "jf5NoJhMyDw",
+        "category": ["humor", "influenciador"]
+    }
+]
+```
+
+Cria dentro de repositories um arquivo com a função que vai mandar esse dados do json para o service:
+
+Importas o fs(filesystem é nativo do nodejs) para apontar para um arquivo com ele. 
+
+A path lê tudo qu está dentro do diretório.
+
+__dirname pega o diretório da src, não importa em qual máquina o projeto está ele encontra a pasta src. Ele não funciona com o type:module no package.json
+
+O join junta o caminho do src encontrado com o caminho da pasta repositories
+
