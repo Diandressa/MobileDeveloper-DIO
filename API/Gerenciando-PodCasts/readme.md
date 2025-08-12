@@ -670,8 +670,63 @@ export const getFilterEpisodes = async (req:IncomingMessage, res:ServerResponse)
     res.end(JSON.stringify(content.body))
 }
 ```
+## Tratamento de erro no list
 
+No service defini a variável
 
+```
+let responseFormat:FilterPodcastModel = {
+    statusCode: 0,
+    body: []
+}
+```
+
+Depois verificar se o data trás conteúdo
+
+```
+const data = await repositoryPodcast();
+
+responseFormat = {
+    statusCode: data.length !== 0 ? StatusCode.OK : StatusCode.NO_CONTENT,
+    body: data
+}
+
+return responseFormat;
+```
+
+Tipa o retorno da função com tipo objeto FilterPodcastModel:
+
+`export const serviceListEpisodes = async ():Promise<FilterPodcastModel> => {`
+
+DTO: Data Transfer Object  -> um modelo só para representar uma transferência
+
+Arrumar no na model para **PodcastTransferModel** com f2, arruma para todos com esse nome:
+
+```
+export interface PodcastTransferModel {
+    statusCode: number;
+    body: PodcastModel[];
+}
+```
+
+No controller, altera o status dinamicamente agora :
+
+```
+export const getListEpisodes = async (req: IncomingMessage, res:ServerResponse)=>{
+    const content:PodcastTransferModel = await serviceListEpisodes()
+
+    res.writeHead(content.statusCode,{"content-type": ContentType.JSON});
+    res.end(JSON.stringify(content.body))
+}
+```
+
+No controller, podemos usar o write para escrever no corpo e o end como ponto final, encerrar a resposta:
+
+```
+res.writeHead(content.statusCode,{"content-type": ContentType.JSON});
+res.write(JSON.stringify(content.body));
+res.end();
+```
 
 
 
