@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { PodcastModel } from "../models/podcast-model";
 
-//O join junta o caminho do src encontrado com o caminho da pasta repositories
+//O join junta o caminho do src encontrado com o caminho da pasta repositories (raiz C:\Users\...)
 const pathData = path.join(__dirname, "../repositories/podcasts.json");
 
 export const repositoryPodcast = async (podcastName?:string): Promise<PodcastModel[]> => {
