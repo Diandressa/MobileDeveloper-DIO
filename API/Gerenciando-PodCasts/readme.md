@@ -728,6 +728,10 @@ res.write(JSON.stringify(content.body));
 res.end();
 ```
 
+## Limpeza e Renomeação de arquivos
+
+
+Tirar o que não estiver usando
 
 
 

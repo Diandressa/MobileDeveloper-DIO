@@ -1,6 +1,5 @@
-import { IncomingMessage } from "http";
 import { repositoryPodcast } from "../repositories/podcasts-repository"
-import { PodcastTransferModel } from "../models/filter-podcast-model";
+import { PodcastTransferModel } from "../models/podcast-transfer-model";
 import { StatusCode } from "../utils/status-code";
 
 //tipo o retorno como PodcastTransferModel, que tem um status code e um body
