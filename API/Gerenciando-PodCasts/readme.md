@@ -413,6 +413,12 @@ Testar no Thunder Client a url:
 Ex: localhost:3334/api/filter?p=venus
 
 ## Refatorar 
+Refatorar com enum e ajustar camadas para sua função (controller).
+
+Organizar o código: 
+* sempre que for uma lista de opções posso exportar uma enum
+* podemos colocar a variável no env (quando importante)
+* criar const para armazenar o dado
 
 ### Camadas
 
@@ -449,7 +455,107 @@ export const serviceFilterEpisodes = async (podcastName: string | undefined) => 
     return data;
 }
 ```
+### Rotas enum
 
+Evitar números mágicos e textos flutuantes 
+
+* Números mágicos: números largados no meio do código sem nenhuma variável atribuída a ele
+* Textos flutuantes: conteúdo textual largado no meio do código sem nenhuma variável atribuída a ele
+
+Podemos remover o texto flutuante das rotas (/api/list e /api/episode) e colocar em variáveis em uma pasta chamada rotas > routes.ts
+
+Dentro de routes.ts criar um enum (como se fosse um objeto com chave lista e valor)
+
+```
+export enum Routes {
+    LIST = "/api/list",
+    FILTER = "/api/filter"
+}
+```
+
+Declaramos enum dessa forma, com igual e enum na frente do nome
+
+No server.ts:
+
+```
+if(req.method === "GET" && baseUrl === Routes.LIST){
+    await getListEpisodes(req, res);
+}
+
+if(req.method === "GET" && baseUrl === Routes.FILTER){
+    await getFilterEpisodes(req, res)
+}
+```
+
+### Método GET enum
+
+Precisamos tipar o GET, deixar ele recebendo métodos existentes
+
+Criamos uma pasta chamada utils (utilidades), cria o arquivo http-methods.ts e defini as opções de métodos disponíveis
+
+```
+export enum HttpMethod {
+    GET = "GET",
+    POST = "POST",
+    PUT = "PUT",
+    PATCH = "PACTH",
+    DELETE = "DELETE"
+}
+```
+E no server.ts:
+
+```
+if(req.method === HttpMethod.GET && baseUrl === Routes.LIST){
+    await getListEpisodes(req, res);
+}
+
+if(req.method === HttpMethod.GET && baseUrl === Routes.FILTER){
+    await getFilterEpisodes(req, res)
+}
+```
+
+Para deixar o código mais legível, em vez de req e res usamos request e response
+
+### Status Code enum
+
+No podcasts-controller.ts, temos um número mágico, o 200.
+
+`res.writeHead(200,{"content-type": "application/json"});`
+
+Criamos um enum para o status code, na pasta utils
+
+```
+export enum StatusCode {
+    OK = 200,   
+}
+```
+
+No controller:
+
+`res.writeHead(StatusCode.OK,{"content-type": "application/json"});`
+
+Obs: Não esquecer de importar os exports
+
+### Content-Type enum
+
+```
+export enum ContentType {
+    JSON = "application/json"
+}
+```
+
+No controller:
+
+`res.writeHead(StatusCode.OK,{"content-type": ContentType.JSON});`
+
+### utf-8
+
+No repositories > podcasts-repository.ts:
+
+```
+const language = "utf-8";
+const rawData = fs.readFileSync(pathData, language);
+```
 
 
 
