@@ -174,7 +174,7 @@ Escolher o método e inserir a url localhost:port
 
 * Podemos usar a extensão **thunder clint** do vscode
 
-## Criando a Service
+## Criando a Service List
 
 Colocar os dados no service em vez do controller, o controller só precisa intermediar os dados requeridos e enviados.
 
@@ -278,3 +278,82 @@ export const repositoryPodcast = async (): Promise<Podcast[]> => {
 ## Modulo Dinâmico
 
 Deixar no package.jon o type dinâmico, não especificar o type no package.json, o node lida sozinho dinamicamente
+
+## Criando o Service Filter
+
+Criar o arquivo em services > filter-episodes-services.ts
+
+No podcast-repository.ts
+
+```
+import fs from "fs";
+import path from "path";
+import { PodcastModel } from "../models/podcast-model";
+
+//O join junta o caminho do src encontrado com o caminho da pasta repositories
+const pathData = path.join(__dirname, "../repositories/podcasts.json");
+
+export const repositoryPodcast = async (podcastName?:string): Promise<PodcastModel[]> => {
+    //fs para ler o arquivo no caminho apontado pelo pathData
+    const rawData = fs.readFileSync(pathData, "utf-8");
+
+    //ler o arquivo e guardar ele na memória
+    let jsonFile = JSON.parse(rawData)
+
+    //se receber parâmetros, no json (nomeado como podcast no filter) pega o podcastName e precisa ser igual ao recebido no parâmetro para retornar o jsonFile só com o objeto que filtrei
+    if(podcastName){
+        jsonFile = jsonFile.filter((podcast:PodcastModel) => podcast.podcastName === podcastName);
+    }
+
+    return jsonFile;
+}
+
+```
+
+No arquivo filter-episodes-service.ts
+
+```
+import { repositoryPodcast } from "../repositories/podcasts-repository"
+
+export const serviceFilterEpisodes = async (podcastName: string) => {
+    const data = await repositoryPodcast(podcastName);
+
+    return data;
+}
+```
+
+## Criando rotas
+
+no arquivo podcast-controller.ts, adicionar :
+
+```
+export const getFilterEpisodes = async (req:IncomingMessage, res:ServerResponse)=>{
+    const content = await serviceFilterEpisodes('flow')
+
+    res.writeHead(200, {"content-type": "application/json"});
+    res.end(JSON.stringify(content))
+}
+```
+
+no server.ts:
+
+```
+const server = http.createServer(async (req:http.IncomingMessage, res:http.ServerResponse) =>{
+
+    //acessar a feature listEpisodes se o método do request for GET e no request vir a rota, a URL como /api/list
+    if(req.method === "GET" && req.url === "/api/list"){
+        await getListEpisodes(req, res);
+    }
+
+    //acessar a feature filterEpisodes se o método do request for GET e no request vir a rota, a URL como /api/filter
+    if(req.method === "GET" && req.url === "/api/filter"){
+        await getFilterEpisodes(req, res)
+    }
+
+});
+```
+
+A combinação de method com url(rota) são chamadas de **endpoint**
+
+
+

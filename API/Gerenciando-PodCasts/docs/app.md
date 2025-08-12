@@ -40,7 +40,10 @@ response:
 ```
 
 ### Feature filtrar
-Listar os episódios de podcasts em sessões de categorias
+Listar os episódios de podcasts em sessões de categorias.
+
+> **Como vou implementar:**
+GET: retorna lista de episódios baseado em um parâmetro enviado pelo cliente do nome do podcast
 
 > **Como vou implementar:**
 Vou retornar em uma api rest(json) o nome podcast, nome do episódio, imagem de capa, link do vídeo, categoria do episódio

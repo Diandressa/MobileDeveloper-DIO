@@ -1,11 +1,16 @@
 import * as http from "http";
-import {getListEpisodes} from './controllers/podscasts-controller';
+import {getFilterEpisodes, getListEpisodes} from './controllers/podscasts-controller';
 
 const server = http.createServer(async (req:http.IncomingMessage, res:http.ServerResponse) =>{
 
-    //acessar a feature listarEpisodios se o método do request for GET
-    if(req.method === "GET"){
+    //acessar a feature listEpisodes se o método do request for GET e no request vir a rota, a URL como /api/list
+    if(req.method === "GET" && req.url === "/api/list"){
         await getListEpisodes(req, res);
+    }
+
+    //acessar a feature filterEpisodes se o método do request for GET e no request vir a rota, a URL como /api/filter
+    if(req.method === "GET" && req.url === "/api/filter"){
+        await getFilterEpisodes(req, res)
     }
 
 });
