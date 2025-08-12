@@ -599,6 +599,81 @@ import { app } from "./app";
 const server = http.createServer(app);
 ```
 
+## Tratamento de erro de Status Code
+
+localhost:3334/api/filter?p=venus
+
+Status: 200 OK
+
+localhost:3334/api/filter?p=ngfpn
+
+Ao passar um valor incorreto, continua com Status: 200 OK. 
+
+Retorna um array vazio, portanto precisa retornar 204, NoContent
+
+Tratar esse erro no service, no serviceFilterEpisodes(), ele precisa devolver o content e o status code correto
+
+Precisamos definir um molde(contrato de conversa - interface) para especificar como quero os tipos trabalhados.
+
+Cria em models > filter-podcast-model.ts. O body é um vetor do PodcastModel, importamos ele.
+
+```
+import { PodcastModel } from "./podcast-model";
+
+export interface FilterPodcastModel {
+    statusCode: number;
+    body: PodcastModel[];
+}
+```
+
+Em filter-episodes-service, no serviço:
+
+```
+//tipo o retorno como FilterPodcastModel, que tem um status code e um body
+export const serviceFilterEpisodes = async (podcastName: string | undefined):Promise<FilterPodcastModel> => {
+
+    //iniciar a variável com vazio, vai ser do tipo FilterPodcastModel
+    let responseFormat:FilterPodcastModel = {
+        statusCode: 0,
+        body: []
+    }
+
+    //busca os dados
+    const queryString = podcastName?.split("?p=")[1] || "";
+    const data = await repositoryPodcast(queryString);
+
+    //verificar se recebe json com algum conteúdo, se tiver usamos o enum StatusCode OK, se não tiver retorna NoContent - data é um vetor, vamos verificar com length. Se length é diferente de zero, se a array tem algum item cai no status ok 
+    if(data.length !== 0){
+        responseFormat.statusCode = StatusCode.OK;
+    } else {
+        responseFormat.statusCode = StatusCode.NO_CONTENT
+    }
+
+    //responseFormat.statusCode = data.length !== 0 ? StatusCode.OK : StatusCode.NO_CONTENT
+
+    //manda o json recebido para o body
+    responseFormat.body = data;
+
+    return responseFormat;
+}
+```
+
+No controller: 
+
+```
+export const getFilterEpisodes = async (req:IncomingMessage, res:ServerResponse)=>{
+    //tipar o content
+    const content:FilterPodcastModel = await serviceFilterEpisodes(req.url)
+
+    //recebemos o status da função e o conteúdo como objeto, passamos para o cabeçalho e end
+    res.writeHead(content.statusCode, {"content-type": ContentType.JSON});
+    res.end(JSON.stringify(content.body))
+}
+```
+
+
+
+
 
 
 
