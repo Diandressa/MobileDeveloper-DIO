@@ -412,5 +412,47 @@ Testar no Thunder Client a url:
 
 Ex: localhost:3334/api/filter?p=venus
 
+## Refatorar 
+
+### Camadas
+
+Tirar esse tratamento d controller, pois o controller só repasse os dados
+
+`const queryString = req.url?.split("?p=")[1] || "";`
+
+passa o req.url para a função
+
+`const content = await serviceFilterEpisodes(req.url)`
+
+Da erro pq a função espera uma string e não um IncomingMessage, que é o tipo da req. Definimos no serviço que podemos receber string ou undefined(o IncomingMessage é undefined)
+
+Definir no serviço que podemos receber string ou undefined
+
+```
+export const serviceFilterEpisodes = async (podcastName: string | undefined) => {
+
+    const queryString = podcastName?.split("?p=")[1] || "";
+    const data = await repositoryPodcast(queryString);
+
+    return data;
+}
+```
+
+Substitui o valor passado para o data com esse valor dinâmico pego da url, a querystring
+
+```
+export const serviceFilterEpisodes = async (podcastName: string | undefined) => {
+
+    const queryString = podcastName?.split("?p=")[1] || "";
+    const data = await repositoryPodcast(queryString);
+
+    return data;
+}
+```
+
+
+
+
+
 
 
