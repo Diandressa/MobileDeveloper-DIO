@@ -355,5 +355,62 @@ const server = http.createServer(async (req:http.IncomingMessage, res:http.Serve
 
 A combinação de method com url(rota) são chamadas de **endpoint**
 
+## QueryString
+
+Quando vejo o sinal de interrogação(?) na url, significa que a url está passando uma variável.
+
+?v= valor
+v é o nome da variável, ela recebe o valor
+
+Ex: https://www.youtube.com/watch?v=jfKfPfyJRdk
+
+Antes do sinal de interrogação é o endpoint, e depois é os parâmetros/variáveis passadas para o servidor
+
+Essa técnica é chamada querystring (tradução: consulta de texto)
+
+No server.ts
+
+O slipt quebra a url com base na interrogação e salva em duas variáveis ( o typescript acrescente ?, pois deixa como opcional caso não recebe nenhum parâmetro). Se ele não encontrar a url ele retorna oo valor vazio para as variáveis.
+
+`const [baseUrl, queryString] = req.url?.split("?") ?? ["", ""];`
+
+No if:
+
+```
+if(req.method === "GET" && baseUrl === "/api/list"){
+    await getListEpisodes(req, res);
+}
+
+if(req.method === "GET" && baseUrl === "/api/filter"){
+    await getFilterEpisodes(req, res)
+}
+```
+
+o req.url vira a baseUrl, vem a url do mesmo jeito
+
+No controller, separa a url e o valor da variável somente:
+
+localhost:3334 **/api/filter**?p=**flow**
+
+Tem duas posições: 0 (/api/filter) e 1 (flow)
+Queremos a posição 1
+
+```
+//localhost:3334/api/filter?p=flow
+const queryString = req.url?.split("?p=")[1]
+```
+
+Se ele não encontrar nada retorna vazio (para não dar erro na tipagem do retorno string|undefined)
+
+`const queryString = req.url?.split("?p=")[1] || "";`
+
+Passo essa o valor, dinamicamente, para a função de filtrar agora:
+
+`const content = await serviceFilterEpisodes(queryString)`
+
+Testar no Thunder Client a url:
+
+Ex: localhost:3334/api/filter?p=venus
+
 
 
