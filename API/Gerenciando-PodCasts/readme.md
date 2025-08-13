@@ -2,6 +2,12 @@
 
 Como fazer uma API sem frameworks
 
+## Diagrama das camadas da aplicação
+
+Diagrama que mostra como as camadas da aplicação se relacionam 
+
+![Diagrama Camadas](./docs/arch/diagrama-camadas.png)
+
 ## Estrutura do diretório, conforme a arquitetura desenhada (tree)
 ```
 .
@@ -730,7 +736,6 @@ res.end();
 ```
 
 ## Limpeza e Renomeação de arquivos
-
 
 Tirar o que não estiver usando
 
