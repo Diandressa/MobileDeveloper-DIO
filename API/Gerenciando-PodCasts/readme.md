@@ -1,27 +1,28 @@
 # Gerenciador de Podcasts - API NodeJS Com Typescript e HTTP Module
 
+Como fazer uma API sem frameworks
+
 ## Estrutura do diretório, conforme a arquitetura desenhada (tree)
 ```
-Gerenciando-Podcasts/
-├── docs/
-│   ├── arch
-│   └── app.md
-├── src/
-│   ├── controllers/
-│   │   └── controller.ts
-│   ├── models/
-│   │   └── model.ts
-│   ├── repositories/
-│   │   ├── repository.ts
-│   │   └── dados.json
-│   ├── services/
-│   │   └── service.ts
-│   └── server.ts
-├── .env
-├── .gitignore
-├── package.json
-├── readme.md
-└── tsconfig.json
+.
+└── Gerenciando-Podcasts/
+    ├── docs/
+    │   ├── arch
+    │   └── app.md
+    ├── src/
+    │   ├── controllers
+    │   ├── models
+    │   ├── repositories
+    │   ├── routes
+    │   ├── services
+    │   ├── utils 
+    │   ├── app.ts
+    │   └── server.ts
+    ├── .env
+    ├── .gitignore
+    ├── package.json
+    ├── readme.md
+    └── tsconfig.json
 ```
 
 ## Pacote HTTP Node

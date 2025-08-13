@@ -1,4 +1,4 @@
-# Podcast Menager
+# Podcast Manager
 
 ### Descrição
 Um app ao estilo Netflix, onde posso centralizar diferentes episódios de podcasts separados por categoria
