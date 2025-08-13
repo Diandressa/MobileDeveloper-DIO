@@ -23,3 +23,7 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 [Veja o conteúdo sobre Aplicações Web](./Aplicações%20Web)
 
+## Extras
+
+Site para fazer fluxograma: https://xmind.com/
+Mapa mental: https://www.tldraw.com/
