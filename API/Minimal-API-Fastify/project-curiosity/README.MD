@@ -29,18 +29,18 @@ npm run start:dev
 ## 📡 Endpoints disponíveis
 
 ### **1. Curiosidades**
-http://localhost:3333`/curiosidades`  
+`http://localhost:3333/curiosidades` 
 Retorna todas as curiosidades disponíveis.
 
-http://localhost:3333`/curiosidades/id`  
+`http://localhost:3333/curiosidades/id`
 Retorna uma curiosidade específica pelo `id`. Defina um número de 1 à 6.
 
 
 ### **2. Mensagens de biscoito da sorte**
-http://localhost:3333`/biscoitosDaSorte`  
+`http://localhost:3333/biscoitosDaSorte`  
 Retorna todas as mensagens de biscoito da sorte.
 
-http://localhost:3333`/curiosidades/id`  
+`http://localhost:3333/curiosidades/id`  
 Retorna uma mensagem específica pelo `id`. Defina um número de 1 à 6.
 
 
