@@ -27,3 +27,11 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 Site para fazer fluxograma: https://xmind.com/
 Mapa mental: https://www.tldraw.com/
+
+## Dicas
+
+VSCode:
+
+Alterar nome clicando F2 - muda o nome selecionado em toda aplicação
+
+Contro + enter - mostra as opções/métodos daquela função
