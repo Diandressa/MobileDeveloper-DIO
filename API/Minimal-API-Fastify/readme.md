@@ -56,3 +56,31 @@ server.listen({port: 3333}, ()=> {
 Verificar com npm run start:watch
 
 Testar no Thunder Client: http://localhost:3333/teams
+
+## Criar endpoints
+
+No server.ts:
+
+```
+server.get("/drivers", async(request, response) => {
+    response.type("application/json").code(200);
+
+    return [{id: 1, name: "Mas Verstappen", team: "Red Bull Racing"}]
+})
+```
+
+Podemos criar os dados em uma variável no próprio server.ts:
+
+```
+const teams = [
+    {id: 1, name: "McLaren", base: "Woking, UK"},
+    {id: 2, name: "Mercedes", base: "Brackley, UK"},
+    {id: 2, name: "Red Bull Racing", base: "Milton Keynes, UK"},
+]
+
+server.get("/teams", async(request,response) => {
+    response.type("application/json").code(200);
+    
+    return [teams];
+})
+```
