@@ -129,3 +129,60 @@ if(!driver){
 ```
 
 Essa lógica ficaria em uma camada de service, porém como é uma API Mínima podemos deixar no server.ts. ssa é uma API rápida
+
+## Cors
+
+O navegador não deixa consumir algumas APIS, por causa da CORS.
+
+Cross-Origin Resource Sharing (Compartilhamento de recursos entre origens)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
+
+CORS é uma proteção para APIs 'particulares'. 
+
+Ele delimita quem solicita a API (a origem de quem solicitou) e o que a API pode compartilhar.
+
+Se a minha API não tiver um CORS definido, alguns navegadores podem bloquear a API. Preciso determinar quem pod solicitar a API.
+
+O Festify tem uma biblioteca/dependência para lidar com o CORS: https://www.npmjs.com/package/@fastify/cors
+
+Comando para instalar:
+
+`npm i @fastify/cors`
+
+Importar no server.ts:
+
+`import cors from "@fastify/cors"`
+
+Associar o cors ao servidor com register:
+
+`server.register(cors, {
+    origin: ["www.dio.me", "outro.com"]
+})`
+
+Posso definir site específicos que podem consumir minha API, ou posso dizer que qualquer um pode consumir com o asterisco *
+
+```
+server.register(cors, {
+    origin: "*"
+})
+```
+
+Posso delimitar quais métodos podem ser consumidos:
+
+```
+server.register(cors, {
+    origin: "*",
+    methods: ["GET", "POST"]
+})
+```
+
+O CORS tem haver com o navegador. 
+
+O erro comum de consumir um API: **Access-Control-Allow-Origin**
+
+A API não diz quem pode acessar ou não, pode ocorrer esse erro.
+
+Como não tem o CORS configurado a API bloqueia qualquer acesso.
+
+Por isso é importante tre o CORS configurado na API.
