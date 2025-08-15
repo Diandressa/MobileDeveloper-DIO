@@ -84,3 +84,48 @@ server.get("/teams", async(request,response) => {
     return [teams];
 })
 ```
+
+## Filter Driver
+
+: diz que é uma variável na rota
+`server.get("/drivers/:id")`
+
+async é o controller.
+
+Pegamos os parâmetros da rota, que vem do request, com o params:
+
+`server.get("/drivers/:id", async (request, response)=>{
+    const id = request.params.id
+})`
+
+Tipamos os parâmetros vindo dessa rotas com interfaces:
+
+```
+interface DriverParams{
+    id:string
+}
+
+server.get<{Params:DriverParams}>("/drivers/:id", async (request, response)=>{
+    const id = request.params.id
+})
+```
+
+parseInt() para converter o id para número 
+
+Procurar o objeto que com o id enviado na rota:
+
+`const driver = drivers.find(item => item.id === id);`
+
+Lógico para o retorno:
+
+```
+if(!driver){
+    response.type("application/json").code(404);
+    return {message: "Driver Not Found"}
+} else {
+    response.type("application/json").code(200);
+    return {driver};
+}
+```
+
+Essa lógica ficaria em uma camada de service, porém como é uma API Mínima podemos deixar no server.ts. ssa é uma API rápida
