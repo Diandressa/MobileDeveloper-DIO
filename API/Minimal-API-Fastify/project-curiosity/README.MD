@@ -10,6 +10,8 @@ Uma API simples feita com [Fastify](https://fastify.dev/) que fornece **curiosid
 
 ## 📦 Instalação e uso
 
+Instale o projeto: [Release API Minimal](https://github.com/Diandressa/MobileDeveloper-DIO/releases/tag/API)
+
 ### 1. Instale as dependências
 ```bash
 npm install
