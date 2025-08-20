@@ -1,11 +1,9 @@
 import {Request, Response} from 'express';
 import { getCardService } from '../services/cards-service';
-import { ok } from '../utils/http-helper';
+import { statusData } from '../utils/http-helper';
 
 export const getCard = async (req:Request, res:Response)=>{
-    const data = await getCardService()
+    const HttpResponse = await getCardService()
 
-    const response = await ok(data);
-
-    res.status(response.statusCode).json(response.body)
+    res.status(HttpResponse.statusCode).json(HttpResponse.body)
 }
