@@ -95,3 +95,37 @@ app.get("/", (req:Request, res:Response)=>{
 `http://localhost:3333/`
 
 ## Configurando o Express
+
+1. Apontar o .env nos scripts no package.json:
+
+```
+  "start:dev": "tsx --env-file=.env src/server.ts",
+  "start:watch": "tsx watch --env-file=.env src/server.ts",
+```
+2. Passar mensagem quando o server inicia:
+
+```
+app.listen(port, ()=>{
+    console.log(`🔥 Server running at port http://localhost:${port}`);
+});
+```
+
+3.Se comunicar com o json utilizando middleware
+
+Converte tudo que está na requisição em um Content-Type, no formato json.
+Precisamos importar o json `import express, {json, Request, Response} from 'express';``.
+
+`app.use(json())`
+
+4. Retornamos um json em vez de uma mensagem agora:
+
+```
+app.get("/", (req:Request, res:Response)=>{
+    res.json({card: "Forest"})
+})
+```
+
+5. Definir o status code
+
+`res.status(200).json({card: "Forest"})`
+
