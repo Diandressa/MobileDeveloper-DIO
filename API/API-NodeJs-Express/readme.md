@@ -216,3 +216,27 @@ router.get("/cards", getCard)
 `app.use("/api", router)`
 
 Importar o router. O /api irá se repetir em todas as rotas.
+
+## Criando a camada de Service
+
+1. Criar pasta services no src
+
+2. Criar arquivo cards-service.ts
+
+```
+export const getCardService = async ()=> {
+    return {card: "Montain"};
+}
+```
+
+3. No controller:
+
+```
+import {Request, Response} from 'express';
+import { getCardService } from '../services/cards-service';
+
+export const getCard = async (req:Request, res:Response)=>{
+    const data = await getCardService()
+    res.status(200).json(data)
+}
+```
