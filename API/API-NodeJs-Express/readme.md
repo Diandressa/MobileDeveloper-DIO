@@ -129,3 +129,40 @@ app.get("/", (req:Request, res:Response)=>{
 
 `res.status(200).json({card: "Forest"})`
 
+## Separando a Server da APP
+
+1. Criar arquivo app.ts no src
+
+2. Criar função com as configurações da aplicação:
+
+```
+import express, {Request, Response} from 'express';
+
+function createApp(){
+    const app = express();
+
+    app.use(express.json());
+
+    app.get("/", (req:Request, res:Response)=>{
+        res.status(200).json({card: "Forest"})
+    })
+
+    return app;
+}
+
+export default createApp;
+```
+
+3. Importar no server.ts:
+
+```
+import createApp from "./app";
+
+const app = createApp()
+const port = process.env.PORT;
+
+app.listen(port, ()=>{
+    console.log(`🔥 Server running at port http://localhost:${port}`);
+});
+```
+
