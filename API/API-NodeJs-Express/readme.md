@@ -188,3 +188,31 @@ export const getCard = (req:Request, res:Response)=>{
 app.get("/", getCard)
 ```
 
+## Criando camada de Routes
+
+1. Criar arquivo para gerenciar as rotas do projeto, routes.ts
+
+2. Importar o gerenciador de rotas do próprio express
+
+`import { Router } from "express";`
+
+3. Indicar a rota e o Controller
+
+```
+import { Router } from "express";
+import { getCard } from './controllers/cards-controller';
+
+const router = Router();
+
+router.get("/cards", getCard)
+```
+
+4. Exportar o router
+
+`export default router`
+
+5. No arquivo app.ts, usar o use()
+
+`app.use("/api", router)`
+
+Importar o router. O /api irá se repetir em todas as rotas.
