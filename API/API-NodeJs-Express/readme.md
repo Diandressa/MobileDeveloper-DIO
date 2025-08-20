@@ -240,3 +240,41 @@ export const getCard = async (req:Request, res:Response)=>{
     res.status(200).json(data)
 }
 ```
+
+## Criando camada de utils (enum)
+
+1. Criar pasta utils em src
+
+2. Criar interface para dar os retornos sempre com os tipos definidos
+
+```
+interface HttpResponse {
+    statusCode: number;
+    body: any;
+}
+```
+
+3. Criar função para o retornar o método e o json
+
+```
+export const ok = async (data:any):Promise<HttpResponse> => {
+    return {
+        statusCode: 200,
+        body: data
+    }
+}
+```
+
+4. No controller:
+
+```
+export const getCard = async (req:Request, res:Response)=>{
+    const data = await getCardService()
+
+    const response = await ok(data);
+
+    res.status(response.statusCode).json(response.body)
+}
+```
+
+import o ok
