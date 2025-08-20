@@ -1,13 +1,12 @@
 import express, {Request, Response} from 'express';
+import { getCard } from './controllers/cards-controller';
 
 function createApp(){
     const app = express();
 
     app.use(express.json());
 
-    app.get("/", (req:Request, res:Response)=>{
-        res.status(200).json({card: "Forest"})
-    })
+    app.get("/", getCard)
 
     return app;
 }

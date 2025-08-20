@@ -166,3 +166,25 @@ app.listen(port, ()=>{
 });
 ```
 
+## Criando camada de Controller
+
+1. Criar pasta na src com nome de Controllers
+
+2. Criar arquivo ts
+
+3. Colocar a função do res e res no controller, pois ele que controla as requisições (tirar do app.ts):
+
+```
+import express, {Request, Response} from 'express';
+
+export const getCard = (req:Request, res:Response)=>{
+    res.status(200).json({card: "Forest"})
+}
+```
+
+4. No app.ts (importar o getCard):
+
+```
+app.get("/", getCard)
+```
+
