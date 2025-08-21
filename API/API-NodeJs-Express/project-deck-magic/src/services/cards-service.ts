@@ -1,7 +1,8 @@
+import * as CardRepository from "../repositories/cards-repository";
 import { noContent, statusData } from "../utils/http-helper";
 
 export const getCardService = async ()=> {
-    const data = {card: "Montain"};
+    const data = await CardRepository.findAllCards();
     let response = null
 
     if(data){

@@ -278,3 +278,45 @@ export const getCard = async (req:Request, res:Response)=>{
 ```
 
 import o ok
+
+## Criando a camada de Repositories
+
+1. Crie a pasta repositories em src
+
+2. Criar o arquivo cards-repository.ts
+
+3. Criar a interface, o const com o json e a função para retorna o json e outra com o find pelo id
+
+```
+interface CardModel {
+    id: number,
+    name: string,
+}
+
+const dataBase:CardModel[] = [
+    {
+        id: 1,
+        name: "Serra Angel"
+    },
+    {
+        id: 2,
+        name:  "Lightning Bolt"
+    }
+]
+
+export const findAllCards = async ():Promise<CardModel[]> => {
+    return dataBase;
+}
+
+export const findCardById = async (id:number):Promise<CardModel | undefined> => {
+    return dataBase.find(card => card.id == id)
+}
+```
+
+4. No service importa o repositories e chamar a função findAllCards
+
+`import * as CardRepository from "../repositories/cards-repository";`
+
+`const data = await CardRepository.findAllCards;`
+
+5. 
