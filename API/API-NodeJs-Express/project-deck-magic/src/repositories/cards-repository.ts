@@ -1,7 +1,4 @@
-interface CardModel {
-    id: number,
-    name: string,
-}
+import { CardModel } from "../models/card-model";
 
 const dataBase:CardModel[] = [
     {

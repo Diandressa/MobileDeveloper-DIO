@@ -319,4 +319,6 @@ export const findCardById = async (id:number):Promise<CardModel | undefined> => 
 
 `const data = await CardRepository.findAllCards;`
 
-5. 
+## Criando a camada de Models
+
+Criar pasta Models em src, e colocar as interface lá
