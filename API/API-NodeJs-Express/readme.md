@@ -322,3 +322,80 @@ export const findCardById = async (id:number):Promise<CardModel | undefined> => 
 ## Criando a camada de Models
 
 Criar pasta Models em src, e colocar as interface lá
+
+## Filtrar por id
+
+Pelo método query string/ query parameters:
+
+http://localhost:3333/api/cards?id=1
+
+Ou pelo método route params:
+
+http://localhost:3333/api/cards/1
+
+1. Na controller criar a função:
+
+```
+export const getCardById = async (req:Request, res:Response)=>{
+    
+}
+```
+
+2. Chamar em route.ts:
+
+`router.get("/cards/:id", getCardById);`
+
+3. No controller especificar id, o params.id pega o id passado na rota, o :id
+
+```
+export const getCardById = async (req:Request, res:Response)=>{
+    const id = req.params.id
+}
+```
+
+4. Em routes podemos importar tudo que está dentro da Controller:
+
+`import * as CardController from './controllers/cards-controller';`
+
+5. No service criar nova função para trazer o findCardById definido no repository:
+
+```
+export const getCardByIdService = async (id:number)=> {
+    const data = await CardRepository.findCardById(id)
+}
+```
+
+6. Verificar nessa função se existe dados, se sim retorna ele no statusData, que retorna um status code e o body
+
+```
+if (data){
+    return response = await statusData(data);
+} else {
+    response = await noContent();
+}
+
+return response
+```
+7. Para melhorar a leitura, podemos importar todas as funções de http-helper
+
+`import * as HttpResponse from "../utils/http-helper";`
+
+8. No cardsService agora:
+
+```
+if (data){
+    return response = await HttpResponse.statusData(data);
+} else {
+    response = await HttpResponse.noContent();
+}
+
+return response
+```
+
+9. No controller chamar a função do service e passar o id:
+
+`const httpResponse = await getCardByIdService(id);`
+
+10. Passar o res(status code) e o json(body):
+
+`res.status(httpResponse.statusCode).json(httpResponse.body);`

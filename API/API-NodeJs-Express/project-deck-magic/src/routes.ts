@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { getCard } from './controllers/cards-controller';
+import * as CardController from './controllers/cards-controller';
 
 const router = Router();
 
-router.get("/cards", getCard)
+router.get("/cards", CardController.getCard);
+router.get("/cards/:id", CardController.getCardById);
 
 export default router

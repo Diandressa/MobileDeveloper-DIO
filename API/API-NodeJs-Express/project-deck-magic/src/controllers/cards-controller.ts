@@ -1,7 +1,15 @@
 import {Request, Response} from 'express';
-import { getCardService } from '../services/cards-service';
+import * as Service from '../services/cards-service';
+import { findCardById } from '../repositories/cards-repository';
 
 export const getCard = async (req:Request, res:Response)=>{
-    const HttpResponse = await getCardService()
-    res.status(HttpResponse.statusCode).json(HttpResponse.body)
+    const httpResponse = await Service.getCardService()
+    res.status(httpResponse.statusCode).json(httpResponse.body)
+}
+
+export const getCardById = async (req:Request, res:Response)=>{
+    const id = parseInt(req.params.id);
+    const httpResponse = await Service.getCardByIdService(id);
+
+    res.status(httpResponse.statusCode).json(httpResponse.body);
 }
