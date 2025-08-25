@@ -140,3 +140,7 @@ export const findAllCards = async ():Promise<CardModel[]> => {
 export const findCardById = async (id:number):Promise<CardModel | undefined> => {
     return dataBase.find(card => card.id == id)
 }
+
+export const insertCard = async (card: CardModel) => {
+  dataBase.push(card);
+}

@@ -1,3 +1,4 @@
+import { CardModel } from "../models/card-model";
 import * as CardRepository from "../repositories/cards-repository";
 import * as HttpResponse from "../utils/http-helper";
 
@@ -25,4 +26,17 @@ export const getCardByIdService = async (id:number)=> {
     }
 
     return response
+}
+
+export const createCardService = async (card:CardModel) => {
+    let response = null;
+
+    if(Object.keys(card).length !== 0){
+        await CardRepository.insertCard(card);
+        response = HttpResponse.created();
+    } else {
+        response = HttpResponse.badRequest()
+    }
+
+    return response;
 }

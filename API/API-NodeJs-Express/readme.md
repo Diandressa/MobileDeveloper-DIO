@@ -399,3 +399,122 @@ return response
 10. Passar o res(status code) e o json(body):
 
 `res.status(httpResponse.statusCode).json(httpResponse.body);`
+
+## Cadastrando um card
+
+1. Em router.ts, inserir rota com post para cadastro
+
+`router.post("/cards", CardController.postCard);`
+
+2. Editar o controller, cria a função do post
+
+```
+export const postCard = async(req:Request, res:Response)=>{
+    
+}
+```
+
+3. No Thunder Client chamar o post
+
+post|`http://localhost:3333/api/cards`
+
+4. Preciso mandar os dados para inserir no json, mando pelo body da requisição no formato de json
+
+Ir no Thunder Client, na aba body, colocar o json que quero cadastrar.
+
+## Recuperar os dados pelo body (Ajustando cadastro)
+
+1. No controller, na função postCard:
+
+`const bodyValue = req.body;`
+
+2. Mandar esse body para o service
+
+3. No service cria a função que vai chamar o repository, recebe um card com interface do CardModel
+
+No if verifica se o objeto tem conteúdo com o object.keys
+
+```
+export const createCardService = async (card:CardModel) => {
+    if(Object.keys(card).length !== 0){
+
+    } else {
+        return HttpResponse.badRequest();
+    }
+}
+```
+
+4. Chamar o createCardService no controller
+
+```
+export const postCard = async(req:Request, res:Response)=>{
+    const bodyValue = req.body;
+    const httpResponse = await Service.createCardService(bodyValue);
+
+    if(httpResponse){
+        res.status(httpResponse.statusCode).json(httpResponse.body);
+    }
+}
+```
+
+5. Colocar status code de badRequest na utils, e o created
+
+```
+export const noContent = async ():Promise<HttpResponse> => {
+    return {
+        statusCode: 204,
+        body: null,
+    }
+}
+```
+
+```
+export const created = async ():Promise<HttpResponse> => {
+    return {
+        statusCode: 201,
+        body: {
+            message: "successeful",
+        },
+    }
+}
+```
+
+6. Chamar o repository no service para inserir o card. 
+
+Definir o response como created, http-helper em utils
+
+```
+export const createCardService = async (card:CardModel) => {
+    let response = null;
+
+    if(Object.keys(card).length !== 0){
+        await CardRepository.insertCard(card);
+        response = HttpResponse.created();
+    } else {
+        response = HttpResponse.badRequest()
+    }
+
+    return response;
+}
+```
+
+7. Criar a função de insert no repository:
+
+```
+export const insertCard = async (card: CardModel)=> {
+  
+}
+```
+
+8. Dar o push do dado no dataBase
+
+```
+export const insertCard = async (card: CardModel)=> {
+  dataBase.push(card)
+}
+```
+
+9. Testar no Thunder Client com post, e com json no body
+
+10. Cadastrou, mas não vai aparecer no arquivo repository.
+
