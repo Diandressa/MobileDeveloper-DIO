@@ -144,3 +144,12 @@ export const findCardById = async (id:number):Promise<CardModel | undefined> => 
 export const insertCard = async (card: CardModel) => {
   dataBase.push(card);
 }
+
+export const deleteOneCard = async (id:number) => {
+  const index = dataBase.findIndex(c => c.id == id);
+  if (index !== -1){
+    // diferente de -1 significa que encontrou algo
+    //deleta posição do index passado, sendo deletado 1 elemento
+    dataBase.splice(index, 1)
+  }
+}

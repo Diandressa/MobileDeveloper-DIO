@@ -23,3 +23,10 @@ export const postCard = async(req:Request, res:Response)=>{
         res.status(httpResponse.statusCode).json(httpResponse.body);
     } 
 }
+
+export const deleteCard = async (req:Request, res:Response)=> {
+    const id = parseInt(req.params.id);
+    const httpResponse = await Service.deleteCardService(id);
+
+    res.status(httpResponse.statusCode).json(httpResponse.body);
+}

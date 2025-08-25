@@ -40,3 +40,11 @@ export const createCardService = async (card:CardModel) => {
 
     return response;
 }
+
+export const deleteCardService = async(id:number) =>{
+    let response = null;
+    await CardRepository.deleteOneCard(id);
+
+    response = HttpResponse.statusData({message: "deleted"})
+    return response;
+}
