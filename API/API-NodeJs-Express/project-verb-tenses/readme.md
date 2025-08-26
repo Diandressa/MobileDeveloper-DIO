@@ -12,3 +12,54 @@ Technologies used:
 ![nodejs](https://readmecodegen.vercel.app/api/social-icon?name=nodejs&size=24)
 ![npm](https://readmecodegen.vercel.app/api/social-icon?name=npm&size=24)
 ![postman](https://readmecodegen.vercel.app/api/social-icon?name=postman&size=24)
+
+
+## Installation
+
+Requirements: Node.js
+
+### Clone this project
+
+`https://github.com/Diandressa/MobileDeveloper-DIO.git`
+
+Go to directory, in terminal: `cd API/API-NodeJs-Express/project-verb-tenses`
+
+### Install dependencies
+
+`npm i`
+
+### Run server
+
+`npm run start:dev` or `npm run start:watch`
+
+## API Endpoints 
+
+GET /verbtenses
+
+GET /verbtenses/:tense
+
+> tense: simple-present | present-continuous | present-perfect | present-perfect-continuous | simple past | past-continuous | past-perfect | past-perfect-continuous | simple-future | future-continuous | future-perfect | future-perfect-continuous
+
+POST /verbtenses
+
+PATCH /verbtenses/:tense/:id
+
+DELETE /verbtenses/:id
+
+## Environment variables (.env)
+
+PORT=3333
+
+## License
+
+This project is licensed under the [MIT License](/LICENSE).
+
+
+## Author
+
+Name: Andressa Nicolau
+LinkedIn: https://www.linkedin.com/in/andressa-nicolau
+
+## Date
+
+Completed: September 9, 2025

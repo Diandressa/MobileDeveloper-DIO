@@ -35,3 +35,7 @@ VSCode:
 Alterar nome clicando F2 - muda o nome selecionado em toda aplicação
 
 Contro + enter - mostra as opções/métodos daquela função
+
+## Licença 
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
