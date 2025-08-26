@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 150.86346836521915,
-			"y": 404.031392001631,
-			"lastActivityTimestamp": 1756220031799,
+			"x": 883.9544402521431,
+			"y": 430.7781935967527,
+			"lastActivityTimestamp": 1756229598763,
 			"meta": {}
 		},
 		{
@@ -198,9 +198,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 210.26635022083633,
-			"y": 105.69729930404537,
-			"z": 0.5787392490000001,
+			"x": 149.57141157520005,
+			"y": 58.07000245860456,
+			"z": 0.7343793081305485,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -309,7 +309,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "lógica de retorno para a service"
+									"text": "return logic for the service"
 								}
 							]
 						}
@@ -509,13 +509,12 @@
 			"typeName": "binding"
 		},
 		{
-			"editingShapeId": null,
+			"editingShapeId": "shape:BrdLVv1etdElPT3iCY2nO",
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:jPDgmrZuYEWDLoozkp1D6",
-				"shape:n6QpGlOUFwPlopVijVLBk"
+				"shape:BrdLVv1etdElPT3iCY2nO"
 			],
-			"hoveredShapeId": null,
+			"hoveredShapeId": "shape:BrdLVv1etdElPT3iCY2nO",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -697,7 +696,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "Express cria app, suporte para o json e chama o router"
+									"text": "Express create app, with json support and call router"
 								}
 							]
 						}
@@ -902,7 +901,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "Cria Server na porta 3333"
+									"text": "Create Server on port 3333"
 								}
 							]
 						}
@@ -1143,19 +1142,11 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:font": "draw",
-				"tldraw:color": "light-green",
-				"tldraw:geo": "rectangle",
-				"tldraw:size": "s",
-				"tldraw:horizontalAlign": "middle",
-				"tldraw:fill": "solid",
-				"tldraw:textAlign": "end"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -1265,7 +1256,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "Server.ts usa o app para abrir o servidor"
+									"text": "Server.ts uses the app to open the server"
 								}
 							]
 						}

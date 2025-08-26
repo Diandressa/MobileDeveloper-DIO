@@ -50,6 +50,10 @@ DELETE /verbtenses/:id
 
 PORT=3333
 
+## Application architecture
+
+![Application architecture](./docs/architecture.png)
+
 ## License
 
 This project is licensed under the [MIT License](/LICENSE).
