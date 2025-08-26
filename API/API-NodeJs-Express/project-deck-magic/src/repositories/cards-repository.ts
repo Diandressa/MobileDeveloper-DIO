@@ -1,4 +1,5 @@
 import { CardModel } from "../models/card-model";
+import { StatisticsModel } from "../models/statistics-model";
 
 const dataBase:CardModel[] = [
    {
@@ -146,10 +147,23 @@ export const insertCard = async (card: CardModel) => {
 }
 
 export const deleteOneCard = async (id:number) => {
-  const index = dataBase.findIndex(c => c.id == id);
+  const index = dataBase.findIndex(card => card.id === id);
   if (index !== -1){
     // diferente de -1 significa que encontrou algo
     //deleta posição do index passado, sendo deletado 1 elemento
-    dataBase.splice(index, 1)
+    dataBase.splice(index, 1);
+    return true
   }
+
+  return false
+}
+
+export const findAndModifyCard = async (id:number, statistics:StatisticsModel):Promise<CardModel> => {
+  const cardIndex = dataBase.findIndex(card => card.id === id);
+  if(cardIndex !== -1){
+    //pega no banco, com aquele index (mesmo que o id), a chave statistics e substitui pelo valor enviado plo parâmero
+    dataBase[cardIndex].statistics = statistics;
+  }
+
+  return dataBase[cardIndex]
 }

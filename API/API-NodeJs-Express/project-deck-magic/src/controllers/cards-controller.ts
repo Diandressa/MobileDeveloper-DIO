@@ -1,7 +1,6 @@
 import {Request, Response} from 'express';
 import * as Service from '../services/cards-service';
-import { findCardById } from '../repositories/cards-repository';
-import { noContent } from '../utils/http-helper';
+import { StatisticsModel } from '../models/statistics-model';
 
 export const getCard = async (req:Request, res:Response)=>{
     const httpResponse = await Service.getCardService()
@@ -28,5 +27,13 @@ export const deleteCard = async (req:Request, res:Response)=> {
     const id = parseInt(req.params.id);
     const httpResponse = await Service.deleteCardService(id);
 
+    res.status(httpResponse.statusCode).json(httpResponse.body);
+}
+
+export const updateCard = async (req:Request, res:Response) => {
+    const id = parseInt(req.params.id);
+    const bodyValue:StatisticsModel = req.body;
+
+    const httpResponse = await Service.updateCardService(id, bodyValue);
     res.status(httpResponse.statusCode).json(httpResponse.body);
 }

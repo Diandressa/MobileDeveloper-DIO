@@ -7,6 +7,8 @@ router.get("/cards", CardController.getCard);
 router.post("/cards", CardController.postCard);
 
 router.delete("/cards/:id", CardController.deleteCard);
+router.patch("/cards/:id", CardController.updateCard);
+
 router.get("/cards/:id", CardController.getCardById);
 
 

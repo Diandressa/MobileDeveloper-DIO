@@ -1,4 +1,5 @@
 import { CardModel } from "../models/card-model";
+import { StatisticsModel } from "../models/statistics-model";
 import * as CardRepository from "../repositories/cards-repository";
 import * as HttpResponse from "../utils/http-helper";
 
@@ -33,9 +34,9 @@ export const createCardService = async (card:CardModel) => {
 
     if(Object.keys(card).length !== 0){
         await CardRepository.insertCard(card);
-        response = HttpResponse.created();
+        response = await HttpResponse.created();
     } else {
-        response = HttpResponse.badRequest()
+        response = await HttpResponse.badRequest()
     }
 
     return response;
@@ -43,8 +44,27 @@ export const createCardService = async (card:CardModel) => {
 
 export const deleteCardService = async(id:number) =>{
     let response = null;
-    await CardRepository.deleteOneCard(id);
+    const isDeleted = await CardRepository.deleteOneCard(id);
 
-    response = HttpResponse.statusData({message: "deleted"})
+    if(isDeleted){
+        response = await HttpResponse.statusData({message: "deleted"})
+    } else {
+        response = await HttpResponse.badRequest();
+    }
+    return response;
+}
+
+export const updateCardService = async(id:number, statistics:StatisticsModel) => {
+    const data = await CardRepository.findAndModifyCard(id, statistics);
+    let response = null;
+
+    //Object.keys(data) pega todas as chaves do objeto data (chave: valor). Então, se a quantidade de chaves for zero, significa que o objeto está vazio
+
+    if(!data){
+        response = await HttpResponse.badRequest()
+    } else {
+        response = await HttpResponse.statusData(data)
+    }
+
     return response;
 }
