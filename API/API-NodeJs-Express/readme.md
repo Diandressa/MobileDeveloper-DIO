@@ -518,3 +518,20 @@ export const insertCard = async (card: CardModel)=> {
 
 10. Cadastrou, mas não vai aparecer no arquivo repository.
 
+## Criando update e delete
+
+## Criando outro controller
+
+## Lendo arquivo json
+
+1. Importar o fs no repository, ele que vai ler o arquivo json
+
+`import fs from "fs/promises";`
+
+2. Ler o arquivo dentro da função:
+
+`const data = await fs.readFile("./src/data/decks.json", "utf-8");`
+
+3. Converte o data para json e guarda em um array do tipo DeckModel
+
+`const decks:DeckModel[] = JSON.parse(data)`

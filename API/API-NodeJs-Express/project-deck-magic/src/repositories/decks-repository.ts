@@ -1,16 +1,9 @@
 import { DeckModel } from "../models/deck-model";
-
-const dataBase = [
-    {
-        "id": 1,
-        "name": "Dragons Fury"
-    },
-    {
-        "id": 2,
-        "name": "Elves of the Eternal Forest"
-    }
-]
+import fs from "fs/promises";
 
 export const findAllDecks = async ():Promise<DeckModel[]> => {
-    return dataBase;
+    const data = await fs.readFile("./src/data/decks.json", "utf-8");
+    const decks:DeckModel[] = JSON.parse(data);
+
+    return decks;
 }
