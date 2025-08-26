@@ -535,3 +535,36 @@ export const insertCard = async (card: CardModel)=> {
 3. Converte o data para json e guarda em um array do tipo DeckModel
 
 `const decks:DeckModel[] = JSON.parse(data)`
+
+## Pacote cors
+
+Cors controla quem vai chamar sua API, torna a API confiável para ser lida nos navegadores. Definimos se ela pode ser lida ou não por todos no cors.
+
+Pacote: https://www.npmjs.com/package/cors
+
+1. Instalar: npm i cors
+
+2. Ir na app.ts
+
+3. Importar o cors
+
+`import cors from 'cors';`
+
+Dá erro. Precisa usar o Quick fix para instalar a tipagem ts do cors, @types/cors
+
+4. Usar na aplicação, vazio permite que qualquer um acesse.
+
+`app.use(cors())`
+
+5. Configurar o cors para permitir 
+
+Só o site definido no origin pode consumir a API, e só pode usar o método GET
+
+```
+const corsOption = {
+    origin: ['http://andressa.online', "http:/outro.br"],
+    methods: ["GET", "UPDATE"],
+}
+app.use(cors(corsOption))
+```
+
