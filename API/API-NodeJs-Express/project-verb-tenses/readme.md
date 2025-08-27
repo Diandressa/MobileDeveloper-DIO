@@ -34,17 +34,17 @@ Go to directory, in terminal: `cd API/API-NodeJs-Express/project-verb-tenses`
 
 ## API Endpoints 
 
-GET /verbtenses
+GET /api/verbtenses
 
-GET /verbtenses/:tense
+GET /api/verbtenses/:tense
 
 > tense: simple-present | present-continuous | present-perfect | present-perfect-continuous | simple past | past-continuous | past-perfect | past-perfect-continuous | simple-future | future-continuous | future-perfect | future-perfect-continuous
 
-POST /verbtenses
+POST /api/verbtenses
 
-PATCH /verbtenses/:tense/:id
+PATCH /api/verbtenses/:tense/:id
 
-DELETE /verbtenses/:id
+DELETE /api/verbtenses/:id
 
 ## Environment variables (.env)
 
