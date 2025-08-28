@@ -1,0 +1,99 @@
+[
+    {
+      "name": "Present Simple",
+      "formula": "Subject + base verb (+s for 3rd person)",
+      "examples": [
+        "I work every day.",
+        "She plays the piano."
+      ]
+    },
+    {
+      "name": "Present Continuous",
+      "formula": "Subject + am/is/are + verb+ing",
+      "examples": [
+        "I am studying now.",
+        "They are watching TV."
+      ]
+    },
+    {
+      "name": "Present Perfect",
+      "formula": "Subject + have/has + past participle",
+      "examples": [
+        "I have finished my homework.",
+        "She has visited London."
+      ]
+    },
+    {
+      "name": "Present Perfect Continuous",
+      "formula": "Subject + have/has + been + verb+ing",
+      "examples": [
+        "I have been working all day.",
+        "She has been studying English for 3 years."
+      ]
+    },
+    {
+      "name": "Past Simple",
+      "formula": "Subject + past verb",
+      "examples": [
+        "I visited Paris last year.",
+        "She cooked dinner yesterday."
+      ]
+    },
+    {
+      "name": "Past Continuous",
+      "formula": "Subject + was/were + verb+ing",
+      "examples": [
+        "I was reading when you called.",
+        "They were playing football at 5 p.m."
+      ]
+    },
+    {
+      "name": "Past Perfect",
+      "formula": "Subject + had + past participle",
+      "examples": [
+        "I had finished the project before the deadline.",
+        "She had already left when I arrived."
+      ]
+    },
+    {
+      "name": "Past Perfect Continuous",
+      "formula": "Subject + had + been + verb+ing",
+      "examples": [
+        "I had been studying for hours before the exam.",
+        "They had been working all day when the storm came."
+      ]
+    },
+    {
+      "name": "Future Simple",
+      "formula": "Subject + will + base verb",
+      "examples": [
+        "I will call you tomorrow.",
+        "She will help us."
+      ]
+    },
+    {
+      "name": "Future Continuous",
+      "formula": "Subject + will + be + verb+ing",
+      "examples": [
+        "I will be working at 8 p.m.",
+        "They will be traveling next week."
+      ]
+    },
+    {
+      "name": "Future Perfect",
+      "formula": "Subject + will + have + past participle",
+      "examples": [
+        "I will have finished the book by tomorrow.",
+        "She will have graduated by next year."
+      ]
+    },
+    {
+      "name": "Future Perfect Continuous",
+      "formula": "Subject + will + have + been + verb+ing",
+      "examples": [
+        "I will have been working here for 5 years in June.",
+        "They will have been studying all night by the time you arrive."
+      ]
+    }
+]
+  
