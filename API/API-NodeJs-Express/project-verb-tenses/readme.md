@@ -42,6 +42,19 @@ GET /api/verbtenses/:tense
 
 POST /api/verbtenses
 
+Request body Example:
+```
+{
+    "id": 11,
+    "code": "future-perfect",
+    "name": "Future Perfect",
+    "formula": "Subject + will + have + past participle",
+    "examples": [
+    "I will have finished the book by tomorrow.",
+    "She will have graduated by next year."
+    ]
+}
+```
 PATCH /api/verbtenses/:tense/:id
 
 DELETE /api/verbtenses/:id

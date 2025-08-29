@@ -1,3 +1,4 @@
+import { TensesModel } from "../model/verbTenses-model";
 import * as TenseRepository from "../repositories/verbTenses-repository";
 import * as HttpResponse from "../utils/http-helper";
 
@@ -12,5 +13,12 @@ export const getTenseByCodeService = async (code:string) => {
     const data = await TenseRepository.findTenseByCode(code);
     const response = await HttpResponse.statusData(data);
 
+    return response
+}
+
+export const createTenseService = async (bodyValue:TensesModel) => {
+    await TenseRepository.createTenseRepository(bodyValue);
+    const response = await HttpResponse.createdData();
+    
     return response
 }

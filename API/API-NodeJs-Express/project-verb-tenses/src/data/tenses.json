@@ -118,5 +118,15 @@
       "I will have been working here for 5 years in June.",
       "They will have been studying all night by the time you arrive."
     ]
+  },
+  {
+    "id": 13,
+    "code": "future-perfect",
+    "name": "Future Perfect",
+    "formula": "Subject + will + have + past participle",
+    "examples": [
+      "I will have finished the book by tomorrow.",
+      "She will have graduated by next year."
+    ]
   }
 ]

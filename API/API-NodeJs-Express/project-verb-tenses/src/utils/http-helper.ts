@@ -6,3 +6,12 @@ export const statusData = async (data:any):Promise<HttpResponse> => {
         body: data
     }
 }
+
+export const createdData = async ():Promise<HttpResponse> => {
+    return {
+        status: 201,
+        body: {
+            message: "successeful",
+        }
+    }
+}
