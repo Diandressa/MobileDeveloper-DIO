@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import { TensesModel } from "../model/verbTenses-model";
+import { ExamplesModel } from "../model/examples-model";
 
 const readFileJson = async ():Promise<TensesModel[]> => {
     const data = await fs.readFile("./src/data/tenses.json", "utf-8");
@@ -22,4 +23,16 @@ export const createTenseRepository = async (bodyValue:TensesModel):Promise<void>
     const tenses = await readFileJson();
     tenses.push(bodyValue)
     return await fs.writeFile("./src/data/tenses.json", JSON.stringify(tenses, null, 2), "utf-8")
+}
+
+export const modifyTenseRepository = async (id:number, bodyValue:ExamplesModel):Promise<TensesModel | undefined>=> {
+    const tenses = await readFileJson();
+    const index = tenses.findIndex(tense => tense.id === id)
+
+    if (index !== -1){
+        tenses[index].examples = bodyValue.examples;
+        await fs.writeFile("./src/data/tenses.json", JSON.stringify(tenses, null, 2), "utf-8")
+    }
+
+    return tenses[index]
 }

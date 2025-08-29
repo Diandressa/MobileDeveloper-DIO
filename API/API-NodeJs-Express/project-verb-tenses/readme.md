@@ -57,6 +57,18 @@ Request body Example:
 ```
 PATCH /api/verbtenses/:tense/:id
 
+Update example:
+
+```
+{
+"examples": 
+  [
+    "no",
+    "yes"
+  ]
+}
+```
+
 DELETE /api/verbtenses/:id
 
 ## Environment variables (.env)
