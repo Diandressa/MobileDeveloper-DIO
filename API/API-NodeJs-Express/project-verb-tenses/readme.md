@@ -34,6 +34,8 @@ Go to directory, in terminal: `cd API/API-NodeJs-Express/project-verb-tenses`
 
 ## API Endpoints 
 
+http://localhost:3333/
+
 GET /api/verbtenses
 
 GET /api/verbtenses/:tense
