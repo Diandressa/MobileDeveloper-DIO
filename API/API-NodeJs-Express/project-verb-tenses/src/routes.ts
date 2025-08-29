@@ -8,6 +8,7 @@ router.get('/verbtenses/:code', TensesController.getVerbTenseByCode);
 
 router.post('/verbtenses', TensesController.createVerbTense);
 router.patch('/verbtenses/:id', TensesController.updateVerbTenseById);
+router.delete('/verbtenses/:id', TensesController.deleteVerbTenseById);
 
 export default router;
 

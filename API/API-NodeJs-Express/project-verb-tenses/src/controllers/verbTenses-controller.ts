@@ -29,3 +29,10 @@ export const updateVerbTenseById = async (req:Request, res:Response) => {
 
     res.status(HttpResponse.status).json(HttpResponse.body)
 }
+
+export const deleteVerbTenseById = async(req:Request, res:Response) => {
+    const id = parseInt(req.params.id);
+    const HttpResponse = await TensesService.deleteTenseService(id)
+
+    res.status(HttpResponse.status).json(HttpResponse.body)
+}

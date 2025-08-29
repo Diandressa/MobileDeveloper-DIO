@@ -30,3 +30,10 @@ export const updateTenseService = async (id:number, bodyValue:ExamplesModel) => 
     
     return response
 }
+
+export const deleteTenseService = async (id:number) => {
+    const data = await TenseRepository.deleteTenseRepository(id)
+    const response = await HttpResponse.statusData({message: "deleted"})
+
+    return response
+}

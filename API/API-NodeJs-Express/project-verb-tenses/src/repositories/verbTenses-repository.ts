@@ -36,3 +36,15 @@ export const modifyTenseRepository = async (id:number, bodyValue:ExamplesModel):
 
     return tenses[index]
 }
+
+export const deleteTenseRepository = async(id:number) => {
+    const tenses = await readFileJson();
+    const index = tenses.findIndex(tense => tense.id === id)
+
+    if (index !== -1){
+        tenses.splice(index,1)
+        return true
+    }
+
+    return false
+}
