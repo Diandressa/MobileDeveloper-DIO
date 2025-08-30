@@ -57,7 +57,7 @@ Request body Example:
     ]
 }
 ```
-PATCH /api/verbtenses/:tense/:id
+PATCH /api/verbtenses/:id
 
 Update example:
 
