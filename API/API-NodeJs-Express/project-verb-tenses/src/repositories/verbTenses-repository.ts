@@ -43,6 +43,7 @@ export const deleteTenseRepository = async(id:number) => {
 
     if (index !== -1){
         tenses.splice(index,1)
+        await fs.writeFile("./src/data/tenses.json", JSON.stringify(tenses, null, 2), "utf-8")
         return true
     }
 
