@@ -56,3 +56,9 @@ Parâmetros de consulta (ou query parameters). Ficam após o ponto de interroga�
 Fazemos os tratamentos de erros com o Status Code HTTP.
 
 ![Status Code](./status-code.avif)
+
+## Link para os artigos
+
+[Boas Práticas para APIs RESTful](https://aline-antunes.gitbook.io/boas-praticas-para-apis-restful)
+
+[🚀 7 Boas Práticas Para APIs RESTful Profissionais! ](https://www.dio.me/articles/7-boas-praticas-para-apis-restful-profissionais)
