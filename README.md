@@ -7,7 +7,8 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 * NodeJS ✔ 
 * Typescript ✔ 
 * Aplicações Web ✔ 
-* APIs ⏳
+* APIs ✔
+* Clean Code and API RESTFUL (Boas Práticas de Programação) ⏳
 * React Native
 * IA Powered
 
@@ -22,6 +23,10 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 ## Aplicações Web
 
 [Veja o conteúdo sobre Aplicações Web](./Aplicações%20Web)
+
+## API
+
+[Veja o conteúdo sobre API](./API)
 
 ## Extras
 
