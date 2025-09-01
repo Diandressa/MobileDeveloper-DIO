@@ -19,10 +19,14 @@ Usar substantivos plurais em rotas
 
 ## Hierarquia e Aninhamento em Rotas
 
-Criar URL que sigam uma estrutura hierárquica
+Criar URL que sigam uma estrutura hierárquica, de forma lógica
 
-Documentos/
-    Trabalho/
-        Relatorios/
+users/
+    {userId}/
+        orders/
 
-Hierarquia de pastas: Documentos/Trabalho/Relatórios
+Hierarquia de pastas: users/123/orders
+
+users/ = representa o recurso
+123/ = especifica o usuário
+orders/ = especifica o pedido relacionado a esse usuário
