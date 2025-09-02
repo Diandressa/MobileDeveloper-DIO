@@ -21,9 +21,29 @@ Vantagens:
 
 Quando utilizar o nativo?
 
-Quando o app requer um recurso especifico daquele hardware (Android ou IOS) ou quando preciso de um nível de performance muito alto.
+Quando o app requer um recurso especifico daquele hardware (Android ou IOS) ou quando preciso de um nível de performance/processamento muito alto.
 
 Desvantagens:
 
 * As linguagens nativas são feitas para aquele ambiente especifico, é necessário fazer dois apps em paralelo, um para o Android e outro para o IOS (com pessoas especialista naquelas linguagens)
 * Não tem tantas pessoas desenvolvedoras do swift(IOS), dependo do hardware (Mac)
+
+### Híbridos
+
+Tecnologias cruzadas no ambiente mobile, um desenvolvimento que gera dois apps (Android e IOS)
+
+Desvantagens: 
+
+* Quando chega novidades no Android ou IOS, preciso aguardar sair o pacote/versão para uso nos Híbridos
+* Tem mais camadas de conversão para ser executado. (Não tem uma queda de performance tão grande)
+* Cada híbrido tem estratégias diferentes para o mobile, cada um funciona diferente do outro.
+
+Vantagens:
+
+* Mais econômico para as empresas.
+* Multi-plataforma: Uma pessoa desenvolve tanto para Android quanto para IOS usando somente o híbrido.
+
+Quando utilizar?
+
+Quando não dependo do tanto de novos recursos do hardware.
+
