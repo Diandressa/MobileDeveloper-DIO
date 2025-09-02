@@ -47,3 +47,15 @@ Quando utilizar?
 
 Quando não dependo do tanto de novos recursos do hardware.
 
+### React vs React Native
+
+![ReactJS vs React Native](./tldraw/react-vs-reactNative.png)
+
+### Arquitetura React Native
+
+![Architecture React Native](./tldraw/react-native-new-architecture.png)
+
+### React Native Component 
+
+![React Native Component](./tldraw/react-native-jsx.png)
+
