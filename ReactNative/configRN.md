@@ -80,11 +80,21 @@ https://developer.android.com/develop?hl=pt-br
 
 Obs: Ele é um programa pesado, porém é o mais indicado para desenvolvimento mobile.
 
+Clica em `more actions` > Virtual Device Manager > start
+
 Documentação: https://developer.android.com/studio/gemini/overview?hl=pt-br
 
-Outro opção é o espelhar a tela do celular no computador com o Vysor
+Após o `npm run start`, aperta `a` para abrir no android
+
+Caso trave no android studio, clico `r` no terminal do vscode para dar reload
+
+ctrl+c desliga o servidor no terminal
+
+e no celular virtual clica em icon de desligar
 
 ## Vysor (emulador)
+
+Outro opção é o espelhar a tela do celular no computador com o Vysor
 
 Transmite a tela do celular para o desktop.
 
