@@ -77,3 +77,18 @@ Podemos em vez do expo usar o android studio, e o React Native CLI. O Expo pode 
 O Android Studio simular um celular (emulador)
 
 https://developer.android.com/develop?hl=pt-br
+
+Obs: Ele é um programa pesado, porém é o mais indicado para desenvolvimento mobile.
+
+Documentação: https://developer.android.com/studio/gemini/overview?hl=pt-br
+
+Outro opção é o espelhar a tela do celular no computador com o Vysor
+
+## Vysor (emulador)
+
+Transmite a tela do celular para o desktop.
+
+https://www.vysor.io 
+
+Instalar no desktop e no celular
+
