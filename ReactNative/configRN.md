@@ -102,3 +102,17 @@ https://www.vysor.io
 
 Instalar no desktop e no celular
 
+## Criar pasta src no projeto
+
+É uma boa prática criar a pasta src, e codificar os arquivos dentro dela. E os arquivos fora da src são arquivos de configuração.
+
+## Observações
+
+.expo 
+
+A pasta .expo é as configurações que seu aplicativo terá quando rodar no expo. Ir no readme dentro na pasta para saber mais. Não irei utilizar muito.
+
+Assets 
+
+ficam todas as imagens
+
