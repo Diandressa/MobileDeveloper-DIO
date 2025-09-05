@@ -183,6 +183,33 @@ Imagem pelo link direto, com duas chaves {{}}, preciso definir o tamanho da imag
 />
 ```
 
+## If ternário no component style
+
+Adicionando lógica em um component
+
+`<Image source={isActive ? symbolOn : symbolOff}/>`
+
+## Estilo condicional
+
+`<View style={isActive ? styles.containerOn : styles.containerOff}>`
+
+```
+const styles = StyleSheet.create({
+  containerOn: {
+    flex: 1,
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  containerOff:{
+    flex: 1,
+    backgroundColor: 'gray',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+});
+```
+
 
 
 

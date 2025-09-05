@@ -40,6 +40,22 @@ Os scripts então em package.json
 
 O package.json engloba todo o ambiente de desenvolvimentos e pastas (para desenvolvimento) e o app.json são os comportamentos quando rodo em algum ambiente (para o dispositivo).
 
+## tsconfig.json
+
+O TypeScript precisa saber qual runtime JSX você está usando (automático ou clássico). Abra seu tsconfig.json e veja essa parte:
+
+```
+{
+  "compilerOptions": {
+    "jsx": "react-jsx" // ou "react"
+  }
+}
+```
+
+Use "react-jsx" se estiver usando React 17+ com runtime automático (sem precisar importar React).
+
+Use "react" se estiver usando React 16 ou precisar do runtime clássico (precisa importar React).
+
 ## Rodar o projeto
 
 `npm run start`
