@@ -210,6 +210,31 @@ const styles = StyleSheet.create({
 });
 ```
 
+## Criando áreas sensíveis ao toque
+
+Componentes de touch: https://reactnative.dev/docs/touchableopacity 
+
+Tudo que estiver dentro do component <TouchableOpacity> é sensível ao toque.
+
+`<TouchableOpacity onPress={()=>{console.log('hello')}}>`
+
+ou chamar uma função:
+
+```
+ function handleSymbol(){
+    console.log(isActive) // true
+    //inverte o valor
+    isActive = !isActive
+    console.log(isActive) //false
+  }
+```
+
+`<TouchableOpacity onPress={handleSymbol}>`
+
+Altera o valor, mas não renderiza.
+
+## Controle de estados
+
 
 
 
