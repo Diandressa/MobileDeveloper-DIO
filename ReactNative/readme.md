@@ -97,3 +97,22 @@ Igual o React, tudo precisa estar dentro de uma <View>, não posso retornar dois
 ## Component Expo
 
 Além dos componentes que o React Native fornece, também temos os componentes do próprio Expo
+
+## Style Inline
+
+O style é declarado como se fosse uma função javascript, por isso uso chaves.
+
+No inline declaro o objeto dentro da função { {} } , já em linha:
+
+`<Text style={{ color: 'red'}}>Nicolau</Text>`
+
+```
+<Text 
+    style={{
+        color: 'blue', 
+        backgroundColor: 'red',
+        fontSize: 30
+    }}>
+Hello Andressa
+</Text>
+```
