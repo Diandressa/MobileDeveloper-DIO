@@ -100,7 +100,7 @@ Além dos componentes que o React Native fornece, também temos os componentes d
 
 ## Style Inline
 
-O style é declarado como se fosse uma função javascript, por isso uso chaves.
+O style é declarado como se fosse uma função javascript, por isso uso chaves. Usado para coisas mais específicos
 
 No inline declaro o objeto dentro da função { {} } , já em linha:
 
@@ -116,3 +116,24 @@ No inline declaro o objeto dentro da função { {} } , já em linha:
 Hello Andressa
 </Text>
 ```
+
+## Stylesheet
+
+Não tem css no React Native, é tudo objeto. Usado quando quero reaproveitar o estilo em outros componentes e estilo com muitas propriedades.
+
+Ao importar o StyleSheet consigo usar as estilizações com folha de estilo. 
+
+Criar como se fosse uma classe css, cria uma const com o objeto, o nome do objeto é como se fosse o nome da classe:
+
+```
+const styles2 = StyleSheet.create({
+  titleStyle: {
+    fontSize:35
+  }
+})
+```
+
+No App():
+
+`<Text style={styles2.titleStyle}>Aula React Native</Text>`
+

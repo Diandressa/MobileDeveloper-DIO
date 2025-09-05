@@ -12,11 +12,19 @@ export default function App() {
         Hello Andressa
       </Text>
       <View style={{backgroundColor: 'purple'}}>
-        <Text style={{ color: 'red'}}>Nicolau</Text>
+        <Text style={styles2.titleStyle}>Nicolau</Text>
+        <Text style={styles2.titleStyle}>Aula React Native</Text>
       </View>
     </View>
   );
 }
+
+const styles2 = StyleSheet.create({
+  titleStyle: {
+    fontSize:35,
+    color: '#f1f1f1'
+  }
+})
 
 const styles = StyleSheet.create({
   container: {
