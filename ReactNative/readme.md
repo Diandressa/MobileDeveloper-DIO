@@ -137,3 +137,53 @@ No App():
 
 `<Text style={styles2.titleStyle}>Aula React Native</Text>`
 
+## Comentários
+
+```
+<View style={styles.container}>
+  {/* Comentário em React Native */}
+</View>
+```
+
+## Trabalhando com Imagens
+
+Importar o component Image e a imagem.
+
+```
+import { Image, StyleSheet, Text, View} from 'react-native';
+import symbolOn from './assets/pictures/symbol-on.png'
+```
+
+Utilizar o valor
+
+```
+<View style={styles.container}>
+  <Image source={symbolOn}></Image>
+</View>
+```
+
+Dá erro: Fala que o tipo não corresponde a declaração. Estamos trabalhando com typescript, png o React Native não entende como tipo. PAra o React NAtive entender o png:
+
+Dentro da raiz do projeto criamos o arquivo: `declarations.d.ts` (o nome precisa ser esse).
+
+Dentro desse arquivo, declaramos o tipo/módulo png:
+
+`declare module '*.png'`
+
+
+
+Imagem pelo link direto, com duas chaves {{}}, preciso definir o tamanho da imagem se não ele não aparece:
+
+```
+<Image
+  source={{
+    uri: 'https://reactnative.dev/img/tiny_logo.png',
+  }}
+  style={{ width: 100, height: 100 }}
+/>
+```
+
+
+
+
+
