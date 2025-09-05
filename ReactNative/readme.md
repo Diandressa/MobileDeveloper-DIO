@@ -235,6 +235,103 @@ Altera o valor, mas não renderiza.
 
 ## Controle de estados
 
+Conceitos importantes:
+
+Estado do componente: O estado é o que controla o comportamento e o conteúdo dinâmico de um componente. Quando o estado muda, o componente é re-renderizado automaticamente para refletir essa mudança.
+
+Metro Bundler: transpila seu código. Transforma código moderno (ES6+, JSX, TypeScript) em código que o JavaScript engine do celular entende — normalmente com Babel.
+
+Renderizar: O React "interpreta" isso e renderiza (desenha) esse conteúdo na tela do celular, usando elementos nativos do Android/iOS.
+
+O React Native usa o Metro Bundler para empacotar e enviar o código para o app no celular, apenas quando há mudança no código-fonte.
+
+Quando você altera o estado de um componente usando useState, o React Native re-renderiza automaticamente os componentes afetados, sem precisar reenviar o código via Metro.
+
+Portanto, você não precisa "renderizar com o Metro" toda vez que uma função for chamada — isso é feito automaticamente pelo mecanismo do React.
+
+╔══════════════════════╗
+║ 🖥️ SEU CÓDIGO-FONTE  ║
+║ (JSX, JS, TS, etc.)  ║
+╚══════════════════════╝
+          │
+          ▼
+╔══════════════════════╗
+║ 🚆 METRO BUNDLER     ║
+║ (empacota e envia)   ║
+╚══════════════════════╝
+          │
+          ▼
+╔══════════════════════╗
+║ 📱 APP NO CELULAR    ║
+║ Código carregado ✔️  ║
+╚══════════════════════╝
+
+-------------------------- MUDANÇA DE FLUXO --------------------------
+
+🔁 O que acontece ao interagir com o app:
+
+🧠 Código já está no app → React cuida da lógica
+
+╔══════════════════════╗
+║ 📲 USUÁRIO INTERAGE  ║
+║ (ex: botão clicado)  ║
+╚══════════════════════╝
+          │
+          ▼
+╔══════════════════════╗
+║ ⚛️ setState (useState)║
+║ Estado do componente ║
+║ é atualizado         ║
+╚══════════════════════╝
+          │
+          ▼
+╔══════════════════════╗
+║ 🔁 RE-RENDERIZAÇÃO    ║
+║ React redesenha só   ║
+║ os componentes afet. ║
+╚══════════════════════╝
+
+✅ Nenhum novo código é enviado pelo Metro!
+
+## UseState
+
+O código faz a ponte para o aplicação uma única vez. Preciso alterar o JS de fundo rodando na aplicação.
+
+Vamos usar um hooks (gancho). O hook está ligando o código com a aplicação.
+
+Tipos de hooks: https://pt-br.legacy.reactjs.org/docs/hooks-overview.html 
+
+Ele é do react, precisamos importar a biblioteca react, também importamos o useState:
+
+`import React, {useState} from 'react';`
+
+Usando o useState:
+
+const [isActive, setIsActive] = useState(false)`
+
+Passamos a variável, a função que vai alterar a variável = useState com valor inicial entre parênteses.
+
+Chama o set na função para alterar o valor:
+
+```
+function handleSymbol(){
+  setIsActive()
+}
+```
+
+Recupera o valor inicial no parâmetro do setIsActivate:
+
+```
+function handleSymbol(){
+  setIsActive((oldValue:boolean) => {
+    return !oldValue
+  })
+}
+```
+
+
+
+
 
 
 

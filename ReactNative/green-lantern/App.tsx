@@ -1,15 +1,15 @@
+import React, {useState} from 'react';
 import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import symbolOn from './assets/pictures/symbol-on.png';
 import symbolOff from './assets/pictures/symbol-off.png';
 
 export default function App() {
-  let isActive = true;
+  const [isActive, setIsActive] = useState(false)
 
   function handleSymbol(){
-    console.log(isActive)
-    //inverte o valor
-    isActive = !isActive
-    console.log(isActive)
+    setIsActive((oldValue:boolean) => {
+      return !oldValue
+    })
   }
 
   return (
