@@ -59,3 +59,41 @@ Quando não dependo do tanto de novos recursos do hardware.
 
 ![React Native Component](./tldraw/react-native-jsx.png)
 
+Cada component utilizado precisa ser importado
+
+```
+import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+```
+
+O componente quando chega no Android é convertido para linguagem do Android e quando chega no IOS é convertido para IOS.
+
+Os componentes são funções javascript que retornam tags
+
+Conteúdos soltos, sem estar dentro do component o Android não entende, dá erro:
+
+```
+<View style={styles.container}>
+    <Text>Hello Andressa</Text>
+    texto puro
+</View>
+```
+
+A <View> equivale a <div>
+
+Os componentes devem começar com letra maiúscula.
+
+Igual o React, tudo precisa estar dentro de uma <View>, não posso retornar dois componentes na função
+
+## Component Expo
+
+Além dos componentes que o React Native fornece, também temos os componentes do próprio Expo
