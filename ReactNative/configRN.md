@@ -189,3 +189,21 @@ Assets
 
 ficam todas as imagens
 
+--
+
+Instalar extensão R Component 
+
+Ele cria a estrutura com base em palavras digitadas:
+
+Snippet	Content (ver na extensão)
+
+* rnbc →	Create a new React Native Basic Component 
+* rnso →	Create a new React Native Stylesheet Component
+* rnsc →	Create a new React Native Component with Styled Component
+* rnscs →	Create a new Styled Component File
+* rnsctc →	Get the path to color theme props
+* rnsctf →	Get the path to fonts theme props
+* nbc →	Create Native Base Component
+
+rnbc cria a estrutura do component padrão e rnso a folha de estilo.
+
