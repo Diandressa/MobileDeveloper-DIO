@@ -122,6 +122,39 @@ Instalar no desktop e no celular
 
 É uma boa prática criar a pasta src, e codificar os arquivos dentro dela. E os arquivos fora da src são arquivos de configuração.
 
+## Estrutura de pastas (boas práticas)
+
+Criar pasta src na raiz do projeto, dentro criar components e screens.
+
+O screen é um componente que retorna outros componentes. Criar components com primeira letra em maiúscula.
+
+## Criando a screen
+
+Dentro do arquivo da pasta screen, importa o React e o React-Native.
+
+```
+import React from "react";
+import {Text} from "react-native"
+```
+
+exporta uma função default 
+
+```
+export default function Home(){
+    return(
+        <Text>Home works!!</Text>
+    )
+}
+```
+
+Importa em App.tsx
+
+No React Native podemos utilizar os fragments para envelopar o conteúdo.
+
+`<> </>`
+
+Criar telas em screen e importar em App.tsx, assim passamos a responsabilidade para as telas e deixamos App.tsx limpo.
+
 ## Observações
 
 .expo 

@@ -170,8 +170,6 @@ Dentro desse arquivo, declaramos o tipo/módulo png:
 
 `declare module '*.png'`
 
-
-
 Imagem pelo link direto, com duas chaves {{}}, preciso definir o tamanho da imagem se não ele não aparece:
 
 ```
