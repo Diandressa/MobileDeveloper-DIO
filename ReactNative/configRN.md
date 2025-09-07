@@ -137,7 +137,7 @@ import React from "react";
 import {Text} from "react-native"
 ```
 
-exporta uma função default 
+exporta uma função default, deixar o nome da função igual do arquivo.tsx. Ex: Arquivo Home.tsx, nome da função Home.
 
 ```
 export default function Home(){
@@ -154,6 +154,30 @@ No React Native podemos utilizar os fragments para envelopar o conteúdo.
 `<> </>`
 
 Criar telas em screen e importar em App.tsx, assim passamos a responsabilidade para as telas e deixamos App.tsx limpo.
+
+Podemos deixar cada arquivo do screens dentro de uma pasta específica. Ex: Home > Home.tsx e Style.tsx
+
+## Separar a estilização
+
+Criar dentro de screens, o arquivo Style.tsx. Colocar as folhas de estilos nesse arquivo e importar onde for necessário.
+
+Importar a Stylesheet do react native.
+
+```
+
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
+
+  export default styles;
+```
 
 ## Observações
 
