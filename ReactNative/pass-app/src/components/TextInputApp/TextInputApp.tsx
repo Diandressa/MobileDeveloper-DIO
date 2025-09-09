@@ -8,7 +8,6 @@ export function TextInputApp() {
     <TextInput 
       style={styles.inputer} 
       placeholder='pass'
-      multiline={true}
     />
   );
 }

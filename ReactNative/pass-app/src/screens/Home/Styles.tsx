@@ -18,7 +18,17 @@ const styles = StyleSheet.create({
       paddingTop: 20,
       paddingBottom: 10,
       backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    },
+    overlay:{
+      ...StyleSheet.absoluteFillObject,
+      backgroundColor: "rgba(0, 0, 0, 0.37)"
+    },
+    inputContainer: {
+      width: '80%',
+      alignItems: 'center',
+      flexDirection: 'column',
     }
+
   });
 
 export default styles;
