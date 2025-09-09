@@ -2,10 +2,13 @@ import React from 'react';
 import { View, Button, Text, Pressable } from 'react-native';
 
 import { styles } from './ButtonAppStyles';
+import { TextInputApp } from '../TextInputApp/TextInputApp';
 
 export function ButtonApp() {
   return (
-    <View style={{width: '100%'}}>
+    <>
+        <TextInputApp/>
+        
         <Pressable 
             onPress={()=>{console.log('pressionado')}}
             style={styles.button}
@@ -19,7 +22,6 @@ export function ButtonApp() {
         >
             <Text style={styles.text}>⚡ COPY</Text>
         </Pressable>
-        
-    </View>
+    </>
   );
 }

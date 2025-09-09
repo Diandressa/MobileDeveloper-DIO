@@ -18,7 +18,6 @@ export default function Home(){
                 <Logo/>
 
                 <View style={styles.inputContainer}>
-                    <TextInputApp/>
                     <ButtonApp/>
                 </View>
 
