@@ -179,6 +179,14 @@ const styles = StyleSheet.create({
   export default styles;
 ```
 
+## Imagens
+
+Dentro da raiz do projeto criamos o arquivo: `declarations.d.ts` (o nome precisa ser esse).
+
+Dentro desse arquivo, declaramos o tipo/módulo png:
+
+`declare module '*.png'`
+
 ## Observações
 
 .expo 
@@ -206,4 +214,5 @@ Snippet	Content (ver na extensão)
 * nbc →	Create Native Base Component
 
 rnbc cria a estrutura do component padrão e rnso a folha de estilo.
+
 

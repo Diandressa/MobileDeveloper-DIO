@@ -10,4 +10,4 @@ const styles = StyleSheet.create({
     },
   });
 
-  export default styles;
+export default styles;
