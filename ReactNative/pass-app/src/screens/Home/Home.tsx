@@ -12,6 +12,8 @@ export default function Home(){
         <ImageBackground source={background} style={styles.appContainer}>
             <View style={styles.overlay} />
 
+            <Text style={{backgroundColor: '#d4d3c4', padding: 5, fontSize: 15, marginBottom: 30}}>Generate a secure password</Text>
+
             <View style={styles.logoContainer}>
                 <Logo/>
             </View>
@@ -21,7 +23,6 @@ export default function Home(){
                 <ButtonApp/>
             </View>
             
-            <Text style={{backgroundColor: '#d4d3c4', padding: 5}}>Open up App.tsx to start working on your app!</Text>
             <StatusBar style="light" />
 
         </ImageBackground>

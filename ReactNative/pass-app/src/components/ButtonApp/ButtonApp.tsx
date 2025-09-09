@@ -5,15 +5,19 @@ import { styles } from './ButtonAppStyles';
 
 export function ButtonApp() {
   return (
-    <View style={styles.container}>
-        <Button 
-            onPress={()=>{console.log('ola')}}
-            title='Click aqui'
-            accessibilityLabel='Click aqui'
-            color="#831584"
-        />
-        <Pressable onPress={()=>{console.log('pressionado')}}>
-            <Text>💾 Copy</Text>
+    <View style={{alignItems: 'center'}}>
+        <Pressable 
+            onPress={()=>{console.log('pressionado')}}
+            style={styles.button}
+        >
+            <Text style={styles.text}>GENERATE</Text>
+        </Pressable>
+
+        <Pressable 
+            onPress={()=>{console.log('pressionado')}}
+            style={styles.button}
+        >
+            <Text style={styles.text}>⚡ COPY</Text>
         </Pressable>
         
     </View>

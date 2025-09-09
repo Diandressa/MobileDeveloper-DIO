@@ -2,14 +2,15 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     inputer: {
-        backgroundColor: '#e5bf3c',
+        backgroundColor: '#e9e9e9',
         width: '100%',
         color: 'black',
         fontSize: 20,
-        height: 50,
-        borderWidth: 2,
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#d2e716',
         borderRadius: 5,
-        padding: 30,
+        padding: 25,
         textAlign: 'center',
     }
 });
