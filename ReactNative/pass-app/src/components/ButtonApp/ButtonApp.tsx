@@ -5,7 +5,7 @@ import { styles } from './ButtonAppStyles';
 
 export function ButtonApp() {
   return (
-    <View style={{alignItems: 'center'}}>
+    <View style={{width: '100%'}}>
         <Pressable 
             onPress={()=>{console.log('pressionado')}}
             style={styles.button}

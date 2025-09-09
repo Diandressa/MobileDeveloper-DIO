@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     logoContainer: {
+      width: '80%',
       flexDirection: 'column',
       borderColor: '#f3f3f3',
       borderWidth: 2,
@@ -16,12 +17,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       marginBottom: 40,
       paddingTop: 20,
-      paddingBottom: 10,
+      paddingBottom: 50,
       backgroundColor: 'rgba(0, 0, 0, 0.5)'
     },
     overlay:{
       ...StyleSheet.absoluteFillObject,
-      backgroundColor: "rgba(0, 0, 0, 0.37)"
+      backgroundColor: "rgba(0, 0, 0, 0.452)"
     },
     inputContainer: {
       width: '80%',
