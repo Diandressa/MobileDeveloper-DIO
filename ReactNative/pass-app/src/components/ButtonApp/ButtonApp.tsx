@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Button, Text, Pressable } from 'react-native';
 
 import { styles } from './ButtonAppStyles';
 import { TextInputApp } from '../TextInputApp/TextInputApp';
+import generatePass from '../services/passwordService';
 
 export function ButtonApp() {
-  return (
+    const [pass, setPass] = useState('');
+
+    function handleGenerateButton(){
+        let generateToken = generatePass()
+        setPass(generateToken)
+    }
+
+    return (
     <>
-        <TextInputApp/>
+        <TextInputApp pass={pass}/>
         
         <Pressable 
-            onPress={()=>{console.log('pressionado')}}
+            onPress={handleGenerateButton}
             style={styles.button}
         >
             <Text style={styles.text}>GENERATE</Text>
@@ -20,8 +28,8 @@ export function ButtonApp() {
             onPress={()=>{console.log('pressionado')}}
             style={styles.button}
         >
-            <Text style={styles.text}>⚡ COPY</Text>
+            <Text style={styles.text}>💾 COPY</Text>
         </Pressable>
     </>
-  );
+    );
 }

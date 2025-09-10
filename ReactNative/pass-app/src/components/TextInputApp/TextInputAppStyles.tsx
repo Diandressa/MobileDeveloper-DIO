@@ -2,9 +2,9 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     inputer: {
-        backgroundColor: '#e5b0f3',
+        backgroundColor: '#f803c3',
         width: '100%',
-        color: 'black',
+        color: '#fff',
         fontSize: 20,
         borderWidth: 1,
         borderColor: '#d2e716',
