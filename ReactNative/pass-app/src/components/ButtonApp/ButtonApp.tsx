@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Button, Text, Pressable } from 'react-native';
-
+import { Text, Pressable } from 'react-native';
 import { styles } from './ButtonAppStyles';
 import { TextInputApp } from '../TextInputApp/TextInputApp';
 import generatePass from '../services/passwordService';
+import * as Clipboard from 'expo-clipboard';
 
 export function ButtonApp() {
     const [pass, setPass] = useState('');
@@ -11,6 +11,10 @@ export function ButtonApp() {
     function handleGenerateButton(){
         let generateToken = generatePass()
         setPass(generateToken)
+    }
+
+    function handleCopyButton(){
+        Clipboard.setStringAsync(pass)
     }
 
     return (
@@ -25,7 +29,7 @@ export function ButtonApp() {
         </Pressable>
 
         <Pressable 
-            onPress={()=>{console.log('pressionado')}}
+            onPress={handleCopyButton}
             style={styles.button}
         >
             <Text style={styles.text}>💾 COPY</Text>
