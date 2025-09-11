@@ -1,7 +1,7 @@
-export default function generatePass(){
+export default function generatePass(length: number){
     let password:string = ''
     let characters:string = 'Aa@$123456789abcdefghiFGHIJLMNOP!'
-    let passWordLength = 8;
+    let passWordLength = length;
 
     for(let index = 0; index < passWordLength; index ++){
         //charAT pega um caracter
