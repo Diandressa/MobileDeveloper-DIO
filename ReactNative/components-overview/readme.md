@@ -15,3 +15,19 @@ selectable={true}
     Hello!
 </Text>
 ```
+
+## Compondo texto
+
+O primeiro os textos ficam na mesma linha (concatenando os textos). Colocando dentro da View os textos quebram, e cad um ficam em uma linha diferente
+
+```
+<Text>
+    <Text>Ola</Text>
+    <Text>Mundo</Text>
+</Text>
+
+<View>
+    <Text>Ola</Text>
+    <Text>Mundo</Text>
+</View>
+```

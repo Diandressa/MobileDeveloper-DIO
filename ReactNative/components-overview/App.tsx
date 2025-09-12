@@ -23,6 +23,16 @@ export default function App() {
       </Text>
 
       <StatusBar style="auto" />
+      
+      <Text>
+        <Text>Ola</Text>
+        <Text>Mundo</Text>
+      </Text>
+
+      <View>
+        <Text>Ola</Text>
+        <Text>Mundo</Text>
+      </View>
     </View>
   );
 }
