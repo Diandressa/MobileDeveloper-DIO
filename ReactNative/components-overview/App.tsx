@@ -11,10 +11,17 @@ export default function App() {
         onTouchEnd={(event)=>{
           Alert.alert('CLIQUE', 'Toque finalizado')
         }}
+        onLayout={(event)=> {}}
       >
-        <Text>OnTouch</Text>
+        <Text style={styles.texto}>OnTouch</Text>
       </View>
-      <Text>Hello!</Text>
+
+      <Text
+      selectable={true}
+      >
+        Hello! Open up App.tsx to start working on your app!
+      </Text>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -27,4 +34,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  texto: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    backgroundColor: 'blue',
+    color: 'white',
+    padding: 20,
+  }
 });
