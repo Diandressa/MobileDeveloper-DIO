@@ -3,7 +3,7 @@ import { Alert, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: 'pink'}]}>
       <View
         onTouchStart={(event)=>{
           Alert.alert('CLIQUE', 'Clique Iniciado')
@@ -13,7 +13,7 @@ export default function App() {
         }}
         onLayout={(event)=> {}}
       >
-        <Text style={styles.texto}>OnTouch</Text>
+        <Text style={[styles.texto, styles.border]}>OnTouch</Text>
       </View>
 
       <Text
@@ -50,5 +50,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     color: 'white',
     padding: 20,
+  },
+  border: {
+    borderColor: 'red',
+    borderWidth: 3,
   }
 });

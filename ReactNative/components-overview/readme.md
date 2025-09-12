@@ -31,3 +31,15 @@ O primeiro os textos ficam na mesma linha (concatenando os textos). Colocando de
     <Text>Mundo</Text>
 </View>
 ```
+
+## Array de Styles
+
+Posso passar vários styles utilizando arrays
+
+`<Text style={[styles.texto, styles.border]}>OnTouch</Text>`
+
+Posso compor com um style inline também
+
+`<View style={[styles.container, {backgroundColor: 'pink'}]}>`
+
+Os estilos passados por último sobrescreve os primeiros
