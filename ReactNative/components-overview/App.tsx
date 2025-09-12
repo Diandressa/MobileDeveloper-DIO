@@ -18,6 +18,8 @@ export default function App() {
 
       <Text
       selectable={true}
+      onPress={()=>{console.log('pressionado')}}
+      onLongPress={()=>{console.log('pressionamento longo')}}
       >
         Hello! Open up App.tsx to start working on your app!
       </Text>
