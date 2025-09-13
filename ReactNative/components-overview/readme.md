@@ -43,3 +43,25 @@ Posso compor com um style inline também
 `<View style={[styles.container, {backgroundColor: 'pink'}]}>`
 
 Os estilos passados por último sobrescreve os primeiros
+
+## Imagens e pontos assets
+
+Podemos importar uma imagem direto da memória com require (importar local). Para isso copiamos o caminho da imagem e ajustamos as barras que estão invertidas.
+
+```
+<Image
+    source={require('C:/UsersCaminho/MobileDeveloper-DIO/ReactNative/components-overview/assets/chihiro.jpg')}
+/>
+```
+
+Porém, para não deixar exposto o caminho da máquina podemos importar a imagem no projeto com import. Não esquecer de declarar o tipo png no arquivo declarations.d.ts na raiz do projeto (declare module '*.png').
+
+`import imgChihiro from './assets/chihiro.png'`
+
+Não precisamos do required pois não vamos importar a imagem direto da memória
+
+```
+ <Image
+    source={imgChihiro}
+/>
+```

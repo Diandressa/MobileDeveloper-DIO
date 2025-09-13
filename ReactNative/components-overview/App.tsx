@@ -1,9 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Image, Alert, StyleSheet, Text, View } from 'react-native';
+import imgChihiro from './assets/chihiro.png'
 
 export default function App() {
   return (
     <View style={[styles.container, {backgroundColor: 'pink'}]}>
+
+      <Image
+      source={imgChihiro}
+      />
+
       <View
         onTouchStart={(event)=>{
           Alert.alert('CLIQUE', 'Clique Iniciado')
