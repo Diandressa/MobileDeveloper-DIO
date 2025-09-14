@@ -65,3 +65,24 @@ Não precisamos do required pois não vamos importar a imagem direto da memória
     source={imgChihiro}
 />
 ```
+
+## TextInput
+
+KeyboardType abre o teclado número ao clica no input
+
+```
+<TextInput
+style={styles.input}
+onChange={()=>{console.log('add texto')}}
+keyboardType='numeric'
+/>
+
+```
+
+## Capturando Event
+
+Usamos o nativeEvent para capturar o evento do input
+
+`
+onChange={(event)=>{console.log(event.nativeEvent.text)}}
+`

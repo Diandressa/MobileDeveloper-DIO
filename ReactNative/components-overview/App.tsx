@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Alert, StyleSheet, Text, View } from 'react-native';
+import { Image, Alert, StyleSheet, Text, View, TextInput } from 'react-native';
 import imgChihiro from './assets/chihiro.png'
 
 export default function App() {
@@ -8,6 +8,13 @@ export default function App() {
 
       <Image
       source={imgChihiro}
+      />
+
+      <TextInput
+      style={styles.input}
+      onChange={(event)=>{console.log(event.nativeEvent.text)}}
+      keyboardType='default'
+      placeholder='digite seu numero'
       />
 
       <View
@@ -51,6 +58,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  input:{
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    backgroundColor: '#ffffff'
   },
   texto: {
     fontSize: 20,
