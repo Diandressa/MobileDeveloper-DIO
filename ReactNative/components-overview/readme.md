@@ -122,3 +122,28 @@ onPress={()=>{Alert.alert('Valor atual: ', usuario)}}
 ScrollView permite rolar a tela, ele é um component, como a View, mas que permite a rolagem.
 
 `<ScrollView>`
+
+## Switch
+
+O Toggle Switch (botão de alternância), permite alternar entre dois estados, geralmente "ligado/desligado" ou "ativado/desativado"
+
+`<Switch></Switch>`
+
+Após importar o Switch, criamos o useState que irá renderizar o estado dele e a função que inverte o valor com o negação !
+
+```
+const [ligado, setLigado] = useState(false);
+
+function handleSwitch(){
+setLigado(!ligado)
+}
+```
+
+Usa o onChangeValue (quando o value mudar de valor) e passa a função que chama o useState para renderizar e defini o valor que está no useSate
+
+```
+<Switch 
+value={ligado} 
+onValueChange={handleSwitch}
+/>
+```

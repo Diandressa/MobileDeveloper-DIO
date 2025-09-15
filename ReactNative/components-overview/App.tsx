@@ -1,15 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Alert, StyleSheet, Text, View, TextInput, Button, ScrollView } from 'react-native';
+import { Image, Alert, StyleSheet, Text, View, TextInput, Button, ScrollView, Switch } from 'react-native';
 import imgChihiro from './assets/chihiro.png'
 import React, {useState} from 'react';
 
 export default function App() {
   const [usuario, setUsuario] = useState('');
+  const [ligado, setLigado] = useState(false);
+
+  function handleSwitch(){
+    setLigado(!ligado)
+  }
   
   return (
     <ScrollView>
       <View style={[styles.container, {backgroundColor: 'pink'}]}>
-
         <Image
         source={imgChihiro}
         style={{resizeMode:'contain'}}
@@ -21,6 +25,11 @@ export default function App() {
         keyboardType='default'
         placeholder='digite seu numero'
         value={usuario}
+        />
+
+        <Switch 
+        value={ligado} 
+        onValueChange={handleSwitch}
         />
 
         <Button
