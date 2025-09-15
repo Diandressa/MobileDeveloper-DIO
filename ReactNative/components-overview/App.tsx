@@ -16,7 +16,7 @@ export default function App() {
       <View style={[styles.container, {backgroundColor: 'pink'}]}>
         <Image
         source={imgChihiro}
-        style={{resizeMode:'contain'}}
+        style={{display: ligado ? "flex" : "none"}}
         />
 
         <TextInput

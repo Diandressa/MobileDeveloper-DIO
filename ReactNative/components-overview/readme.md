@@ -147,3 +147,12 @@ value={ligado}
 onValueChange={handleSwitch}
 />
 ```
+
+## Manipular elemento em tela (none ou flex) com base no useState  - utilizando if ternário no style
+
+```
+<Image
+source={imgChihiro}
+style={{display: ligado ? "flex" : "none"}}
+/>
+```
