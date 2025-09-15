@@ -31,8 +31,12 @@ Ele direciona o eixo secundário, após a quebra do flex wrap. Se houver quebra 
 
 ## FlexBasis
 
-Somente aplicável para os components filhos. Aumento a largura ou altura de acordo com a direção do elemento pai. Se for row aumenta a largura e se for column a altura.
+Somente aplicável para os components filhos. Aumento a largura ou altura de acordo com a direção do elemento pai. Se for row aumenta a largura e se for column a altura. Com valores numéricos acima de 0.
 
 ## Flex Grow
 
-Aplica em componentes filhos. Ele subtrai o tamanho do elementos que já estão lá. O espaça que sobre é preenchido pelo elemento que recebe o flex grow
+Aplica em componentes filhos. Ele subtrai o tamanho do elementos que já estão lá. O espaça que sobre é preenchido pelo elemento que recebe o flex grow. Com valor 1.
+
+## Flex Shrink
+
+Ao contrário do grow, ele reduz o elemento pra caber no espaço que sobra. Se usar em mais de um elemento ele reduz os elementos com flex shrink até tudo caber na tela, os elementos sem o flex shrink não encolhem. Com valor 1.
