@@ -19,3 +19,7 @@ E o Align Items  está ligado ao eixo secundário (se o principal é horizontal 
 ## Align self
 
 Sempre atua no eixo secundário. Alinha o elemento filho, só no qual foi aplicado.
+
+## FlexWrap
+
+Quebra os elementos para uma nova linha

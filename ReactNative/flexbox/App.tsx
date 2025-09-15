@@ -8,7 +8,6 @@ function CaixaRed(){
         height: 100,
         width: 100,
         backgroundColor: 'red',
-        alignSelf: 'center',
       }}
     ></View>
   )
@@ -44,6 +43,9 @@ export default function App() {
       <CaixaRed></CaixaRed>
       <CaixaBlue></CaixaBlue>
       <CaixaGreen></CaixaGreen>
+      <CaixaBlue></CaixaBlue>
+      <CaixaGreen></CaixaGreen>
+      
       <StatusBar style="auto" />
     </View>
   );
@@ -52,9 +54,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
     borderWidth: 5,
     borderColor: 'purple',
     backgroundColor: '#fff',
