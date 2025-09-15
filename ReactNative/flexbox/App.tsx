@@ -45,6 +45,12 @@ export default function App() {
       <CaixaGreen></CaixaGreen>
       <CaixaBlue></CaixaBlue>
       <CaixaGreen></CaixaGreen>
+      <CaixaGreen></CaixaGreen>
+      <CaixaBlue></CaixaBlue>
+      <CaixaGreen></CaixaGreen>
+      <CaixaGreen></CaixaGreen>
+      <CaixaBlue></CaixaBlue>
+      <CaixaGreen></CaixaGreen>
 
       <StatusBar style="auto" />
     </View>
@@ -54,7 +60,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     flexWrap: 'wrap',
     alignContent: 'center',
     justifyContent: 'flex-start',

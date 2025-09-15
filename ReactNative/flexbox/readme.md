@@ -27,3 +27,4 @@ Quebra os elementos para uma nova linha
 ## Align Content
 
 Funciona com o Flex Wrap. Caso o wrap quebra os elementos, ele alinha esse conjunto que foi quebrado.
+Ele direciona o eixo secundário, após a quebra do flex wrap. Se houver quebra ele muda o posicionamento do eixo secundário.
