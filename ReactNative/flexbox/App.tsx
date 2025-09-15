@@ -8,6 +8,7 @@ function CaixaRed(){
         height: 100,
         width: 100,
         backgroundColor: 'red',
+        alignSelf: 'center',
       }}
     ></View>
   )
@@ -51,11 +52,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-end',
     borderWidth: 5,
     borderColor: 'purple',
     backgroundColor: '#fff',
-    alignItems: 'center',
   },
 });
