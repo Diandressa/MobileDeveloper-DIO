@@ -25,3 +25,5 @@ Sempre atua no eixo secundário. Alinha o elemento filho, só no qual foi aplica
 Quebra os elementos para uma nova linha
 
 ## Align Content
+
+Funciona com o Flex Wrap. Caso o wrap quebra os elementos, ele alinha esse conjunto que foi quebrado.

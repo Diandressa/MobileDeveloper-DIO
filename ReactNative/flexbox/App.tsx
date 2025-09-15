@@ -45,7 +45,7 @@ export default function App() {
       <CaixaGreen></CaixaGreen>
       <CaixaBlue></CaixaBlue>
       <CaixaGreen></CaixaGreen>
-      
+
       <StatusBar style="auto" />
     </View>
   );
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    alignContent: 'center',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     borderWidth: 5,
