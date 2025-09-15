@@ -8,7 +8,6 @@ function CaixaRed(){
         height: 100,
         width: 100,
         backgroundColor: 'red',
-        flexBasis:90
       }}
     ></View>
   )
@@ -21,6 +20,7 @@ function CaixaBlue(){
         height: 100,
         width: 100,
         backgroundColor: 'blue',
+        flexGrow: 1
       }}
     ></View>
   )
@@ -33,6 +33,7 @@ function CaixaGreen(){
         height: 100,
         width: 100,
         backgroundColor: 'green',
+        flexGrow: 1
       }}
     ></View>
   )
@@ -53,7 +54,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'center',
     justifyContent: 'flex-start',
