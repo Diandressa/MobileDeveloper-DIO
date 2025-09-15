@@ -8,7 +8,6 @@ function CaixaRed(){
         height: 100,
         width: 100,
         backgroundColor: 'red',
-        flex: 1,
       }}
     ></View>
   )
@@ -21,7 +20,18 @@ function CaixaBlue(){
         height: 100,
         width: 100,
         backgroundColor: 'blue',
-        flex: 1,
+      }}
+    ></View>
+  )
+}
+
+function CaixaGreen(){
+  return(
+    <View
+      style={{
+        height: 100,
+        width: 100,
+        backgroundColor: 'green',
       }}
     ></View>
   )
@@ -32,7 +42,7 @@ export default function App() {
     <View style={styles.container}>
       <CaixaRed></CaixaRed>
       <CaixaBlue></CaixaBlue>
-      <CaixaRed></CaixaRed>
+      <CaixaGreen></CaixaGreen>
       <StatusBar style="auto" />
     </View>
   );
@@ -41,6 +51,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
     borderWidth: 5,
     borderColor: 'purple',
     backgroundColor: '#fff',
