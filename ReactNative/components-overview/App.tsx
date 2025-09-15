@@ -1,23 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Alert, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Image, Alert, StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import imgChihiro from './assets/chihiro.png'
+import React, {useState} from 'react';
 
 export default function App() {
+  const [usuario, setUsuario] = useState('');
+  
   return (
     <View style={[styles.container, {backgroundColor: 'pink'}]}>
 
       <Image
       source={imgChihiro}
+      style={{resizeMode:'contain', height:200}}
       />
 
       <TextInput
       style={styles.input}
-      onChange={(event)=>{console.log(event.nativeEvent.text)}}
+      onChange={(text)=>{setUsuario(text.nativeEvent.text)}}
       keyboardType='default'
       placeholder='digite seu numero'
+      value={usuario}
       />
 
-      <View
+      <Button
+      title='Click aqui'
+      onPress={()=>{Alert.alert('Valor atual: ', usuario)}}
+      />
+
+      {/* <View
         onTouchStart={(event)=>{
           Alert.alert('CLIQUE', 'Clique Iniciado')
         }}
@@ -27,7 +37,7 @@ export default function App() {
         onLayout={(event)=> {}}
       >
         <Text style={[styles.texto, styles.border]}>OnTouch</Text>
-      </View>
+      </View> */}
 
       <Text
       selectable={true}

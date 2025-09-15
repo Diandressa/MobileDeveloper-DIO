@@ -86,3 +86,33 @@ Usamos o nativeEvent para capturar o evento do input
 `
 onChange={(event)=>{console.log(event.nativeEvent.text)}}
 `
+
+## Button - Capturando valores com useState
+
+Importa button e useState
+
+```
+import { Image, Alert, StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import React, {useState} from 'react';
+```
+
+Declara a constante do useState antes do return
+
+`const [usuario, setUsuario] = useState('');`
+
+Usa o useState para manipula a contante e depois imprimir no alert do botão
+
+```
+<TextInput
+style={styles.input}
+onChange={(text)=>{setUsuario(text.nativeEvent.text)}}
+keyboardType='default'
+placeholder='digite seu numero'
+value={usuario}
+/>
+
+<Button
+title='Click aqui'
+onPress={()=>{Alert.alert('Valor atual: ', usuario)}}
+/>
+```
