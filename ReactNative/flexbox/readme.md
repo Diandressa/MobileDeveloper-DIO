@@ -40,3 +40,7 @@ Aplica em componentes filhos. Ele subtrai o tamanho do elementos que já estão 
 ## Flex Shrink
 
 Ao contrário do grow, ele reduz o elemento pra caber no espaço que sobra. Se usar em mais de um elemento ele reduz os elementos com flex shrink até tudo caber na tela, os elementos sem o flex shrink não encolhem. Com valor 1.
+
+## Jogo para treinar
+
+[Flexbox Froggy](https://flexboxfroggy.com/) -> Tem o default como row em vez de do column do React Native
