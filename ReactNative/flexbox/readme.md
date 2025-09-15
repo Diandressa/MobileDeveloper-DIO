@@ -44,3 +44,5 @@ Ao contrário do grow, ele reduz o elemento pra caber no espaço que sobra. Se u
 ## Jogo para treinar
 
 [Flexbox Froggy](https://flexboxfroggy.com/) -> Tem o default como row em vez de do column do React Native
+
+--
