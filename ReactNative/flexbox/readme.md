@@ -28,3 +28,7 @@ Quebra os elementos para uma nova linha
 
 Funciona com o Flex Wrap. Caso o wrap quebra os elementos, ele alinha esse conjunto que foi quebrado.
 Ele direciona o eixo secundário, após a quebra do flex wrap. Se houver quebra ele muda o posicionamento do eixo secundário.
+
+## FlexBasis
+
+Somente aplicável para os components filhos. Aumento a largura ou altura de acordo com a direção do elemento pai. Se for row aumenta a largura e se for column a altura.

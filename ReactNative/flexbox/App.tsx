@@ -8,6 +8,7 @@ function CaixaRed(){
         height: 100,
         width: 100,
         backgroundColor: 'red',
+        flexBasis:90
       }}
     ></View>
   )
@@ -41,14 +42,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <CaixaRed></CaixaRed>
-      <CaixaBlue></CaixaBlue>
-      <CaixaGreen></CaixaGreen>
-      <CaixaBlue></CaixaBlue>
-      <CaixaGreen></CaixaGreen>
-      <CaixaGreen></CaixaGreen>
-      <CaixaBlue></CaixaBlue>
-      <CaixaGreen></CaixaGreen>
-      <CaixaGreen></CaixaGreen>
       <CaixaBlue></CaixaBlue>
       <CaixaGreen></CaixaGreen>
 
