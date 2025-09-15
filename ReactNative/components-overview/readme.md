@@ -116,3 +116,9 @@ title='Click aqui'
 onPress={()=>{Alert.alert('Valor atual: ', usuario)}}
 />
 ```
+
+## ScrollView
+
+ScrollView permite rolar a tela, ele é um component, como a View, mas que permite a rolagem.
+
+`<ScrollView>`
