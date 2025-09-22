@@ -21,3 +21,7 @@ A ordem da execução das funções é: OnPressIn, depois onPress e por fim o on
 ## onLongPress
 
 Quando é executado por um tempo mais longo. Ele executado outra ação ao clicar. Só executa o press in e pressOut, o onPress é substituído por ele quando clico e seguro
+
+## onTextLayout
+
+É acionado quando o texto vai para o layout, quando o texto é renderizado na aplicação a função é acionada

@@ -19,6 +19,7 @@ export default function App() {
       onPressIn={ ()=> console.log("Press in acionado") }
       onPress={ ()=> console.log("pressionado") }
       onLongPress={ ()=> console.log("longPress acionado")} 
+      onTextLayout={ ()=> console.log("Texto no Layout")} 
       >
         Componente 
       </Text>
