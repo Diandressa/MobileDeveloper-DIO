@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import { helloAndressa } from './src/actions'
 
 export default function App() {
@@ -12,6 +12,14 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
+
+      <TextInput 
+      style={{ fontSize:32 }} 
+      placeholder='olá'
+      onChange={()=> console.log('onChange Executado')}
+      onChangeText={()=> console.log('onChangeText Executado')}
+      onFocus={()=> console.log('onFocus Executado')}
+      />
 
       <Text 
       style={{ fontSize:32 }} 

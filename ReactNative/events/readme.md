@@ -25,3 +25,13 @@ Quando é executado por um tempo mais longo. Ele executado outra ação ao clica
 ## onTextLayout
 
 É acionado quando o texto vai para o layout, quando o texto é renderizado na aplicação a função é acionada
+
+## TextInput
+
+onChange: alguma mudança no component todo
+onChangeText: alguma mudança de texto do componente
+
+Ele executa primeiro o onChange antes do onChangeText
+
+onFocus: quando o component recebe o foco
+
