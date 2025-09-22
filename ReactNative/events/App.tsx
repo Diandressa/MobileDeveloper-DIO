@@ -17,7 +17,8 @@ export default function App() {
       style={{ fontSize:32 }} 
       onPressOut={ ()=> console.log("Press out acionado") }
       onPressIn={ ()=> console.log("Press in acionado") }
-      onPress={ ()=> console.log("pressionado") } 
+      onPress={ ()=> console.log("pressionado") }
+      onLongPress={ ()=> console.log("longPress acionado")} 
       >
         Componente 
       </Text>

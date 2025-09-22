@@ -18,3 +18,6 @@ Acionado depois da saída/finalizado o onPressIn, usado geralmente para guardar 
 
 A ordem da execução das funções é: OnPressIn, depois onPress e por fim o onPressOut
 
+## onLongPress
+
+Quando é executado por um tempo mais longo. Ele executado outra ação ao clicar. Só executa o press in e pressOut, o onPress é substituído por ele quando clico e seguro
