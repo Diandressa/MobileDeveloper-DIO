@@ -1,13 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { helloAndressa } from './src/actions'
 
 export default function App() {
+  async function handlerHello(){
+    console.log("Hello handler function")
+  }
+
   async function handlerPress(id:number){
     console.log("pressionar", id)
   }
   return (
     <View style={styles.container}>
-      <Text onPress={() => handlerPress(2)}>Open up App.tsx to start working on your app!</Text>
+      <Text onPress={()=> console.log('inline')}>Inline</Text>
+      <Text onPress={handlerHello}>Handler Function</Text>
+      
+      <Text onPress={() => handlerPress(2)}>
+        Handler Function with Parameters
+      </Text>
+
+      <Text onPress={helloAndressa}>
+        Another File
+      </Text>
       {/* <StatusBar style="auto" /> */}
     </View>
   );
@@ -16,6 +30,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    fontSize: 22,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
