@@ -12,7 +12,17 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text onPress={()=> console.log('inline')}>Inline</Text>
+
+      <Text 
+      style={{ fontSize:32 }} 
+      onPressOut={ ()=> console.log("Press out acionado") }
+      onPressIn={ ()=> console.log("Press in acionado") }
+      onPress={ ()=> console.log("pressionado") } 
+      >
+        Componente 
+      </Text>
+
+      {/* <Text onPress={()=> console.log('inline')}>Inline</Text>
       <Text onPress={handlerHello}>Handler Function</Text>
       
       <Text onPress={() => handlerPress(2)}>
@@ -22,7 +32,7 @@ export default function App() {
       <Text onPress={helloAndressa}>
         Another File
       </Text>
-      {/* <StatusBar style="auto" /> */}
+      <StatusBar style="auto" /> */}
     </View>
   );
 }
