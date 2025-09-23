@@ -2,6 +2,7 @@ import { View, Text, Image, Button } from "react-native";
 import styles from "./StyleHome";
 import batSignal from "../../assets/Bat-Signal.png"
 import { useState } from "react";
+import { ButtonApp } from "../components/ButtonApp/ButtonApp";
 
 export default function Home (){
     const [isActive, setIsActive] = useState(true)
@@ -18,12 +19,7 @@ export default function Home (){
                 style={{ resizeMode: 'contain', width: 200 }}
                 ></Image>
 
-                <Button
-                title="Activate Bat Signal"
-                color="#354D7E"
-                accessibilityLabel="Activate Bat Signal"
-                onPress={handlerActivate}
-                ></Button>
+                <ButtonApp title={"Activate Bat Signal"} label={"Activate Bat Signal"} handlerActivate={handlerActivate}/>
             </View>
 
             <View style={!isActive ? styles.containerFlex : styles.containerNone}>
@@ -31,12 +27,7 @@ export default function Home (){
                     Formulário
                 </Text>
 
-                <Button
-                title="Back"
-                color="#354D7E"
-                accessibilityLabel="Back to Activate Bat Signal"
-                onPress={handlerActivate}
-                ></Button>
+                <ButtonApp title={"Back"} label={"Back to Activate Bat Signal"} handlerActivate={handlerActivate}/>
             </View>
             
         </View>
