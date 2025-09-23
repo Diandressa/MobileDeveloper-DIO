@@ -247,6 +247,7 @@ Quando você altera o estado de um componente usando useState, o React Native re
 
 Portanto, você não precisa "renderizar com o Metro" toda vez que uma função for chamada — isso é feito automaticamente pelo mecanismo do React.
 
+```
 ╔══════════════════════╗
 ║ 🖥️ SEU CÓDIGO-FONTE  ║
 ║ (JSX, JS, TS, etc.)  ║
@@ -288,6 +289,7 @@ Portanto, você não precisa "renderizar com o Metro" toda vez que uma função 
 ║ React redesenha só   ║
 ║ os componentes afet. ║
 ╚══════════════════════╝
+```
 
 ✅ Nenhum novo código é enviado pelo Metro!
 
