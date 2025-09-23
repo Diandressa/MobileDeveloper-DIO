@@ -1,17 +1,42 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    container: {
+      containerBackground: {
       flex: 1,
-      backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+      width: "100%",
     },
-    containerFlex:{
-      display: "flex",
+    overlay: {
+      ...StyleSheet.absoluteFillObject,
+      backgroundColor: "black",
+      opacity: 0.5,
     },
-    containerNone: {
-      display: "none",
+    container: {
+      padding: 20,
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: "80%",
+      borderRadius: 5,
+      borderWidth: 1,
+      borderColor: "#354D7E",
+      marginInline: "auto",
+      backgroundColor: "#ffffff92",
+    },
+    InputStyle: {
+      borderWidth: 2,
+      borderColor: "#354D7E",
+      borderRadius: 10,
+      paddingLeft: 20,
+      width: "100%",
+      marginBottom: 25,
+      backgroundColor: "#ffffffe4",
+    },
+    InputLabel: {
+      alignSelf: "flex-start", 
+      marginBottom: 10, 
+      fontSize: 18,
+      color: "#fff"
     }
 });
 

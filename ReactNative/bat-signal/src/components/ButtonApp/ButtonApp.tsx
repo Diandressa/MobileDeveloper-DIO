@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button } from 'react-native';
+import { View, Pressable, Text } from 'react-native';
 
 import { styles } from './ButtonStyle';
 
@@ -11,11 +11,12 @@ interface ButtonProps {
 
 export function ButtonApp({title,label,handlerActivate}:ButtonProps) {
   return (
-    <Button
-    title={title}
-    color="#354D7E"
+    <Pressable
     accessibilityLabel={label}
     onPress={handlerActivate}
-    ></Button>
+    style={styles.StyleButton}
+    >
+      <Text style={{color: "#fff", textAlign: "center"}}>{title}</Text>
+    </Pressable>
   );
 }
