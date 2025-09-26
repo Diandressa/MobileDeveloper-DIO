@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import React, {useState} from 'react';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import React, {useState, useEffect} from 'react';
 
 export default function App() {
   const [count, setCount] = useState(0);
   const [countIcon, setCountIcon] = useState('');
+
+  useEffect(() => {
+    if(count == 0){
+      Alert.alert("Carrinho", "Seu carrinho está vazio")
+    } else {
+      console.log("Ainda tem itens")
+    }
+  }, [count])
 
   const incrementCount = () => {
     //prevstate é o valor passado na função useState(parâmetro)
