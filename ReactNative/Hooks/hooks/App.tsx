@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const [countIcon, setCountIcon] = useState('');
 
   const incrementCount = () => {
     //prevstate é o valor passado na função useState(parâmetro)
@@ -11,16 +12,27 @@ export default function App() {
   }
 
   const decrementCount = () => {
-    setCount((prevState) => prevState - 1)
+    if (count > 0){
+      setCount((prevState) => prevState - 1)
+    }
+  }
+
+  const incrementIcon = () => {
+    if(countIcon){
+      setCountIcon('')
+    } else {
+      setCountIcon('❤')
+    }
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.big}>{count}</Text>
+      <Text style={styles.big}>{count}{countIcon}</Text>
       
       <View style={styles.inline}>
         <Button title='REMOVER' onPress={decrementCount}></Button>
         <Button title='ADICIONAR' onPress={incrementCount}></Button>
+        <Button title='FAVORITAR ❤' onPress={incrementIcon}></Button>
       </View>
     </View>
   );
@@ -39,5 +51,6 @@ const styles = StyleSheet.create({
   inline: {
     display: "flex",
     flexDirection: "row",
+    gap: 10,
   }
 });
