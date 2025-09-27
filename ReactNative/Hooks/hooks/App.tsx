@@ -1,47 +1,40 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, TextInput } from 'react-native';
 import React, {useState, useEffect, useReducer} from 'react';
 
-const reducer = (state: {counter:number}, action: {type:string}) => {
+const listener = (state: any, action: any) => {
   switch(action.type){
-    case 'increment':
+    case 'add-new-task':
       return {
-        counter: state.counter + 1
-      }
-    case 'cancel':
-      return {
-        counter: 0
+        task: [... state.task, {name:action.inputValue , isDone: false}]
       }
     default:
-      return state
+      break;
   }
 }
 
 export default function App() {
-  const [state, dispatch] = useReducer(reducer, {counter: 0})
+  const [inputValue, setInputValue] = useState('')
+  const [state, dispatch] = useReducer(listener, {task: []})
 
-  const incrementCount = () => {
-    dispatch({type: 'increment'})
+  const handleAddTask=()=>{
+    dispatch({type: 'add-new-task', inputValue})
   }
-
-  const decrementCount = () => {
-    dispatch({type: 'decrement'})
-  }
-
-  const cancelCount = () => {
-    dispatch({type: 'cancel'})
-  }
-  
 
   return (
     <View style={styles.container}>
-      <Text style={styles.big}>{state.counter}</Text>
+      <Text style={styles.big}></Text>
       
       <View style={styles.inline}>
-        <Button title='REMOVER' onPress={decrementCount}></Button>
-        <Button title='ADICIONAR' onPress={incrementCount}></Button>
-        <Button title='Zerar' onPress={cancelCount}></Button>
+        <TextInput 
+        style={styles.enter}
+        value = {inputValue}
+        onChangeText={(text) => setInputValue(text)} >
+        </TextInput>
+        <Button title='Adicionar tarefa' onPress={handleAddTask}></Button>
       </View>
+
+      {state?.task.map((task: any) => <Text>{task.name}</Text>)}
     </View>
   );
 }
@@ -49,16 +42,23 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#4939ba',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  enter: {
+    borderColor: 'white',
+    borderWidth: 1,
+    backgroundColor: '#5450d6',
+    width: '80%',
+    color: 'white',
   },
   big: {
     fontSize: 40,
   },
   inline: {
-    display: "flex",
-    flexDirection: "row",
-    gap: 10,
+    width: '50%',
+    flexDirection: 'row',
+    justifyContent: 'center',
   }
 });
