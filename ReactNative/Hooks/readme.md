@@ -102,3 +102,55 @@ const reducer = (state: {counter:number}, action: {type:string}) => {
   }
 }
 ```
+
+Passo a passo:
+
+state.task
+
+Essa é a lista de tarefas atual. Exemplo:
+
+```
+state.task = [
+  { name: 'Comprar pão', isDone: false },
+  { name: 'Estudar React', isDone: true }
+]
+```
+
+...state.task
+
+Esse ... é o spread operator.
+
+Ele "espalha" todos os itens do array antigo em um novo array.
+
+Ou seja, cria uma cópia de todos os elementos da lista atual, sem modificar o array original.
+
+`{ name: action.inputValue, isDone: false }`
+
+Esse é o novo item que você quer adicionar à lista.
+
+name recebe o valor que o usuário digitou (action.inputValue).
+
+isDone começa como false porque a tarefa ainda não foi concluída.
+
+O que [...state.task, { name: action.inputValue, isDone: false }] faz
+
+Cria um novo array que tem:
+
+Todos os elementos antigos (...state.task)
+
+o novo objeto da tarefa.
+
+Exemplo prático:
+```
+state.task = [{ name: 'Comprar pão', isDone: false }]
+action.inputValue = 'Estudar React'
+
+task: [...state.task, { name: action.inputValue, isDone: false }]
+```
+// Resultado:
+```
+[
+  { name: 'Comprar pão', isDone: false },
+  { name: 'Estudar React', isDone: false }
+]
+```
