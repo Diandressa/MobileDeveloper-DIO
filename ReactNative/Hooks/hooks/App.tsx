@@ -1,46 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Alert } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useReducer} from 'react';
+
+const reducer = (state: {counter:number}, action: {type:string}) => {
+  switch(action.type){
+    case 'increment':
+      return {
+        counter: state.counter + 1
+      }
+    case 'cancel':
+      return {
+        counter: 0
+      }
+    default:
+      return state
+  }
+}
 
 export default function App() {
-  const [count, setCount] = useState(0);
-  const [countIcon, setCountIcon] = useState('');
-
-  useEffect(() => {
-    if(count == 0){
-      Alert.alert("Carrinho", "Seu carrinho está vazio")
-    } else {
-      console.log("Ainda tem itens")
-    }
-  }, [count])
+  const [state, dispatch] = useReducer(reducer, {counter: 0})
 
   const incrementCount = () => {
-    //prevstate é o valor passado na função useState(parâmetro)
-    setCount((prevState) => prevState + 1)
+    dispatch({type: 'increment'})
   }
 
   const decrementCount = () => {
-    if (count > 0){
-      setCount((prevState) => prevState - 1)
-    }
+    dispatch({type: 'decrement'})
   }
 
-  const incrementIcon = () => {
-    if(countIcon){
-      setCountIcon('')
-    } else {
-      setCountIcon('❤')
-    }
+  const cancelCount = () => {
+    dispatch({type: 'cancel'})
   }
+  
 
   return (
     <View style={styles.container}>
-      <Text style={styles.big}>{count}{countIcon}</Text>
+      <Text style={styles.big}>{state.counter}</Text>
       
       <View style={styles.inline}>
         <Button title='REMOVER' onPress={decrementCount}></Button>
         <Button title='ADICIONAR' onPress={incrementCount}></Button>
-        <Button title='FAVORITAR ❤' onPress={incrementIcon}></Button>
+        <Button title='Zerar' onPress={cancelCount}></Button>
       </View>
     </View>
   );

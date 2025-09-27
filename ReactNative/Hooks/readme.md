@@ -51,3 +51,54 @@ Se eu não passar nenhuma variável para o useEffect monitorar ele dispara sempr
     Alert.alert("Houve atualização na tela")
 })
 ```
+
+## UseReducer
+
+Parecido com useState, mas guiado a eventos.
+
+Para função a convenção é nomear como 'dispatch' (despacha eventos, manda eventos)
+
+`const [state, dispatch] = useReducer()`
+
+Passamos uma função que escuta nosso reducer (const reducer)
+
+```
+const reducer = (state, action) = {
+
+}
+
+export default function App() {
+  const [state, dispatch] = useReducer(reducer, {counter: 0})
+}
+```
+
+Passo valor inicial (counter: 0) depois de passar a função como parâmetro no reducer. 
+
+Em vez de chamar o set como no useState, chamamos o dispatch
+
+```
+const incrementCount = () => {
+    dispatch({})
+}
+```
+Estou despachando um evento chamado increment
+
+`dispatch({type: 'increment'})`
+
+o state é o estado atual, o action é ação sobre esse estado.
+
+switch(action.type) : Se a ação for do tipo x faça algo
+counter: state.counter + 1 : counter definido no useReduce recebe um novo estado
+
+```
+const reducer = (state: {counter:number}, action: {type:string}) => {
+  switch(action.type){
+    case 'increment':
+      return {
+        counter: state.counter + 1
+      }
+      default:
+      return state
+  }
+}
+```
