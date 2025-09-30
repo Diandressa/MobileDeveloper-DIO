@@ -27,6 +27,8 @@ Monitorar/Vigiar variáveis
 Dentro do useEffect eu posso passar uma função. Depois da vírgula passa quem ele vai monitorar, se aquele component mudar ele executa a ação:
 
 ```
+const [count, setCount] = useState(0);
+
 useEffect(() => {
     Alert.alert("Carrinho", "Seu carrinho está vazio")
   }, [count])
