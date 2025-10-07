@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import { HomeScreen } from '../src/screens/HomeScreen'
-import { GallerySreen } from '../src/screens/GallerySreen'
+import HomeScreen from '../screens/HomeScreen'
+import GallerySreen from '../screens/GallerySreen'
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -10,6 +10,11 @@ export function StackRoutes(){
             <Screen 
                 name='home'
                 component={HomeScreen}
+                options={{
+                    title: 'Main menu',
+                    headerTintColor: 'blue',
+                    headerShown: false,
+                }}
             />
 
             <Screen 
