@@ -18,7 +18,7 @@ E instalar as duas bibliotecas que o navigation depende:
 
 `npm install react-native-screens react-native-safe-area-context`
 
-## Rotas - Roteamento
+## Navegação tipo Stack - Roteamento
 
 Criar pasta routes dentro de src, arquivo stack.routes.tsx
 
@@ -73,7 +73,7 @@ component -> qual o component screen
 </Navigator>
 ```
 
-## Container
+### Container
 
 Contexto de rotas é um tipo de navegação e as telas que ele pode acessar.
 
@@ -139,7 +139,7 @@ export default function App() {
 
 Posso passar o component do **<StatusBar style='auto'/>** na HomeScreen.tsx e na GalleryScreen.tsx
 
-## Botão para navegação - Usando Navigation para trocar de telas
+### Botão para navegação - Usando Navigation para trocar de telas
 
 Temos que resgatar o <Navigator> dentro da Screen (ele vem no import do stack.routes.tsx nas screens criadas home e gallery). Resgatamos no parâmetro da função.
 
@@ -184,7 +184,7 @@ export function StackRoutes(){
 }
 ```
 
-## Option Screen
+### Option Screen
 
 Options é uma propriedade da screen para colocar estilos e nome personalizados:
 
@@ -211,5 +211,12 @@ export function StackRoutes(){
 }
 ```
 
+## Navegação tipo Bottom Tabs - Roteamento
 
+https://reactnavigation.org/docs/bottom-tab-navigator
 
+Comando
+
+`npm install @react-navigation/bottom-tabs`
+
+dentro da pasta Routes, cria o arquivo bottom-tabs.routes.tsx
