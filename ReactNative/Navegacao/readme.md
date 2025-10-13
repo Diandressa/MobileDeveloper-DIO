@@ -284,3 +284,54 @@ Arrumar no component:
     />
 </Navigator>
 ```
+## Ícones Expo
+
+Usar o vector-icons: https://docs.expo.dev/guides/icons/
+
+Ele já venho com o Expo, só precisamos importar. Importa no bottom-tabs.routes.tsx
+
+`import Ionicons from '@expo/vector-icons/Ionicons';`
+
+Instalar o pacote se não vier instalado no expo:
+
+`npx expo install @expo/vector-icons`
+
+Podemos pegar um ícone da galeria: https://icons.expo.fyi/Index
+
+Usamos o option no arquivo bottom-tabs.routes.tsx para personalizar, para estilizar o ícone usamos o tabBarIcon:
+
+```
+<Screen 
+    name='home' 
+    component={HomeScreen}
+    options={{
+        tabBarIcon: 
+    }}
+/>
+```
+
+Passamos valores como uma função. Os parâmetros são os valores que queremos alterar.
+
+```
+options={{
+    tabBarIcon:({color,size}) => (
+        <MaterialCommunityIcons
+            name='home'
+        >
+        </MaterialCommunityIcons>
+    ),
+}}
+```
+
+O name é o nome do ícone, podemos encontrar na lib [icons.expo.fyi](https://icons.expo.fyi/Index) ou control+enter.
+
+Alterar a cor e o tamanho, deixamos o size padrão:
+
+```
+<MaterialCommunityIcons
+    name='home'
+    color='red'
+    size={size}
+>
+</MaterialCommunityIcons>
+```
