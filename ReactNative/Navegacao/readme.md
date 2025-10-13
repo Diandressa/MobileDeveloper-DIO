@@ -288,7 +288,7 @@ Arrumar no component:
 
 Usar o vector-icons: https://docs.expo.dev/guides/icons/
 
-Ele já venho com o Expo, só precisamos importar. Importa no bottom-tabs.routes.tsx
+Ele já venho com o Expo, só precisamos importar. Importa no bottom-tabs.routes.tsx. Dependendo do Icone ele importa de outras bibliotecas. É recomendado usar a mesma lib no projeto, podemos filtrar por pacote no [expo vector](https://icons.expo.fyi/Index).
 
 `import Ionicons from '@expo/vector-icons/Ionicons';`
 
@@ -334,4 +334,20 @@ Alterar a cor e o tamanho, deixamos o size padrão:
     size={size}
 >
 </MaterialCommunityIcons>
+```
+
+## Mudar title da tab com option
+
+```
+options={{
+    title: 'Main',
+    tabBarIcon:({color,size}) => (
+        <MaterialCommunityIcons
+            name='view-gallery'
+            color='blue'
+            size={size}
+        >
+        </MaterialCommunityIcons>
+    ),
+}}
 ```

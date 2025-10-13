@@ -27,6 +27,7 @@ export function BottomTabsRoutes(){
                 name='gallery' 
                 component={GalleryScreen}
                 options={{
+                    title: 'photos',
                     tabBarIcon:({color,size}) => (
                         <MaterialCommunityIcons
                             name='view-gallery'
