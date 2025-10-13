@@ -220,3 +220,48 @@ Comando
 `npm install @react-navigation/bottom-tabs`
 
 dentro da pasta Routes, cria o arquivo bottom-tabs.routes.tsx
+
+## Criando as Rotas em abas
+
+No bottom-tabs.routes.tsx:
+
+```
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from '../screens/HomeScreen';
+import GalleryScreen from '../screens/GallerySreen';
+
+const Tab = createBottomTabNavigator();
+
+export function BottomTabsRoutes(){
+    return(
+        <Tab.Navigator>
+            <Tab.Screen 
+                name='home' 
+                component={HomeScreen}
+            />
+            <Tab.Screen 
+                name='gallery' 
+                component={GalleryScreen}
+            />
+        </Tab.Navigator>
+    )
+}
+```
+
+No index.tsx:
+
+```
+import { NavigationContainer } from '@react-navigation/native'
+
+//o contexto de rota
+import { BottomTabsRoutes } from './bottom-tabs.routes'
+
+//caixa de contextos
+export function Routes(){
+    return(
+        <NavigationContainer>
+            <BottomTabsRoutes/>
+        </NavigationContainer>
+    )
+}
+```
