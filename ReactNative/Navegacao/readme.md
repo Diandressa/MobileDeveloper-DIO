@@ -265,3 +265,22 @@ export function Routes(){
     )
 }
 ```
+
+## Desestruturar a função
+
+`const { Navigator, Screen } = createBottomTabNavigator();`
+
+Arrumar no component:
+
+```
+<Navigator>
+    <Screen 
+        name='home' 
+        component={HomeScreen}
+    />
+    <Screen 
+        name='gallery' 
+        component={GalleryScreen}
+    />
+</Navigator>
+```

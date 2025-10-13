@@ -2,19 +2,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import GalleryScreen from '../screens/GallerySreen';
 
-const Tab = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator();
 
 export function BottomTabsRoutes(){
     return(
-        <Tab.Navigator>
-            <Tab.Screen 
+        <Navigator>
+            <Screen 
                 name='home' 
                 component={HomeScreen}
             />
-            <Tab.Screen 
+            <Screen 
                 name='gallery' 
                 component={GalleryScreen}
             />
-        </Tab.Navigator>
+        </Navigator>
     )
 }
