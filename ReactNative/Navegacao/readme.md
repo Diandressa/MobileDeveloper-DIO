@@ -221,7 +221,7 @@ Comando
 
 dentro da pasta Routes, cria o arquivo bottom-tabs.routes.tsx
 
-## Criando as Rotas em abas
+### Criando as Rotas em abas
 
 No bottom-tabs.routes.tsx:
 
@@ -284,6 +284,7 @@ Arrumar no component:
     />
 </Navigator>
 ```
+
 ## Ícones Expo
 
 Usar o vector-icons: https://docs.expo.dev/guides/icons/
@@ -351,3 +352,23 @@ options={{
     ),
 }}
 ```
+
+## Trabalhando com Drawer Navigation
+
+### Instalar o Drawer Navigator
+
+https://reactnavigation.org/docs/drawer-navigator
+
+comando:
+
+`npm install @react-navigation/drawer`
+
+Ele precisa de duas dependências, para instalar com o expo:
+
+`npx expo install react-native-gesture-handler react-native-reanimated react-native-worklets`
+
+importar na App.tsx
+
+`import { createDrawerNavigator } from '@react-navigation/drawer';`
+
+### Criando contexto de Rotas de Gaveta
