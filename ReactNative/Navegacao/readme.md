@@ -221,6 +221,8 @@ Comando
 
 dentro da pasta Routes, cria o arquivo bottom-tabs.routes.tsx
 
+![Passo a Passo - Como customizar minha Bottom Tab Bar?](https://www.youtube.com/watch?v=8C9Un37K-jI)
+
 ### Criando as Rotas em abas
 
 No bottom-tabs.routes.tsx:

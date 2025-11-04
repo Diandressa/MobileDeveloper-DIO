@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import { globalStyles } from "../styles/screenStyles";
 
-export default function HomeScreen(){
+export default function SkillScreen(){
     return(
         <View style={globalStyles.container}>
-            <Text>Home works!!</Text>
+            <Text>Skill works!!</Text>
         </View>
     )
 }

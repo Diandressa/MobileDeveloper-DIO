@@ -1,45 +1,71 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import SkillScreen from "../screens/SkillScreen";
+import { FollowMeScreen } from "../screens/FollowMeScreen";
+import { theme } from "../styles/theme";
 
 const {Navigator,Screen} = createBottomTabNavigator();
 
 export function BottomTabsRoutes(){
     return(
         <Navigator
-            screenOptions={
+            screenOptions ={({route,navigation}) => (
                 {
-                tabBarActiveTintColor: '#000',
-                tabBarInactiveTintColor: 'lightgray',
-                tabBarStyle: 
-                    {
-                        backgroundColor: 'blue',
-                        marginHorizontal: 20,
-                        marginBottom: 70,
-                        borderRadius: 20,
+                    headerShown: false,
+                    tabBarIcon: ({color,focused,size})=>{
+
+                        let iconName: 'home' | 'account' | 'card-text-outline' = 'home';
+
+                        if(route.name === 'home'){
+                            iconName = 'home'
+                        } else if (route.name === 'follow'){
+                            iconName = 'account'
+                        } else {
+                            iconName ='card-text-outline'
+                        }
+
+                        return <MaterialCommunityIcons name={iconName} size={size} color={color}/>
+                    },
+
+                    tabBarActiveTintColor: '#fff',
+                    tabBarInactiveTintColor: '#ffffff78',
+                    tabBarStyle:{
+                        position: 'absolute',
+                        bottom: 20,
+                        backgroundColor: theme.colors.primary,
+                        marginHorizontal: 40,
+                        height: 80,
+                        borderRadius: 50,
                         elevation: 0,
                     },
                     tabBarItemStyle: {
-                        flexDirection: 'column',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        paddingBlock: 0,
+                        marginBottom: 0,
                         justifyContent: 'center',
                         alignItems: 'center',
+                    },
+                    tabBarLabelStyle: {
+                        fontSize: 12,
                     }
-                }   
-            }
+                }
+            )}
         >
             <Screen
             name="home"
             component={HomeScreen}
-            options={{
-                title: 'Main',
-                headerShown: false,
-                tabBarIcon: ({color,size}) => (
-                    <MaterialCommunityIcons
-                        name='home'
-                        size={size}
-                    />  
-                )
-            }}
+            />
+
+            <Screen
+            name="follow"
+            component={FollowMeScreen}
+            />
+
+            <Screen
+            name="skills"
+            component={SkillScreen}
             />
         </Navigator>
     )
