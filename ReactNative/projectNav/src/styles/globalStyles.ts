@@ -7,5 +7,10 @@ export const globalStyles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme.colors.background,
+        fontFamily: "Roboto",
+    },
+    h1: {
+        fontSize: 32,
+        marginTop: 50,
     }
 })

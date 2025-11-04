@@ -1,5 +1,5 @@
 import { View,Text } from "react-native";
-import { globalStyles } from "../styles/screenStyles";
+import { globalStyles } from "../styles/globalStyles";
 
 export function FollowMeScreen(){
     return(
