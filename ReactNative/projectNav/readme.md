@@ -12,10 +12,10 @@
 
 O SafeAreaView é um componente que impede que o conteúdo da sua tela fique escondido atrás de partes do sistema do celular, como:
 
-* A notch (aquele recorte na parte superior do iPhone);
-* A barra de status (onde ficam hora, bateria, etc.);
-* A barra de navegação inferior (com os botões do Android);
-* As bordas curvas de telas modernas.
+* A notch (aquele recorte na parte superior do iPhone)
+* A barra de status (onde ficam hora, bateria, etc.)
+* A barra de navegação inferior (com os botões do Android)
+* As bordas curvas de telas modernas
 
 Ou seja, ele respeita as “áreas seguras” do dispositivo.
 
