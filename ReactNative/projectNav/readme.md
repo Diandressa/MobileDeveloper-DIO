@@ -1,5 +1,11 @@
 # Curriculum
- 
+
+## Layout
+
+![Layout Aplicação](./assets/layout.png)
+
+## BottomTabBar Style
+
 ![Passo a Passo - Como customizar minha Bottom Tab Bar?](https://www.youtube.com/watch?v=8C9Un37K-jI)
 
 ## SafeAreaView
@@ -26,3 +32,4 @@ Com o SafeAreaView, o React Native detecta automaticamente as margens seguras do
     </SafeAreaView>
 </NavigationContainer>
 ```
+
