@@ -20,8 +20,14 @@ export const globalStyles = StyleSheet.create({
     },
     bottomContainer: {
         flex: 2,
-        padding: 40,
+        padding: 30,
         width: '100%',
+    },
+    boxSkills: {
+        backgroundColor: '#EBFCFE',
+        borderRadius: 20,
+        padding: 40,
+        elevation: 1,
     },
     h1: {
         fontSize: 32,
