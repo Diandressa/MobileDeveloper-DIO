@@ -8,7 +8,20 @@ export const globalStyles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: theme.colors.background,
         fontFamily: "Roboto",
+    },
+    topContainer: {
+        width: '100%',
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: theme.colors.primary,
+        fontFamily: "Roboto",
+        top: 0,
+    },
+    bottomContainer: {
+        flex: 2,
         padding: 40,
+        width: '100%',
     },
     h1: {
         fontSize: 32,
@@ -17,6 +30,29 @@ export const globalStyles = StyleSheet.create({
     text: {
         textAlign: 'center',
         marginTop: 10,
-        fontSize: 16,
-    }
+        fontSize: 15,
+        paddingInline: 40,
+    },
+    perfil: {
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+    },
+    perfilText: {
+        fontSize: 32,
+        color: '#fff',
+        lineHeight: 34,
+    },
+    buttonLink: {
+        backgroundColor: '#fff',
+        paddingVertical: 12,
+        borderRadius: 25,          
+        shadowColor: '#00000077',
+        elevation: 1,
+        alignItems: 'center', 
+        zIndex:2,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        width: '60%',
+    },
 })

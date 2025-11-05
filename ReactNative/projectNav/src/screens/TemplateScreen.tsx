@@ -8,7 +8,7 @@ interface TemplateScreenProps {
 
 export function TemplateScreen({children}:TemplateScreenProps){
     return(
-        <ImageBackground source={elementImg} style={globalStyles.container}>
+        <ImageBackground source={elementImg} imageStyle={{zIndex: 1, resizeMode: 'cover'}} style={globalStyles.container}>
             {children}
         </ImageBackground>
     )
