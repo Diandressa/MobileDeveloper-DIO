@@ -1,10 +1,10 @@
-import { View,Text } from "react-native";
-import { globalStyles } from "../styles/globalStyles";
+import { Text } from "react-native";
+import { TemplateScreen } from "./TemplateScreen";
 
 export function FollowMeScreen(){
     return(
-        <View style={globalStyles.container}>
+        <TemplateScreen>
             <Text>Follow me</Text>
-        </View>
+        </TemplateScreen>
     )
 }

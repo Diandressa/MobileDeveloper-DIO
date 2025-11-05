@@ -15,14 +15,14 @@ export function BottomTabsRoutes(){
                     headerShown: false,
                     tabBarIcon: ({color,focused,size})=>{
 
-                        let iconName: 'home' | 'account' | 'card-text-outline' = 'home';
+                        let iconName: 'comment-text-outline' | 'account' | 'text-short' = 'comment-text-outline';
 
-                        if(route.name === 'home'){
-                            iconName = 'home'
+                        if(route.name === 'about'){
+                            iconName = 'comment-text-outline'
                         } else if (route.name === 'follow'){
                             iconName = 'account'
                         } else {
-                            iconName ='card-text-outline'
+                            iconName ='text-short'
                         }
 
                         return <MaterialCommunityIcons name={iconName} size={size} color={color}/>
@@ -54,7 +54,7 @@ export function BottomTabsRoutes(){
             )}
         >
             <Screen
-            name="home"
+            name="about"
             component={HomeScreen}
             />
 

@@ -8,9 +8,15 @@ export const globalStyles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: theme.colors.background,
         fontFamily: "Roboto",
+        padding: 40,
     },
     h1: {
         fontSize: 32,
         marginTop: 50,
+    },
+    text: {
+        textAlign: 'center',
+        marginTop: 10,
+        fontSize: 16,
     }
 })
