@@ -1,5 +1,7 @@
 # React Native + Expo Curriculum
 
+[Clique aqui para a verão em português do README](./readme.md)
+
 Project developed to showcase my professional profile through a mobile application.
 The app contains three pages: the first with an “About Me” section, the second with contact information, and the third displaying my technical skills.
 
@@ -16,6 +18,7 @@ Download the Expo Go app from the Play Store.
 Scan the QR Code below to open it directly on your phone.
 
 📷 QR Code to test on your phone:
+
 ![QR Code Expo](./qrcode-expo.svg)
 
 # Technologies Used
