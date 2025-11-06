@@ -2,7 +2,7 @@
 
 [click here to see the English version of the readme.](./readmeEN.md)
 
-Projeto com o desenvolvimento de um aplicativo com meu perfil profissional. Há três páginas, a primeira com sobre, a segunda com dados de contatos e, por fim, a terceira com as minhas habilidades técnicas.
+Projeto voltado para o desenvolvimento de um aplicativo que apresenta meu perfil profissional. O app possui três páginas: a primeira com informações sobre mim, a segunda com meus dados de contato e a terceira com minhas habilidades técnicas.
 
 ## Demonstração
 
