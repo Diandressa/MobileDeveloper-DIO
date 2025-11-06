@@ -5,11 +5,11 @@
 Project developed to showcase my professional profile through a mobile application.
 The app contains three pages: the first with an “About Me” section, the second with contact information, and the third displaying my technical skills.
 
-# Demo
+## Demo
 
 ![Demonstração](./demostracao.gif)
 
-Usage
+## Usage
 
 I’m making it available for testing through the Expo Go app:
 
@@ -21,13 +21,13 @@ Scan the QR Code below to open it directly on your phone.
 
 ![QR Code Expo](./qrcode-expo.svg)
 
-# Technologies Used
+## Technologies Used
 
 * React Native
 * Expo
 * TypeScript
 
-# How to Run the Project Locally
+## How to Run the Project Locally
 
 Clone this repository:
 
@@ -52,6 +52,6 @@ On the Metro Bundler screen, press:
 a → to open in Android Studio Emulator
 Or scan the QR Code in Expo Go on your phone.
 
-License
+# License
 
 This project is licensed under the [ MIT License](./LICENSE.txt)
