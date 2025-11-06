@@ -1,6 +1,6 @@
 # React Native + Expo Curriculum
 
-[Clique aqui para a verão em português do README](./readme.md)
+[Clique aqui para a versão em português do README](./readme.md)
 
 Project developed to showcase my professional profile through a mobile application.
 The app contains three pages: the first with an “About Me” section, the second with contact information, and the third displaying my technical skills.
