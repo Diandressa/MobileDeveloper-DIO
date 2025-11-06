@@ -1,4 +1,4 @@
-# Curriculum React Native + Expo
+# Currículo React Native + Expo
 
 [click here to see the English version of the readme.](./readmeEN.md)
 
