@@ -28,15 +28,16 @@ export const globalStyles = StyleSheet.create({
         borderRadius: 20,
         padding: 40,
         elevation: 1,
+        maxHeight: '80%',
     },
     h1: {
         fontSize: 32,
-        marginTop: 50,
+        marginTop: 10,
     },
     text: {
         textAlign: 'center',
         marginTop: 10,
-        fontSize: 18,
+        fontSize: 15,
         paddingInline: 40,
     },
     perfil: {

@@ -27,6 +27,8 @@ export default function SkillScreen(){
                             {key: 'NPM', image: icons.npm},
                             {key: 'API', image: icons.api},
                             ]}
+                            persistentScrollbar={true} // 👈 deixa a barra de rolagem sempre visível
+                            showsVerticalScrollIndicator={true}
                             renderItem={({item}) => 
                             <View style={{marginVertical: 10, flexDirection: 'row', alignItems: 'center'}}>
                                 <Image source={item.image} style={{marginRight: 10}}/>

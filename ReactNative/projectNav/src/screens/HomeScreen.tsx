@@ -6,9 +6,9 @@ import { TemplateScreen } from "./TemplateScreen";
 export default function HomeScreen(){
     return(
         <TemplateScreen>
-            <Image source={homeImg} />
+            <Image source={homeImg} style={{width: '50%', resizeMode: 'contain'}}/>
             <Text style={globalStyles.h1}>About me</Text>
-            <Text style={globalStyles.text}>My name is Andressa, and I am a front-end web developer. I focus on React and React Native, and I have learned many hard skills along the way. I am committed, dedicated, and work well in a team.</Text>
+            <Text style={globalStyles.text}>I'm Andressa, a front-end developer focused on React and React Native. I'm dedicated, collaborative, and always improving my skills.</Text>
         </TemplateScreen>
     )
 }

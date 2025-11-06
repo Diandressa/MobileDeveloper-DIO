@@ -15,7 +15,7 @@ export function FollowMeScreen(){
                     <Text style={globalStyles.perfilText}>my name is Andressa.</Text>
                 </View>
 
-                <View style={[globalStyles.bottomContainer, { gap: 60}]}>
+                <View style={[globalStyles.bottomContainer, { gap: 30}]}>
                     <Text style={{textAlign: 'center', fontSize: 20}}>contact me through</Text>
                     <Link url={'https://github.com/Diandressa'} text="Github" name="github"/>
                     <Link url={'https://www.linkedin.com/in/andressa-nicolau'} text="Linkedin" name="linkedin"/>

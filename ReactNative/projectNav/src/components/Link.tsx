@@ -15,8 +15,8 @@ export function Link({text, url, name}: LinkProps){
             onPress={() => Linking.openURL(url)}
         >
             <View style={{flexDirection: 'row'}}>
-                <MaterialCommunityIcons name={name} size={20} style={ {marginRight: 10} }></MaterialCommunityIcons>
-                <Text>{text}</Text>
+                <MaterialCommunityIcons name={name} size={21} style={ {marginRight: 10} }></MaterialCommunityIcons>
+                <Text style={{fontSize: 15}}>{text}</Text>
             </View>
         </TouchableOpacity>
     )
