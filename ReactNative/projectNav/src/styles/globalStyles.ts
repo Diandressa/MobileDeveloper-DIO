@@ -36,7 +36,7 @@ export const globalStyles = StyleSheet.create({
     text: {
         textAlign: 'center',
         marginTop: 10,
-        fontSize: 15,
+        fontSize: 18,
         paddingInline: 40,
     },
     perfil: {
