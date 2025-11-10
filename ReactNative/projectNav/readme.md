@@ -1,35 +1,55 @@
-# Curriculum
+# Currículo React Native + Expo
 
-## Layout
+[click here to see the English version of the readme.](./readmeEN.md)
 
-![Layout Aplicação](./assets/layout.png)
+Projeto voltado para o desenvolvimento de um aplicativo que apresenta meu perfil profissional. O app possui três páginas: a primeira com informações sobre mim, a segunda com meus dados de contato e a terceira com minhas habilidades técnicas.
 
-## BottomTabBar Style
+## Demonstração
 
-![Passo a Passo - Como customizar minha Bottom Tab Bar?](https://www.youtube.com/watch?v=8C9Un37K-jI)
+![Demonstração](./demostracao.gif)
 
-## SafeAreaView
+## Uso
 
-O SafeAreaView é um componente que impede que o conteúdo da sua tela fique escondido atrás de partes do sistema do celular, como:
+Estou disponibilizando para testes por meio do aplicativo Expo GO:
 
-* A notch (aquele recorte na parte superior do iPhone)
-* A barra de status (onde ficam hora, bateria, etc.)
-* A barra de navegação inferior (com os botões do Android)
-* As bordas curvas de telas modernas
+* Baixe o aplicativo Expo Go na Play Store.
+* Escaneie o QR Code abaixo para abrir diretamente no seu celular.
 
-Ou seja, ele respeita as “áreas seguras” do dispositivo.
+📷 QR Code para testar no celular:
 
-🛠️ Como ele funciona
+![QR Code Expo](./qrcode-expo.svg)
 
-Sem o SafeAreaView, seu conteúdo ocupa toda a tela (flex: 1), podendo ser coberto por partes do sistema.
+## Tecnologias Utilizadas
 
-Com o SafeAreaView, o React Native detecta automaticamente as margens seguras do aparelho e adiciona padding nessas áreas — assim, nada fica escondido.
+* React Native
+* Expo
+* Typescript
 
-```
-<NavigationContainer>
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
-        <BottomTabsRoutes/>
-    </SafeAreaView>
-</NavigationContainer>
-```
+## Como rodar o projeto localmente
 
+1. Clone este repositório:
+
+`https://github.com/Diandressa/MobileDeveloper-DIO.git`
+
+2. Navega até a pasta do Projeto pelo terminal
+
+Control+Shift+'
+
+`cd ReactNative/projectNav`
+
+3. Instale as dependências:
+
+`npm install`
+
+4. Inicie o projeto:
+
+`npm run start`
+
+5. Na tela do Metro Bundler, pressione:
+
+a → para abrir no Android Studio Emulator
+Ou escaneie o QR Code no Expo Go pelo celular.
+
+# Licença
+
+Este projeto está licenciado sob a [Licença MIT](./LICENSE.txt)
