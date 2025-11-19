@@ -3,12 +3,15 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
-  const [quantity, setQuantity] = useState<number>(12);
+  const [quantity, setQuantity] = useState<number>(1);
+  const [price, setPrice] = useState<number>(10.90);
+  const basePrice = 10.9;
 
   const removeNumber = () => {
     setQuantity((prevQuantity)=>{
       const newQuantity = prevQuantity -1;
       console.log(newQuantity);
+      setPrice(basePrice * newQuantity)
       return newQuantity
     });
   }
@@ -17,17 +20,22 @@ export default function App() {
     setQuantity((prevQuantity)=>{
       const newQuantity = prevQuantity +1;
       console.log(newQuantity);
+      setPrice(basePrice * newQuantity)
       return newQuantity
     });
   }
 
   return (
     <View style={styles.container}>
+
       <View style={styles.buttonRow}>
         <Button title="-" onPress={removeNumber}/>
         <Text style={styles.textLabel}>{quantity}</Text>
         <Button title="+" onPress={addNumber}/>
       </View>
+
+      <Text>{price}</Text>
+
       <StatusBar style="auto" />
     </View>
   ); 
