@@ -19,3 +19,49 @@ React Native ou web, responsável pela view:
 * renderização
 
 O React Core passa a lógica para o React Native renderizar uma única vez. Para atualizar a aplicação precisamos utilizar os Hooks (Ganchos)
+
+## Documentação 
+
+A mesma do react: https://react.dev/reference/react/hooks 
+
+## useState
+
+Preciso importar o hook
+
+`import React, {useState} from 'react';`
+
+useState altera o estado, ou seja, se o estado for alterado ele irá renderizar. Passamos uma função que é chamado quando o estado muda.
+
+`const [quantity, setQuantity] = useState<number>(12);`
+
+```
+const removeNumber = () => {
+    setQuantify(quantity - 1);
+    console.log(quantity)
+}
+
+const addNumber = () => {
+    setQuantify(quantity + 1);
+    console.log(quantity)
+}
+```
+
+Ele da o console.log antes de renderizar. Não espera o setQuantity acontecer para imprimir. Por isso colocamos o console.log dentro do setQuantity.
+
+O prevQuantity é o valor da variável do hook, o quantity.
+
+Preciso retornar a nova quantidade 
+
+```
+const removeNumber = () => {
+    setQuantity((prevQuantity)=>{
+      const newQuantity = prevQuantity -1;
+      console.log(newQuantity);
+      return newQuantity
+    });
+  }
+```
+
+Isso ajusta, deixa síncrono. Uma função executa após a outra na mesma chamada de função.
+
+
