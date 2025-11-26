@@ -64,4 +64,30 @@ const removeNumber = () => {
 
 Isso ajusta, deixa síncrono. Uma função executa após a outra na mesma chamada de função.
 
+## UseEffect
 
+Executa um efeito colateral quando ocorre uma modificação no elemento vigiado. Ele é uma funcão:
+
+```
+useEffect(()=>{
+
+})
+```
+
+Depois da vírgula coloca a lista de elementos que serão vigiados, colocar a função depois da criação da variável:
+
+```
+useEffect(()=>{
+  console.log("Algo foi alterado")
+}, [quantity])
+```
+
+Agora, quando quantity tiver o valor alterado o useEffect vai ser executado.
+
+Se não passar a lista do elemento a ser alterado, ele executa a ação do useEffect assim que a aplicação inicia:
+
+```
+useEffect(()=>{
+  console.log("Efeito colateral executado, app iniciado")
+}, [])
+```
