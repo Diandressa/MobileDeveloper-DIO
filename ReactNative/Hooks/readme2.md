@@ -91,3 +91,47 @@ useEffect(()=>{
   console.log("Efeito colateral executado, app iniciado")
 }, [])
 ```
+
+## useRef
+
+Usamos o useRed como os seletores do JS, como o querySelect ou getElementyById, para selecionar o elemento que desejamos alterar. Guardo a referência do elemento usando o useRef.
+
+O useRef precisa de um valor inicial, no exemplo passamos null.
+
+```
+const textInputRef = useRef<TextInput>(null);
+```
+
+O <TextInput> é a tipagem do elemento que estamos selecionando
+
+No elemento colocamos o ref:
+
+```
+<TextInput ref={textInputRef} style={styles.textInput}>
+```
+
+Verificamos se existe o elemento, o current é o elemento atual (corrente):
+
+```
+const resetButton = () => {
+  if(textInputRef.current){
+
+  }
+}
+```
+
+Usamos o *setNativeProps* para manipular a propriedade do elemento, queremos manipular a propriedade text:
+
+```
+const resetButton = () => {
+  if(textInputRef.current){
+    textInputRef.current.focus();
+    textInputRef.current.setNativeProps({text: "reset"});
+  }
+}
+```
+
+Funciona na primeira REnderização
+
+
+
