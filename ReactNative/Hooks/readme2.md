@@ -131,7 +131,33 @@ const resetButton = () => {
 }
 ```
 
-Funciona na primeira REnderização
+Funciona na primeira Renderização.
+
+Para renderizar o conteúdo a cada mudança podemos usar o useState
+
+```
+const [text, setText] = useState("");
+const textInputRef = useRef<TextInput>(null);
+
+const resetButton = () => {
+  setText("");            // limpa o conteúdo
+  textInputRef.current?.focus(); // coloca o cursor no input
+};
+
+```
+
+Elemento:
+
+```
+<View style={styles.container}>
+  <TextInput onChangeText={setText} ref={textInputRef} style={styles.textInput} value={text}>
+    
+  </TextInput>
+  <Button title='Resetar' onPress={resetButton}/>
+</View>
+```
+
+Chama o onChangeText para atualizar o valor do useSate, set o valor digitado para o estado. Ao apertar no btn resetar ele chama a função resetButton. Aplica o setText como branco e focu o input, e renderiza isso na tela a cada clique
 
 
 
