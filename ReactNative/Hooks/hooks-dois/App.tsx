@@ -1,51 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React, {useState, useEffect, useRef} from 'react';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
-  const [quantity, setQuantity] = useState<number>(1);
-  const [price, setPrice] = useState<number>(10.90);
-  const basePrice = 10.9;
+  const textInputRef = useRef<TextInput>(null);
 
-  useEffect(()=>{
-    console.log("Efeito colateral executado, app iniciado")
-  }, [])
-
-  const removeNumber = () => {
-    setQuantity((prevQuantity)=>{
-
-      const newQuantity = prevQuantity -1;
-      console.log(newQuantity);
-
-      setPrice(basePrice * newQuantity)
-
-      return newQuantity
-    });
-  }
-
-  const addNumber = () => {
-    setQuantity((prevQuantity)=>{
-      const newQuantity = prevQuantity +1;
-      console.log(newQuantity);
-
-      setPrice(basePrice * newQuantity)
-
-      return newQuantity
-    });
+  const resetButton = () => {
+    if(textInputRef.current){
+      textInputRef.current.focus();
+      textInputRef.current.setNativeProps({text: "reset"});
+    }
   }
 
   return (
     <View style={styles.container}>
-
-      <View style={styles.buttonRow}>
-        <Button title="-" onPress={removeNumber}/>
-        <Text style={styles.textLabel}>{quantity}</Text>
-        <Button title="+" onPress={addNumber}/>
-      </View>
-
-      <Text>{price}</Text>
-
-      <StatusBar style="auto" />
+      <TextInput ref={textInputRef} style={styles.textInput}>
+        
+      </TextInput>
+      <Button title='Resetar' onPress={resetButton}/>
     </View>
   ); 
 }
@@ -57,11 +29,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textLabel:{
-    fontSize: 22,
-    marginHorizontal: 15,
+  textInput:{
+    height: 40,
+    borderColor: 'gray',
+    paddingTop: 10,
+    marginTop: 20,
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingHorizontal: 10,
   },
-  buttonRow: {
-    flexDirection: "row",
-  }
 });
