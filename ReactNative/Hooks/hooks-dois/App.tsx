@@ -3,18 +3,17 @@ import React, {useState, useEffect, useRef} from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
+  const [text, setText] = useState("")
   const textInputRef = useRef<TextInput>(null);
 
   const resetButton = () => {
-    if(textInputRef.current){
-      textInputRef.current.focus();
-      textInputRef.current.setNativeProps({text: "reset"});
-    }
+    setText("");
+    textInputRef.current?.focus(); // interrogação: chama o focus() se não for null ou undefined
   }
 
   return (
     <View style={styles.container}>
-      <TextInput ref={textInputRef} style={styles.textInput}>
+      <TextInput onChangeText={setText} ref={textInputRef} style={styles.textInput} value={text}>
         
       </TextInput>
       <Button title='Resetar' onPress={resetButton}/>
