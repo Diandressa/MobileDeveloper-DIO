@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
@@ -7,11 +7,18 @@ export default function App() {
   const [price, setPrice] = useState<number>(10.90);
   const basePrice = 10.9;
 
+  useEffect(()=>{
+    console.log("Efeito colateral executado, app iniciado")
+  }, [])
+
   const removeNumber = () => {
     setQuantity((prevQuantity)=>{
+
       const newQuantity = prevQuantity -1;
       console.log(newQuantity);
+
       setPrice(basePrice * newQuantity)
+
       return newQuantity
     });
   }
@@ -20,7 +27,9 @@ export default function App() {
     setQuantity((prevQuantity)=>{
       const newQuantity = prevQuantity +1;
       console.log(newQuantity);
+
       setPrice(basePrice * newQuantity)
+
       return newQuantity
     });
   }
