@@ -20,7 +20,7 @@ export default function HomeScreen({navigation}:HomeScreenProps){
             <TextInput 
                 placeholder="Digite seu nome..."
                 value={inputText}
-                onChangeText={(text)=>setInputText} //a cada atualizao de texto ele envia o valor para o setInputText atualizar o inputText
+                onChangeText={(text)=>setInputText(text)} //a cada atualização de texto ele envia o valor para o setInputText atualizar o inputText
             />
             <Button title="Logar" onPress={navigateToUserScreen} />
         </View>

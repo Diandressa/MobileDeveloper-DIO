@@ -99,7 +99,7 @@ export default function HomeScreen(){
             <TextInput 
                 placeholder="Digite seu nome..."
                 value={inputText}
-                onChangeText={(text)=>setInputText} //a cada atualizao de texto ele envia o valor para o setInputText atualizar o inputText
+                onChangeText={(text)=>setInputText(text)} //a cada atualização de texto ele envia o valor para o setInputText atualizar o inputText
             />
             <Button title="Logar" onPress={navigateToUserScreen} />
         </View>
@@ -127,7 +127,9 @@ Importa a lista de typos do App.tsx
 
 Definir agora a tipagem das propriedades da tela Home (fora do export):
 
-O navigation vai ser um StackNavigationProp com o tipo RootStackParamList, pegando o item Home dessa list
+O navigation vai ser um StackNavigationProp com o tipo RootStackParamList, pegando o item Home dessa list.
+
+navigation: é tipado como a navegação da tela "Home"
 
 ```
 type HomeScreenProps = {
@@ -154,4 +156,54 @@ const navigateToUserScreen = ()=>{
     navigation.navigate("User", {username: inputText})
 }
 ```
+
+## UserScreen
+
+Resgatar um valor passado na rota, pela HomeScreen, com o RouteProp. Vamos importa no UserScreen.tsx a Rota, Usamos a Rota em vez do StackNavigation pq iremos somente receber o parâmetro:
+
+`import { RouteProp } from "@react-navigation/native";`
+
+Importar também a list de parâmetros:
+
+`import { RootStackParamList } from "../../App";`
+
+Criar a tipagem para o parâmetro que iremos receber
+
+```
+type UserScreenProps = {
+    route: RouteProp<RootStackParamList, "User">
+}
+```
+
+Injeta no export, esperamos um parâmetro route do tipo UserScreenProps
+
+```
+export default function UserScreen({route}:UserScreenProps){
+    return(
+        <View>
+            <Text>Works!</Text>
+        </View>
+    )
+}
+```
+
+Extrair os parâmetro do username (dentro do export):
+
+O username é o tipo definido para o User, em RootStackParamList. Definimos ele em HomeScreen, passando o inputText, na função navigateToUserScreen(). Quando vou de uma tela para outra, os parâmetros ficam salvos na rota.
+
+```
+const {username} = route.params;
+```
+
+Podemos agora recuperar o username na tela:
+
+```
+return(
+    <View>
+        <Text>Bem vindo: {username}</Text>
+    </View>
+)
+```
+
+Esse é a maneira trabalhosa de recuperar um parâmetro entre telas, a forma mais prática e facilitada de compartilhar informações de um componente para outro ou entre telas seria usando os Contextos em React
 
