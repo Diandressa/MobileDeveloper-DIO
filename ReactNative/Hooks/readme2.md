@@ -159,5 +159,66 @@ Elemento:
 
 Chama o onChangeText para atualizar o valor do useSate, set o valor digitado para o estado. Ao apertar no btn resetar ele chama a função resetButton. Aplica o setText como branco e focu o input, e renderiza isso na tela a cada clique
 
+## useReducer
+
+Mais complexo, quando precisamos alterar um component de diferentes maneiras e funções.
+
+Passa o estado inicial
+
+`const [state, dispatch] = useReducer(useReducer, initialState)`
+
+Declarando o estado inicial
+
+```
+ const initialState = {
+    textInputRef: useRef<TextInput>(null);
+  }
+```
+Cria a função do reducer que vai gerenciar os estados do component (fora do export default App). A função vai receber, como parâmetro o estado e a ação que quero executar:
+
+`const reducer = (state, action) => {}`
+
+Podemos usar o switch case para organizar as funções
+
+```
+const reducer = (state:any, action:any) => {
+  switch (action.type){
+
+  }
+}
+```
+
+Definir os tipos de ações em uma const, como objeto
+
+```
+const ActionsTypes = {
+  RESET: "RESET",
+}
+```
+
+Na função de gerenciamento podemos definir a função caso chame o RESET
+
+```
+const reducer = (state, action) => {
+  switch (action.type){
+    case ActionsTypes.RESET:
+
+      state.textInputRef.current?.focus(); // interrogação: chama o focus() se não for null ou undefined
+      state.current.setNativeProps({text: ""})    
+      return state
+    
+  }
+}
+```
+
+Chama o RESET no component, com a função dispatch do reducer:
+
+```
+<Button title='Resetar' onPress={()=>dispatch({type: ActionsTypes.RESET})}/>
+```
+
+No componente, usa o state para acessar o textInputRef agora
+
+`<TextInput ref={state.textInputRef} style={styles.textInput}>`
 
 

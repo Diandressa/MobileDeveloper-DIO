@@ -1,22 +1,41 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useReducer} from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
-export default function App() {
-  const [text, setText] = useState("")
-  const textInputRef = useRef<TextInput>(null);
+const ActionsTypes = {
+  RESET: "RESET",
+  WRITE: "WRITE",
+}
 
-  const resetButton = () => {
-    setText("");
-    textInputRef.current?.focus(); // interrogação: chama o focus() se não for null ou undefined
+const reducer = (state:any, action:any) => {
+  switch (action.type){
+
+    case ActionsTypes.RESET:
+      
+      state.textInputRef.current?.focus(); // interrogação: chama o focus() se não for null ou undefined
+      state.textInputRef.current.setNativeProps({text: ""})
+      return state
+
+    case ActionsTypes.WRITE:
+       state.textInputRef.current.setNativeProps({text: "Inserir Texto"})
+       return state
   }
+}
+
+export default function App() {
+  const initialState = {
+    textInputRef: useRef<TextInput>(null),
+  }
+
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
     <View style={styles.container}>
-      <TextInput onChangeText={setText} ref={textInputRef} style={styles.textInput} value={text}>
+      <TextInput ref={state.textInputRef} style={styles.textInput}>
         
       </TextInput>
-      <Button title='Resetar' onPress={resetButton}/>
+      <Button title='Resetar' onPress={()=>dispatch({type: ActionsTypes.RESET})}/>
+      <Button title='Escrever' onPress={()=>dispatch({type: ActionsTypes.WRITE})}></Button>
     </View>
   ); 
 }
