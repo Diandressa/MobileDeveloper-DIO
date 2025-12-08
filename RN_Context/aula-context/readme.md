@@ -85,3 +85,73 @@ export type RootStackParamList = {
 Posso passar esse tipo quando cria a navegação
 
 `const {Navigator, Screen} = createStackNavigator<RootStackParamList>();`
+
+## HomeScreen
+
+Criar o input e o state que guarda o valor desse input ao renderizar:
+
+```
+export default function HomeScreen(){
+    const [inputText, setInputText] = useState("");
+
+    return(
+        <View>
+            <TextInput 
+                placeholder="Digite seu nome..."
+                value={inputText}
+                onChangeText={(text)=>setInputText} //a cada atualizao de texto ele envia o valor para o setInputText atualizar o inputText
+            />
+            <Button title="Logar" onPress={navigateToUserScreen} />
+        </View>
+    )
+}
+```
+
+Criar a função navigateToUserScreen para acessar a página Screen
+
+```
+const navigateToUserScreen = ()=>{
+    //navegar para o UserScreen
+}
+```
+
+Importar o NavigationProp:
+
+`import { StackNavigationProp } from "@react-navigation/stack";`
+
+Com o NavigationProp podemos passar propriedades pela navegação entre telas. Como estamos usando o stack então importamos o StackNavigationProp.
+
+Importa a lista de typos do App.tsx
+
+`import { RootStackParamList } from "../../App";`
+
+Definir agora a tipagem das propriedades da tela Home (fora do export):
+
+O navigation vai ser um StackNavigationProp com o tipo RootStackParamList, pegando o item Home dessa list
+
+```
+type HomeScreenProps = {
+    navigation: StackNavigationProp<RootStackParamList, "Home">;
+}
+```
+
+Passa essa a prop com a tipagem HomeScreenProps para o export HomeScreen:
+
+`export default function HomeScreen({navigation}:HomeScreenProps){`
+
+Agora na função navigateToUserScreen(), podemos passar a prop com a tipagem para UserScreen:
+
+Primeiro usamos o navigate() e passamos para o User do RootStackParamlist o parâmetro
+
+```
+navigation.navigate("User", )
+```
+
+Passamos como parâmetro o inputText (do useState) para a propriedade username definida no RootStackParamlist > User
+```
+const navigateToUserScreen = ()=>{
+    //navegar para o UserScreen
+    navigation.navigate("User", {username: inputText})
+}
+```
+
