@@ -46,6 +46,8 @@ Definimos um valor para o context, o contextValue.
 
 Abrimos o return para inserir o component <UserContextProvider>. Passamos o valor que desejamos. Dentro do component colocamos o children. Injetamos o valor no children (component passado na props, o component que chamou o context). Não esquecer o export para exportar.
 
+Passamos para o children o value (retornamos para o children), Podemos passar assim as props para os componentes.
+
 ```
 export default function UserContextProvider({children} : any){
     const contextValue = {nome: "Andressa"}
