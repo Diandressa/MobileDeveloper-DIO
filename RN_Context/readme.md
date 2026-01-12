@@ -87,6 +87,55 @@ export default function App() {
 
 Agora podemos consumir esses dados em uma página.
 
+## Usando um Contexto
+
+Como usar os dados nos componentes abraçados pelo UserContextProvider:
+
+Podemos usar um hook nativo no react chamado useContext, importamos ele primeiro no UserScreen.tsx
+
+`import { useContext } from "react";`
+
+Usamos na tela:
+
+`const UserContextValue = useContext()`
+
+..
+
+```
+export default function UserScreen({route}:UserScreenProps){
+    const {username} = route.params;
+    const UserContextValue = useContext()
+
+    return(
+        <View>
+            <Text>Bem vindo: {username}</Text>
+        </View>
+    )
+}
+```
+
+Precisamos passar o contexto pra função (não o Provide).
+
+O contexto é esse definido UserContext.tsx:
+
+`export const UserContext = createContext({})`
+
+Então fica assim na função:
+
+`const UserContextValue = useContext(UserContext)`
+
+Não esquecer de importar o UserContext tb.
+
+Agora criamos uma constante para extrai o value lá de dentro do contexto. Resgatamos a propriedade nome.
+
+`const nome = UserContextValue.nome;`
+
+Dá erro na tipagem de nome. Precisamos tipar o contexto.
+
+
+
+
+
 
 
 
