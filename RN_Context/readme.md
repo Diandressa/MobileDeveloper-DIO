@@ -222,6 +222,45 @@ const contextValues:UserContextProps = {
 ```
 Agora o provide esta retornado três coisas: name, loginName, função com setar o valor parra o useState
 
+## Escrevendo e lendo contextos
+
+importa ele na página, no caso vamos usar na Home a função save:
+
+`import { useState ,useContext} from "react";`
+
+Também vamos importar o UserContext do aquivo userContexto.tsx
+
+`import { UserContext } from "../contexts/userContext";`
+
+Podemos usar no Home agora:
+
+Para usar o contexto precisamos usar a função useContext do react, e chamamos o nome do contexto criado em userContext.tsx
+
+`const userContext = useContext(UserContext)`
+
+Assim podemos acessar os parâmetros, quando navegamos entre páginas:
+
+```
+const navigateToUserScreen = ()=>{
+    //navegar para o UserScreen
+    navigation.navigate("User", {username: inputText})
+    userContext?.save(inputText)
+}
+```
+
+Passamos o inputText para a função save, que tem um set para useState.
+
+No UserScreen recuperamos esse valor agora, o save salva o input no loginName:
+
+```
+export default function UserScreen({route}:UserScreenProps){
+    const {username} = route.params;
+    const UserContextValue = useContext(UserContext)
+    const nome = UserContextValue?.loginName || "Nenhum nome salvo";
+...
+```
+
+
 
 
 
