@@ -132,6 +132,43 @@ Agora criamos uma constante para extrai o value lá de dentro do contexto. Resga
 
 Dá erro na tipagem de nome. Precisamos tipar o contexto.
 
+## Tipando os contextos
+
+No UserContext.tsx
+
+```
+//tipagem
+
+interface UserContextProps {
+    nome: string;
+}
+```
+
+No Contexto, o tipo pode ser undefined ou UserContextProps, iniciamos ele como undefined:
+
+```
+export const UserContext = createContext<UserContextProps | undefined>(undefined)
+```
+
+No UserScreen usamos a interrogação para dizer que pode ou não receber um parâmetro:
+
+`const nome = UserContextValue?.nome;`
+
+Também podemos deixar um valor padrão se não receber nenhum parâmetro:
+
+`const nome = UserContextValue?.nome || "Nenhum nome salvo";`
+
+Usando o parâmetro em UserScreen:
+
+```
+return(
+    <View>
+        <Text>Bem vindo: {username}</Text>
+        <Text>Bem vindo: {nome}</Text>
+    </View>
+)
+```
+
 
 
 

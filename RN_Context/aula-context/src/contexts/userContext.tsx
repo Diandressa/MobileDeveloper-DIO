@@ -1,7 +1,12 @@
 import { createContext } from "react";
 
+//tipagem
+interface UserContextProps {
+    nome: string;
+}
+
 //contexto
-export const UserContext = createContext({})
+export const UserContext = createContext<UserContextProps | undefined>(undefined)
 
 //provider
 export default function UserContextProvider({children} : any){
