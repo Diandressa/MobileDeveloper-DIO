@@ -169,6 +169,59 @@ return(
 )
 ```
 
+## Criando contextos dinâmicos
+
+Pegar o valor do input, salvar no contexto e usar na página UserScreen:
+
+Primeiro criamos o estado, o useState no userContext.tsx
+
+`import { createContext, useState } from "react";`
+
+`const [loginName, setLoginName] = useState<string>("");`
+
+Fazer uma função para setar um user no useState:
+
+```
+function saveLoginUserToCache(user:string){
+    setLoginName(user)
+}
+```
+
+Podemos fazer verificação como:
+
+```
+function saveLoginUserToCache(user:string){
+    if(user !== ""){
+        setLoginName(user)
+    }
+}
+```
+
+Tipar o loginName na interface, e a função saveLoginUserToCache:
+
+```
+interface UserContextProps {
+    nome: string;
+    loginName: string;
+    save: (user:string) => void
+}
+```
+
+Agora podemos tipo o ContextValue tb:
+
+`const contextValues:UserContextProps = {nome: "Andressa"};`
+
+Passando os parâmetro que a interface pede:
+
+```
+const contextValues:UserContextProps = {
+    nome: "Andressa", 
+    loginName: loginName, 
+    save: saveLoginUserToCache
+};
+```
+Agora o provide esta retornado três coisas: name, loginName, função com setar o valor parra o useState
+
 
 
 
