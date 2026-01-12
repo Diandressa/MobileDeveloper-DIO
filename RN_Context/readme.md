@@ -58,6 +58,37 @@ export default function UserContextProvider({children} : any){
     )
 }
 ```
+## Prover os dados para os componentes
+
+Importa o provide no App.tsx
+
+`import UserContextProvider from './src/contexts/userContext';`
+
+Usa ele como componente que engloba os outros, tudo dentro desse provide irá ter acesso as propriedades dele (propriedades criadas no context)
+
+```
+const {Navigator, Screen} = createStackNavigator<RootStackParamList>();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <UserContextProvider>
+        <Navigator>
+
+          <Screen name="Home" component={HomeScreen}/>
+          <Screen name="User" component={UserScreen}/>
+
+        </Navigator>
+      </UserContextProvider>
+    </NavigationContainer>
+  );
+}
+```
+
+Agora podemos consumir esses dados em uma página.
+
+
+
 
 
 
