@@ -1,5 +1,6 @@
 import { View,Text } from "react-native"
 import { styles } from "./style"
+import CardView from "../CardView"
 
 export default function DrawerScreen(){
     return(
@@ -9,6 +10,7 @@ export default function DrawerScreen(){
                 <View style={[styles.trianguloCorner, styles.topRight]}></View>
                 <View style={[styles.trianguloCorner, styles.bottomLeft]}></View>
                 <View style={[styles.trianguloCorner, styles.bottomRight]}></View>
+                 <CardView/>
             </View>
             <Text>Works</Text>
         </View>
