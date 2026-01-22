@@ -20,4 +20,16 @@ export const styles = StyleSheet.create({
         width: "65%",
         resizeMode: "contain",
     },
+    drawBrand:{
+        color: "#fff",
+        fontWeight:"400",
+        fontSize: 18,
+        fontStyle: "italic",
+    },
+    drawName:{
+        color:"#fff",
+        fontSize: 20,
+        fontWeight: "bold",
+        textAlign: "center",
+    }
 })
