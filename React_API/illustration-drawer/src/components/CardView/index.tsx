@@ -3,6 +3,7 @@ import {View, Text, Button, Image} from 'react-native'
 import { styles } from './style';
 import Logo from '../../../assets/logo.png';
 import Divider from '../Divider';
+import { DRAW_ASSETS_BASE_URL } from '../../constants/draw';
 
 export default function CardView(){
     // sub-component: criado no próprio arquivo
@@ -19,12 +20,23 @@ export default function CardView(){
         </View>
     )
 
+    const renderDrawImage = () => (
+        <Image
+            style={styles.image}
+            source={{
+                uri: `${DRAW_ASSETS_BASE_URL}2.jpg`
+            }}
+        />
+    )
+
     return(
         <View style={styles.container}>
             {renderLogoBox()}
             <Divider/>
 
             {renderDrawDetails()}
+            {renderDrawImage()}
+            <Divider/>
         </View>
     )
 }

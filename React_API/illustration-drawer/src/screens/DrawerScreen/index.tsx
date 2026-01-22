@@ -12,7 +12,6 @@ export default function DrawerScreen(){
                 <View style={[styles.trianguloCorner, styles.bottomRight]}></View>
                  <CardView/>
             </View>
-            <Text>Works</Text>
         </View>
     )
 }
