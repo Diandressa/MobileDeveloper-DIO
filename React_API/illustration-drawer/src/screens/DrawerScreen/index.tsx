@@ -1,6 +1,6 @@
 import { View,Text } from "react-native"
 import { styles } from "./style"
-import CardView from "../CardView"
+import CardView from "../../components/CardView"
 
 export default function DrawerScreen(){
     return(
