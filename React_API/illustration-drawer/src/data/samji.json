@@ -1,0 +1,49 @@
+{
+  "artista": {
+    "nome": "Samji Illustrator",
+    "localizacao": "Original da Índia, baseado na Polônia",
+    "estilo": "2D, Vibrante, Pop-culture e Futurista",
+    "links": {
+      "behance": "https://www.behance.net/samji_illustrator",
+      "instagram": "https://www.instagram.com/samji_illustrator/",
+      "dribbble": "https://dribbble.com/SAMji_illustrator"
+    }
+  },
+  "galeria_design4users": [
+    {
+      "id": 1,
+      "titulo": "Study Practice - Red Profile",
+      "descricao": "Estudo de iluminação de borda (rim light), utilizando um contraste intenso entre sombras profundas e tons avermelhados vibrantes.",
+      "cores_predominantes": ["Preto", "Vermelho Carmesim", "Laranja"],
+      "link": "https://dribbble.com/shots/22541447-Study-practice"
+    },
+    {
+      "id": 2,
+      "titulo": "Chiya - Teal & Yellow",
+      "descricao": "Retrato da personagem original Chiya usando óculos redondos e jaqueta puffer, com um estilo de pintura digital suave e cores saturadas.",
+      "cores_predominantes": ["Azul Turquesa", "Amarelo", "Rosa Pastel"],
+      "link": "https://dribbble.com/shots/22292942-Chiya"
+    },
+    {
+      "id": 3,
+      "titulo": "Experimenting - Cyber Portrait",
+      "descricao": "Uma exploração artística com estética futurista, focada em detalhes de acessórios tecnológicos e uma iluminação facial complexa.",
+      "cores_predominantes": ["Azul Marinho", "Roxo Neon", "Ciano"],
+      "link": "https://dribbble.com/shots/22174439-Experimenting"
+    },
+    {
+      "id": 4,
+      "titulo": "Chiya - Street Style",
+      "descricao": "Versão da personagem Chiya com foco em moda urbana, destacando texturas de tecido e um design de personagem expressivo.",
+      "cores_predominantes": ["Verde Oliva", "Bege", "Marrom"],
+      "link": "https://dribbble.com/shots/22057183-Chiya"
+    },
+    {
+      "id": 5,
+      "titulo": "Peek-a-boo",
+      "descricao": "Ilustração criativa brincando com a composição de mãos e rosto, focada em formas orgânicas e um olhar marcante.",
+      "cores_predominantes": ["Roxo Vibrante", "Pêssego", "Branco"],
+      "link": "https://dribbble.com/shots/21961670-Peek-a-boo"
+    }
+  ]
+}
