@@ -4,6 +4,7 @@ import { styles } from './style';
 import Logo from '../../../assets/logo.png';
 import Divider from '../Divider';
 import { DRAW_ASSETS_BASE_URL } from '../../constants/draw';
+import FavoriteButton from '../FavoriteButton';
 
 export default function CardView(){
     // sub-component: criado no próprio arquivo
@@ -37,6 +38,8 @@ export default function CardView(){
             {renderDrawDetails()}
             {renderDrawImage()}
             <Divider/>
+
+            <FavoriteButton/>
         </View>
     )
 }
