@@ -32,6 +32,14 @@ export default function CardView(){
         </View>
     )
 
+    const renderPriceControls = () => (
+        <View style={styles.priceLabelContainer}>
+            <Button title="<" color={'#a11cca'} onPress={() => {}}/>
+            <Text style={styles.priceLabel}>VALOR</Text>
+            <Button title='>'color={'#a11cca'} onPress={() => {}}/>
+        </View>
+    )
+
     return(
         <View style={styles.container}>
             {renderLogoBox()}
@@ -39,9 +47,9 @@ export default function CardView(){
 
             {renderDrawDetails()}
             {renderDrawImage()}
-            <Divider/>
 
             <FavoriteButton/>
+            {renderPriceControls()}
         </View>
     )
 }
