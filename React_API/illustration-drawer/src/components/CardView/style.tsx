@@ -16,9 +16,11 @@ export const styles = StyleSheet.create({
         resizeMode: "contain",
     },
     imageLogo:{
-        flex: 1,
         width: "65%",
-        resizeMode: "contain",
+        height: "65%",
+        borderRadius: 50,
+        resizeMode: "cover",
+        backgroundColor: '#f0f0f0'
     },
     drawBrand:{
         color: "#fff",

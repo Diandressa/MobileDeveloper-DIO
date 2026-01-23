@@ -10,7 +10,10 @@ export default function CardView(){
     // sub-component: criado no próprio arquivo
     const renderLogoBox = () => (
         <View style={styles.logoContainer}>
-            <Image style={styles.imageLogo} source={Logo} />
+            <Image 
+                style={styles.imageLogo} 
+                source={{ uri: "https://instagram.fcgh10-2.fna.fbcdn.net/v/t51.2885-19/330855951_568280355238169_3867901785016127227_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fcgh10-2.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2QGxJDlhlZKfvTgCyE1jeywth_hjCZqPDQ4yIcGxuPGpRuIExpf6VB7Y6R_gCU6lG9BQAwkcI_6Fq5aArhlmpqGp&_nc_ohc=Rf4IByc3gJIQ7kNvwEa3wx9&_nc_gid=cRBVaDe9JyEMcB6IdGRVLQ&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfpKd78T3Rtx8KYCXXDrYhsOK19yk20g88Ma3RotjHTCvg&oe=6979C1BF" }} 
+            />
         </View>
     );
 
