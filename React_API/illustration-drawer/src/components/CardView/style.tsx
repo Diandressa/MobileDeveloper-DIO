@@ -32,9 +32,17 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
     },
+    imageContainer:{
+        flex: 0.8,
+        borderWidth: 2,
+        borderColor: '#fff',
+        margin: 10,
+        borderRadius: 20,
+    },
     image:{
-        flex: 1,
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
+        alignSelf: 'center',
+        borderRadius: 20,
     }
 })

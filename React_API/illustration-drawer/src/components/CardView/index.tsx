@@ -22,12 +22,14 @@ export default function CardView(){
     )
 
     const renderDrawImage = () => (
-        <Image
-            style={styles.image}
-            source={{
-                uri: `${DRAW_ASSETS_BASE_URL}2.jpg`
-            }}
-        />
+        <View style={styles.imageContainer}>
+            <Image
+                style={styles.image}
+                source={{
+                    uri: `${DRAW_ASSETS_BASE_URL}2.jpg`
+                }}
+            />
+        </View>
     )
 
     return(

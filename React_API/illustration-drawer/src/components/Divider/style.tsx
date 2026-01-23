@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     },
     divider:{
         alignItems:"center",
-        height: 1,
+        height: 2,
         width: "80%",
         backgroundColor: "hotpink",
         marginVertical: 10,
