@@ -1,1 +1,3 @@
 export const DRAW_ASSETS_BASE_URL = "https://design4users.com/wp-content/uploads/2023/10/samji-illustrator-people-illustration-art-"
+
+export const DRAW_API_BASE = "data/samji.json";
