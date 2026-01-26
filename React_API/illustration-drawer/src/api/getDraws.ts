@@ -3,7 +3,7 @@ import { DrawModel } from "../components/CardView/props";
 import { DRAW_API_BASE } from "../constants/draw";
 
 interface ApiResponse {
-    galeria: DrawModel[]
+    galeria_design4users: DrawModel[]
 }
 
 export const fetchGetDrawData = async(id:number) => {
@@ -12,10 +12,10 @@ export const fetchGetDrawData = async(id:number) => {
         const response = await axios.get<ApiResponse>(DRAW_API_BASE)
 
         //pega os dados de um objeto só
-        const drawData = response.data.galeria.find((draw) => draw.id === id || null)
+        const drawData = response.data.galeria_design4users.find((draw) => draw.id === id)
         return drawData;
 
     } catch(error){
-        console.log("Erro ao buscar dados da api", error);
+        console.log("Erro ao buscar dados da api fetchGetDrawData", error);
     }
 }

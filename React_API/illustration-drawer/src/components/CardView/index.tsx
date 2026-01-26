@@ -13,9 +13,10 @@ export default function CardView(){
 
     useEffect(()=>{
         (async()=>{
-            await loadDrawData(1, setDrawData)
+            await loadDrawData(2, setDrawData);
+            console.log(drawData)
         })();
-    })
+    }, []);
 
     // sub-component: criado no próprio arquivo
     const renderLogoBox = () => (

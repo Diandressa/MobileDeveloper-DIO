@@ -87,3 +87,7 @@ export const loadDrawData = async(id:number, setDrawData:React.Dispatch<React.Se
     }
 }
 ```
+
+# Processo consumir API com axios
+
+![Processos Consumir API](./assets/processo_consumir_api.png)

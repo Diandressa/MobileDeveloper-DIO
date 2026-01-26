@@ -10,7 +10,7 @@ export const loadDrawData = async(id:number, setDrawData:React.Dispatch<React.Se
             setDrawData(response)
         }
     }catch(error){
-        console.log("Error ao buscar a api", error)
+        console.log("Error ao buscar a api loadDrawData", error)
         setDrawData(null)
     }
 }
