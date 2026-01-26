@@ -1,12 +1,22 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import {View, Text, Button, Image} from 'react-native'
 import { styles } from './style';
 import Logo from '../../../assets/logo.png';
 import Divider from '../Divider';
 import { DRAW_ASSETS_BASE_URL } from '../../constants/draw';
 import FavoriteButton from '../FavoriteButton';
+import { DrawModel } from './props';
+import { loadDrawData } from './actions';
 
 export default function CardView(){
+    const [drawData, setDrawData] = useState<DrawModel | null>(null);
+
+    useEffect(()=>{
+        (async()=>{
+            await loadDrawData(1, setDrawData)
+        })();
+    })
+
     // sub-component: criado no próprio arquivo
     const renderLogoBox = () => (
         <View style={styles.logoContainer}>

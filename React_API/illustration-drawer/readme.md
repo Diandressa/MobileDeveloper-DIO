@@ -1,59 +1,89 @@
-# Criar projeto
+# Instalar Axios
 
-1 - Cria a pasta do projeto
+Preciso usar o axios(dependência) para consumir API: https://axios-http.com/ptbr/docs/intro
 
-2 - No terminal:\
-`create-expo-app nomeProjeto -t`
+Comando no terminal:
 
-3 - Escolher Blade(Typescript)
+`npm install axios`
 
-4 - Criar pasta src 
+importa ele:
 
-5 - Dentro de src cria pasta: component, screens, apis
+`import axios from "axios";`
 
-6 - Cria as telas em screens com extensão .tsx
+chama a API com o fetch:
 
-7 - No arquivo de tela:
 ```
-import { View,Text } from "react-native"
+import axios from "axios";
+import { DrawModel } from "../components/CardView/props";
+import { DRAW_API_BASE } from "../constants/draw";
 
-export default function DrawerScreen(){
-    return(
-        <View>
-            <Text>Works</Text>
-        </View>
-    )
+interface ApiResponse {
+galeria: DrawModel[]
+}
+
+export const fetchGetDrawData = async(id:number) => {
+    try{
+        //traz toda a lista da pasta data/samji.json
+        const response = await axios.get<ApiResponse>(DRAW_API_BASE)
+
+        //pega os dados de um objeto só
+        const drawData = response.data.galeria.find((draw) => draw.id === id || null)
+        return drawData;
+
+    } catch(error){
+        console.log("Erro ao buscar dados da api", error);
+    }
 }
 ```
 
-8 - Importa <View> do "react-native"
+# Actions API
 
-9 - Em App.tsx importar o component criado
+Precisamos usar um arquivo intermediário para conversar com a API e o component (mais prático a manutenção assim), os actions:
 
-10 - No terminal:\
-`npm run start`
+![Actions API](./assets/actions.png)
 
-# Estilo CSS
+Precisamos criar o estado que recebe essa API
 
-1 - Cria pasta na screen com o nome da tela
+importa o use state, cria a constante que vai receber a api:
 
-2 - Coloca index.tsx e style.tsx na pasta
+`const [drawData, setDrawData] = useState<DrawModel | null>(null);`
 
-3 - No arquivo style.tsx: \
+Cria assim que a tela iniciar, usando o useEffect:
+
 ```
-import { StyleSheet } from "react-native";
-
-export const styles = StyleSheet.create({
-    container:{
-
-    }
+// () -> significa que a função é auto invocável (executa assim que é lida)
+useEffect(()=>{
+    (async()=>{})();
 })
 ```
 
-4 - Importar na index.tsx:
+Passa a função do action que carrega os dados, com id a o set como parâmetros: 
+
 ```
-<View style={styles.container}>
-    <Text>Works</Text>
-</View>
+useEffect(()=>{
+    (async()=>{
+        await loadDrawData(1, setDrawData)
+    })();
+})
 ```
 
+No actions.ts:
+
+```
+import { fetchGetDrawData } from "../../api/getDraws"
+import { DrawModel } from "./props"
+
+export const loadDrawData = async(id:number, setDrawData:React.Dispatch<React.SetStateAction<DrawModel | null>>) => {
+    //solicita para API
+    const response = await fetchGetDrawData(id)
+
+    try{
+        if(response){
+            setDrawData(response)
+        }
+    }catch(error){
+        console.log("Error ao buscar a api", error)
+        setDrawData(null)
+    }
+}
+```

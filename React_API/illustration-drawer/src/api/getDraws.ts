@@ -3,7 +3,7 @@ import { DrawModel } from "../components/CardView/props";
 import { DRAW_API_BASE } from "../constants/draw";
 
 interface ApiResponse {
-galeria: DrawModel[]
+    galeria: DrawModel[]
 }
 
 export const fetchGetDrawData = async(id:number) => {
