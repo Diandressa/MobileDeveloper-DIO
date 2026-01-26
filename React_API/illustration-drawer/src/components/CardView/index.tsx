@@ -13,8 +13,7 @@ export default function CardView(){
 
     useEffect(()=>{
         (async()=>{
-            await loadDrawData(2, setDrawData);
-            console.log(drawData)
+            await loadDrawData(3, setDrawData);
         })();
     }, []);
 

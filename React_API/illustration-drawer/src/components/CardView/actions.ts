@@ -7,6 +7,7 @@ export const loadDrawData = async(id:number, setDrawData:React.Dispatch<React.Se
 
     try{
         if(response){
+            console.log(response)
             setDrawData(response)
         }
     }catch(error){
