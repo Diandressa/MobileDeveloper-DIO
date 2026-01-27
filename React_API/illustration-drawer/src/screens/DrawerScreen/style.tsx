@@ -1,5 +1,9 @@
 import { StyleSheet } from "react-native";
 
+const colors = {
+    primary: "#ffffff",
+}
+
 export const styles = StyleSheet.create({
     container:{
         flex: 1,
@@ -14,9 +18,8 @@ export const styles = StyleSheet.create({
         width: 350,
         height: "90%",
         overflow: "hidden",
-        borderWidth: 2,
-        borderColor: "#fff",
         borderRadius: 10,
+        backgroundColor: "#1c5197",
     },
 
     trianguloCorner:{
@@ -25,7 +28,7 @@ export const styles = StyleSheet.create({
         height:0,
         borderStyle: "solid",
         borderTopWidth: 20,
-        borderTopColor: "#fff",
+        borderTopColor: colors.primary,
         borderRightWidth: 20,
         borderRightColor: "transparent"
     },

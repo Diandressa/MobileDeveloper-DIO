@@ -1,6 +1,7 @@
-import { View,Text } from "react-native"
+import { View,Text, ImageBackground } from "react-native"
 import { styles } from "./style"
 import CardView from "../../components/CardView"
+import imagem from "../../../assets/fundo.png"
 
 export default function DrawerScreen(){
     return(

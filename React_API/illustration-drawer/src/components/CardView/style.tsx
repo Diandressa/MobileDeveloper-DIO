@@ -16,11 +16,13 @@ export const styles = StyleSheet.create({
         resizeMode: "contain",
     },
     imageLogo:{
-        width: "65%",
-        height: "65%",
+        width: "50%",
+        height: "60%",
         borderRadius: 50,
         resizeMode: "cover",
-        backgroundColor: '#f0f0f0'
+        borderWidth: 1,
+        borderColor: "#fff",
+        boxShadow: "5px 5px 10px #00000052,"
     },
     drawBrand:{
         color: "#fff",
