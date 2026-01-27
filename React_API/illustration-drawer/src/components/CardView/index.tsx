@@ -46,8 +46,8 @@ export default function CardView(){
         </View>
     )
 
-    const renderPriceControls = () => (
-        <View style={styles.priceLabelContainer}>
+    const renderNavigationControls = () => (
+        <View style={styles.buttonNavigationContainer}>
             <Button title=" < " color={'#a11cca'} onPress={() => {}}/>
             
             <Button title=' > 'color={'#a11cca'} onPress={() => {}}/>
@@ -63,8 +63,8 @@ export default function CardView(){
             {renderDrawImage()}
             
         
-            <Text style={styles.priceLabel}>{drawData?.descricao}</Text>
-            {renderPriceControls()}
+            <Text style={styles.descriptionLabel}>{drawData?.descricao}</Text>
+            {renderNavigationControls()}
         </View>
     )
 }

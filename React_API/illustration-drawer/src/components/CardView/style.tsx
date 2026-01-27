@@ -48,15 +48,16 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
         borderRadius: 20,
     },
-    priceLabelContainer:{
+    buttonNavigationContainer:{
         flexDirection: 'row',
         justifyContent: 'center', 
         gap: 20,
         paddingBottom: 10,
         alignItems: 'center',
         marginTop: 10,
+        borderRadius: 20,
     },
-    priceLabel:{
+    descriptionLabel:{
         color: "#fff",
         paddingHorizontal:20,
         textAlign:'center',
