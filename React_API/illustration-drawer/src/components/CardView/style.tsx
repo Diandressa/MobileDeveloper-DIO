@@ -40,6 +40,7 @@ export const styles = StyleSheet.create({
         borderColor: '#fff',
         margin: 10,
         borderRadius: 20,
+        position: "relative",
     },
     image:{
         width: '100%',
@@ -49,13 +50,15 @@ export const styles = StyleSheet.create({
     },
     priceLabelContainer:{
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'center', 
+        gap: 20,
         paddingBottom: 10,
         alignItems: 'center',
         marginTop: 10,
     },
     priceLabel:{
         color: "#fff",
-        fontSize: 22,
+        paddingHorizontal:20,
+        textAlign:'center',
     }
 })

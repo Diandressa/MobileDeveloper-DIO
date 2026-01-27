@@ -30,16 +30,17 @@ export default function CardView(){
     const renderDrawDetails = () => (
         <View style={{alignItems:"center"}}>
             <Text style={styles.drawBrand}>Girl</Text>
-            <Text style={styles.drawName}>MODEL</Text>
+            <Text style={styles.drawName}>{drawData?.titulo}</Text>
         </View>
     )
 
     const renderDrawImage = () => (
         <View style={styles.imageContainer}>
+            <FavoriteButton/>
             <Image
                 style={styles.image}
                 source={{
-                    uri: `${DRAW_ASSETS_BASE_URL}2.jpg`
+                    uri: `${DRAW_ASSETS_BASE_URL}${drawData?.id}.jpg`
                 }}
             />
         </View>
@@ -47,9 +48,9 @@ export default function CardView(){
 
     const renderPriceControls = () => (
         <View style={styles.priceLabelContainer}>
-            <Button title="<" color={'#a11cca'} onPress={() => {}}/>
-            <Text style={styles.priceLabel}>VALOR</Text>
-            <Button title='>'color={'#a11cca'} onPress={() => {}}/>
+            <Button title=" < " color={'#a11cca'} onPress={() => {}}/>
+            
+            <Button title=' > 'color={'#a11cca'} onPress={() => {}}/>
         </View>
     )
 
@@ -60,8 +61,9 @@ export default function CardView(){
 
             {renderDrawDetails()}
             {renderDrawImage()}
-
-            <FavoriteButton/>
+            
+        
+            <Text style={styles.priceLabel}>{drawData?.descricao}</Text>
             {renderPriceControls()}
         </View>
     )

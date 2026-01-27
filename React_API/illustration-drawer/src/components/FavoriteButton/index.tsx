@@ -8,7 +8,7 @@ export default function FavoriteButton(){
        <View style={styles.container}>
             <TouchableOpacity style={styles.button}>
                 <AntDesign name="heart" size={24} color="black" style={styles.icon}/>
-                <Text style={styles.buttonText}>Favorite</Text>
+                {/* <Text style={styles.buttonText}>Favoritar</Text> */}
             </TouchableOpacity>
        </View> 
     )
