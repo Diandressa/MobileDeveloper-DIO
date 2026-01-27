@@ -1,19 +1,19 @@
 import {useEffect, useState} from 'react';
-import {View, Text, Button, Image} from 'react-native'
+import {View, Text, Button, Image, Linking, Pressable} from 'react-native'
 import { styles } from './style';
 import Logo from '../../../assets/logo.png';
 import Divider from '../Divider';
 import { DRAW_ASSETS_BASE_URL } from '../../constants/draw';
 import FavoriteButton from '../FavoriteButton';
 import { DrawModel } from './props';
-import { loadDrawData } from './actions';
+import { handleNextItem, handlePreviousItem, loadDrawData } from './actions';
 
 export default function CardView(){
     const [drawData, setDrawData] = useState<DrawModel | null>(null);
 
     useEffect(()=>{
         (async()=>{
-            await loadDrawData(3, setDrawData);
+            await loadDrawData(2, setDrawData);
         })();
     }, []);
 
@@ -29,7 +29,7 @@ export default function CardView(){
 
     const renderDrawDetails = () => (
         <View style={{alignItems:"center"}}>
-            <Text style={styles.drawBrand}>Girl</Text>
+            <Text style={styles.drawBrand}>Samji Illustrator</Text>
             <Text style={styles.drawName}>{drawData?.titulo}</Text>
         </View>
     )
@@ -48,9 +48,9 @@ export default function CardView(){
 
     const renderNavigationControls = () => (
         <View style={styles.buttonNavigationContainer}>
-            <Button title=" < " color={'#a11cca'} onPress={() => {}}/>
+            <Button title="  <  " color={'#a11cca'} onPress={() => handlePreviousItem(drawData, setDrawData)}/>
             
-            <Button title=' > 'color={'#a11cca'} onPress={() => {}}/>
+            <Button title='  >  'color={'#a11cca'} onPress={() => handleNextItem(drawData, setDrawData)}/>
         </View>
     )
 
@@ -64,6 +64,10 @@ export default function CardView(){
             
         
             <Text style={styles.descriptionLabel}>{drawData?.descricao}</Text>
+            <Pressable onPress={() => drawData?.link && Linking.openURL(drawData.link)}>
+                <Text style={styles.linkLabel}>Acesse a obra</Text>
+            </Pressable>
+
             {renderNavigationControls()}
         </View>
     )

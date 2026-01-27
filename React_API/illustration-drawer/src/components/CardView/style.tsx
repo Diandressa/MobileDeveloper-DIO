@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
     buttonNavigationContainer:{
         flexDirection: 'row',
         justifyContent: 'center', 
-        gap: 20,
+        gap: 30,
         paddingBottom: 10,
         alignItems: 'center',
         marginTop: 10,
@@ -61,5 +61,15 @@ export const styles = StyleSheet.create({
         color: "#fff",
         paddingHorizontal:20,
         textAlign:'center',
+    },
+    linkLabel:{
+        color: "#fff",
+        width: "80%",
+        alignSelf: "center",
+        paddingVertical:10,
+        textAlign:'center',
+        borderWidth: 2,
+        borderColor: "#fff",
+        marginVertical: 10,
     }
 })
