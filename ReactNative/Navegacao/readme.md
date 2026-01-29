@@ -85,7 +85,7 @@ Criar dentro da pasta routes o arquivo index.tsx, importa o NavigationContainer
 
 Importar o arquivo stack.routes.tsx
 
-`import { NavigationContainer } from '@react-navigation/native'`
+`import { StackRoutes } from './stack.routes'`
 
 Criar a função Routes, usar o NavigationContainer
 
