@@ -3,9 +3,9 @@
 1 - Cria a pasta do projeto
 
 2 - No terminal:\
-`create-expo-app nomeProjeto -t`
+`npx create-expo-app nomeProjeto -t`
 
-3 - Escolher Blade(Typescript)
+3 - Escolher Blank(Typescript)
 
 4 - Criar pasta src 
 

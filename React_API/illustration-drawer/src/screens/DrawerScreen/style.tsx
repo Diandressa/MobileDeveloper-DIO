@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         height: "90%",
         overflow: "hidden",
         borderRadius: 10,
-        backgroundColor: "#1c5197",
+        backgroundColor: "#1c5197", 
     },
 
     trianguloCorner:{
