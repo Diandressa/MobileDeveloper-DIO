@@ -11,7 +11,8 @@
 
 5 - Dentro de src cria pasta: component, screens, apis
 
-6 - Cria as telas em screens com extensão .tsx
+6 - Cria as telas em screens com extensão .tsx \
+`nomeSreen.tsx`
 
 7 - No arquivo de tela:
 ```
@@ -30,7 +31,7 @@ export default function DrawerScreen(){
 
 9 - Em App.tsx importar o component criado
 
-10 - No terminal:\
+10 - No terminal, entra na pasta e:\
 `npm run start`
 
 # Estilo CSS
