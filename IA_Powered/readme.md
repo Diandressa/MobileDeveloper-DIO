@@ -13,3 +13,9 @@ Ordem para escrever um prompt
 4 - Dados de Entrada - Problemas a ser solucionado, dados personalizados para o modelo 
 
 5 - Formato de Saída - Qual formato quero essa resposta.
+
+## Técnicas de engenharia de Prompts
+
+![Componentes de um Prompt](./Componentes_de_um_prompt.png)
+
+## 
