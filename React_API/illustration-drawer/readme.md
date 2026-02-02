@@ -1,3 +1,13 @@
+# Actions API
+
+Precisamos usar um arquivo intermediário para conversar com a API e o component (mais prático a manutenção assim), os actions:
+
+![Actions API](./assets/actions.png)
+
+# Processo consumir API com axios
+
+![Processos Consumir API](./assets/processo_consumir_api.png)
+
 # Instalar Axios
 
 Preciso usar o axios(dependência) para consumir API: https://axios-http.com/ptbr/docs/intro
@@ -135,13 +145,3 @@ export const handlePreviousItem = async(data: DataModel | null, setData: React.D
     }
 }
 ```
-
-# Actions API
-
-Precisamos usar um arquivo intermediário para conversar com a API e o component (mais prático a manutenção assim), os actions:
-
-![Actions API](./assets/actions.png)
-
-# Processo consumir API com axios
-
-![Processos Consumir API](./assets/processo_consumir_api.png)
