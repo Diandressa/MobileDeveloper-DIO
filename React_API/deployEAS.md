@@ -72,4 +72,16 @@ Atualizar para próxima versão
 
 Alterar a aplicação.
 
-Ir no site EAS, pesquisar "Add custom native code"
+Ir no site EAS, pesquisar "Runtime versions and updates" para configurar arquivos de atualização. 
+
+https://docs.expo.dev/eas-update/runtime-versions/#setting-runtimeversion
+
+Em app.json, na parte de android inserir:
+
+`"runtimeVersion": "1.0.0"`
+
+Para aparecer a versão no site EAS, no projeto.
+
+Roda a build da APK novamente:
+
+`eas build -p android --profile preview`
