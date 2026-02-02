@@ -2,11 +2,11 @@
 
 Precisamos usar um arquivo intermediário para conversar com a API e o component (mais prático a manutenção assim), os actions:
 
-![Actions API](./assets/actions.png)
+![Actions API](./illustration-drawer/assets/actions.png)
 
 # Processo consumir API com axios
 
-![Processos Consumir API](./assets/processo_consumir_api.png)
+![Processos Consumir API](./illustration-drawer/assets/processo_consumir_api.png)
 
 # Instalar Axios
 
