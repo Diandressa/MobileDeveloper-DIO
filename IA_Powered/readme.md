@@ -18,4 +18,6 @@ Ordem para escrever um prompt
 
 ![Componentes de um Prompt](./Componentes_de_um_prompt.png)
 
-## 
+## Apresentação com os slides do curso
+
+https://www.canva.com/design/DAGYbpmAiQA/NH0YSZ6tAbdBjNgKJsnFIw/edit
