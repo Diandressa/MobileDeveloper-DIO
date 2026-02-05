@@ -55,3 +55,6 @@ Comando:
 Caso peça para instalar o Github Copilot CLI, aceite
 
 Veja sobre o github copilot: https://github.com/features/copilot?locale=pt-BR 
+
+# Configurando o Github Copilot
+
