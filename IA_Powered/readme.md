@@ -21,3 +21,37 @@ Ordem para escrever um prompt
 ## Apresentação com os slides do curso
 
 https://www.canva.com/design/DAGYbpmAiQA/NH0YSZ6tAbdBjNgKJsnFIw/edit
+
+# Github Copilot
+
+`Control+i` ou clica no ícone
+
+// comando usando comentário
+
+Podemos utilizar pelo CLI/Terminal:
+
+Instale o GitHub CLI no terminal CMD como Administrador:
+
+`choco install gh` 
+
+Para autenticar:
+
+`gh auth login` e logar
+
+A extensão do github copilot já vem instalada por padrão.
+
+Ver mais: https://github.com/github/gh-copilot 
+ 
+ou https://cli.github.com/ -> baixar o instalador
+
+Teste a versão:
+
+`gh --version`
+
+Comando: 
+
+`gh copilot explain "git init"` ou `copilot -i "explain git init"`
+
+Caso peça para instalar o Github Copilot CLI, aceite
+
+Veja sobre o github copilot: https://github.com/features/copilot?locale=pt-BR 
