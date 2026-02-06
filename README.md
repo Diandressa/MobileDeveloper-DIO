@@ -7,6 +7,16 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 <details>
   <summary><strong>📱 Projetos React Native (DIO)</strong></summary>
 
+  ### Pass App
+  Aplicativo de gerenciamento de senhas criado em React Native, focando em armazenamento seguro e usabilidade.
+
+  [![Pass App](https://img.shields.io/badge/Acessar_projeto-Pass_App-brightgreen?style=flat-square)](https://github.com/Diandressa/password-generator)
+
+  ### Project Nav
+  Projeto de navegação em React Native, explorando stacks, tabs e drawer navigation.
+
+  [![Project Nav](https://img.shields.io/badge/Acessar_projeto-Project_Nav-brightgreen?style=flat-square)](/ReactNative/projectNav/)
+
   ### Green Lantern App
   Um aplicativo desenvolvido em React Native para praticar conceitos de navegação e componentes.
 
@@ -17,15 +27,7 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
   [![Bat Signal](https://img.shields.io/badge/Acessar_projeto-Bat_Signal-brightgreen?style=flat-square)](/ReactNative/bat-signal/)
 
-  ### Pass App
-  Aplicativo de gerenciamento de senhas criado em React Native, focando em armazenamento seguro e usabilidade.
 
-  [![Pass App](https://img.shields.io/badge/Acessar_projeto-Pass_App-brightgreen?style=flat-square)](https://github.com/Diandressa/password-generator)
-
-  ### Project Nav
-  Projeto de navegação em React Native, explorando stacks, tabs e drawer navigation.
-
-  [![Project Nav](https://img.shields.io/badge/Acessar_projeto-Project_Nav-brightgreen?style=flat-square)](/ReactNative/projectNav/)
 
 </details>
 
