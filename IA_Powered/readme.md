@@ -58,3 +58,19 @@ Veja sobre o github copilot: https://github.com/features/copilot?locale=pt-BR
 
 # Configurando o Github Copilot
 
+Instalar as extensões 
+
+File > Preferences > Settings > Extension > Copilot > Edit in settings.json
+
+Ou com o botão direito em cima da extensão > settings
+
+Para deixar seu código privado para o copilot
+
+Ir no seu perfil github > settings > copilot > privacy > Allow GitHub to use my data for AI model training 
+
+Desabilitar essa última opção
+
+Para mudar o idioma:
+
+Ir em settings > Extensions > Github copilot chat > Copilot Chat: Locale Override
+
