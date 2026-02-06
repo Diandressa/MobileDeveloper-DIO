@@ -4,17 +4,6 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 ## Projetos desenvolvidos
 
-
-<details>
-  <summary><strong>🧩 Desafios Node.js (DIO)</strong></summary>
-
-  Conjunto de desafios práticos desenvolvidos durante a formação em Node.js pela DIO,  
-  com foco em lógica de programação, manipulação de dados e boas práticas no backend.
-
-  [![Desafios Node.js](https://img.shields.io/badge/Acessar_desafios-NodeJS_DIO-brightgreen?style=flat-square)](./NodeJS/desafios/)
-
-</details>
-
 <details>
   <summary><strong>📱 Projetos React Native (DIO)</strong></summary>
 
@@ -47,6 +36,16 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
   Projeto React/API focado em criar um drawer interativo com ilustrações, integrando componentes e navegação.
 
   [![Illustration Drawer](https://img.shields.io/badge/Acessar_projeto-Illustration_Drawer-brightgreen?style=flat-square)](/React_API/illustration-drawer/)
+
+</details>
+
+<details>
+  <summary><strong>🧩 Desafios Node.js (DIO)</strong></summary>
+
+  Conjunto de desafios práticos desenvolvidos durante a formação em Node.js pela DIO,  
+  com foco em lógica de programação, manipulação de dados e boas práticas no backend.
+
+  [![Desafios Node.js](https://img.shields.io/badge/Acessar_desafios-NodeJS_DIO-brightgreen?style=flat-square)](./NodeJS/desafios/)
 
 </details>
 
