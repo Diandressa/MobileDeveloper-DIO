@@ -4,33 +4,6 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 ## Projetos desenvolvidos
 
-<details>
-  <summary><strong>🚀 API - NodeJs e Express</strong></summary>
-
-  ### MTG Deck API
-  Uma API RESTful que permite gerenciar decks e cartas do jogo Magic: The Gathering (MTG).  
-  Ideal para aplicações de gerenciamento de coleções, decks personalizados e estudos de cartas.
-
-  [![Projeto MTG Deck API](https://img.shields.io/badge/Acessar_projeto-MTG_Deck_API-brightgreen?style=flat-square)](./API/API-NodeJs-Express/project-deck-magic/)
-
-  ### API Verb Tenses
-  A API Verb Tenses retorna uma frase de exemplo e o seu tempo verbal.  
-  Também retorna a estrutura da frase. Esta API permite criar, listar, atualizar e deletar dados (CRUD).
-
-  [![Projeto API Verb Tenses](https://img.shields.io/badge/Acessar_projeto-API_Verb_Tenses-brightgreen?style=flat-square)](./API/API-NodeJs-Express/project-verb-tenses/)
-
-</details>
-
-<details>
-  <summary><strong>⚡ API com Fastify</strong></summary>
-
-  ### API de Curiosidades e Biscoitos da Sorte 🍪
-  Uma API simples feita com Fastify que fornece curiosidades e mensagens
-  de biscoito da sorte através de endpoints REST.
-
-  [![Projeto API Project Curiosity](https://img.shields.io/badge/Acessar_projeto-API_Project_Curiosity-brightgreen?style=flat-square)](./API/Minimal-API-Fastify/)
-
-</details>
 
 <details>
   <summary><strong>🧩 Desafios Node.js (DIO)</strong></summary>
@@ -77,6 +50,33 @@ Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Boo
 
 </details>
 
+<details>
+  <summary><strong>🚀 API - NodeJs e Express</strong></summary>
+
+  ### MTG Deck API
+  Uma API RESTful que permite gerenciar decks e cartas do jogo Magic: The Gathering (MTG).  
+  Ideal para aplicações de gerenciamento de coleções, decks personalizados e estudos de cartas.
+
+  [![Projeto MTG Deck API](https://img.shields.io/badge/Acessar_projeto-MTG_Deck_API-brightgreen?style=flat-square)](./API/API-NodeJs-Express/project-deck-magic/)
+
+  ### API Verb Tenses
+  A API Verb Tenses retorna uma frase de exemplo e o seu tempo verbal.  
+  Também retorna a estrutura da frase. Esta API permite criar, listar, atualizar e deletar dados (CRUD).
+
+  [![Projeto API Verb Tenses](https://img.shields.io/badge/Acessar_projeto-API_Verb_Tenses-brightgreen?style=flat-square)](./API/API-NodeJs-Express/project-verb-tenses/)
+
+</details>
+
+<details>
+  <summary><strong>⚡ API com Fastify</strong></summary>
+
+  ### API de Curiosidades e Biscoitos da Sorte 🍪
+  Uma API simples feita com Fastify que fornece curiosidades e mensagens
+  de biscoito da sorte através de endpoints REST.
+
+  [![Projeto API Project Curiosity](https://img.shields.io/badge/Acessar_projeto-API_Project_Curiosity-brightgreen?style=flat-square)](./API/Minimal-API-Fastify/)
+
+</details>
 
 ## Conteúdos dominados
 
