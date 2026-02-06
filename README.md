@@ -2,8 +2,6 @@
 
 Repositório destinado a armazenar todo o aprendizado desenvolvido durante o Bootcamp Mobile Developer em parceria com MeuTudo, na plataforma da DIO.
 
-# 🏗️ Projetos de Desenvolvimento
-
 ## Projetos desenvolvidos
 
 <details>
